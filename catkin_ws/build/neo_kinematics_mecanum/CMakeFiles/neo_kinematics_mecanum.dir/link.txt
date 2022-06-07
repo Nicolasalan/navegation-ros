@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libneo_kinematics_mecanum.so -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/libneo_kinematics_mecanum.so CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.o 

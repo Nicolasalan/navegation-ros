@@ -1,0 +1,8 @@
+prefix=/home/miguelito/workspace/navegation-warehouse/catkin_ws/install
+
+Name: neo_localization
+Description: Description of neo_localization
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp tf nav_msgs sensor_msgs geometry_msgs neo_common

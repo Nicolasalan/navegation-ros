@@ -1,0 +1,8 @@
+prefix=/home/miguelito/workspace/navegation-warehouse/catkin_ws/install
+
+Name: neo_common
+Description: Description of neo_common
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 
