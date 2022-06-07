@@ -1,24 +1,24 @@
 
 "use strict";
 
-let RelayBoardSetLCDMsg = require('./RelayBoardSetLCDMsg.js')
 let RelayBoardUnSetEMStop = require('./RelayBoardUnSetEMStop.js')
-let UnlockPlatform = require('./UnlockPlatform.js')
+let RelayBoardSetLCDMsg = require('./RelayBoardSetLCDMsg.js')
 let ResetOmniWheels = require('./ResetOmniWheels.js')
-let ActivateMotors = require('./ActivateMotors.js')
 let LockPlatform = require('./LockPlatform.js')
 let RelayBoardSetEMStop = require('./RelayBoardSetEMStop.js')
+let ActivateMotors = require('./ActivateMotors.js')
 let RelayBoardSetRelay = require('./RelayBoardSetRelay.js')
+let UnlockPlatform = require('./UnlockPlatform.js')
 let IOBoardSetDigOut = require('./IOBoardSetDigOut.js')
 
 module.exports = {
-  RelayBoardSetLCDMsg: RelayBoardSetLCDMsg,
   RelayBoardUnSetEMStop: RelayBoardUnSetEMStop,
-  UnlockPlatform: UnlockPlatform,
+  RelayBoardSetLCDMsg: RelayBoardSetLCDMsg,
   ResetOmniWheels: ResetOmniWheels,
-  ActivateMotors: ActivateMotors,
   LockPlatform: LockPlatform,
   RelayBoardSetEMStop: RelayBoardSetEMStop,
+  ActivateMotors: ActivateMotors,
   RelayBoardSetRelay: RelayBoardSetRelay,
+  UnlockPlatform: UnlockPlatform,
   IOBoardSetDigOut: IOBoardSetDigOut,
 };

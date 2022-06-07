@@ -1,8 +1,8 @@
-# Install script for directory: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_simulation
+# Install script for directory: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_simulation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/miguelito/workspace/navegation-warehouse/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/user/workspace/navegation-warehouse/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_simulation/catkin_generated/installspace/neo_simulation.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_simulation/catkin_generated/installspace/neo_simulation.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_simulation/cmake" TYPE FILE FILES
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_simulation/catkin_generated/installspace/neo_simulationConfig.cmake"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_simulation/catkin_generated/installspace/neo_simulationConfig-version.cmake"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_simulation/catkin_generated/installspace/neo_simulationConfig.cmake"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_simulation/catkin_generated/installspace/neo_simulationConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_simulation" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_simulation/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_simulation" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_simulation/package.xml")
 endif()
 

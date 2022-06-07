@@ -43,100 +43,100 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/build
+CMAKE_BINARY_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/build
 
 # Utility rule file for neo_srvs_generate_messages_cpp.
 
 # Include the progress variables for this target.
 include neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp.dir/progress.make
 
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetRelay.h
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/IOBoardSetDigOut.h
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetLCDMsg.h
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/LockPlatform.h
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/UnlockPlatform.h
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ResetOmniWheels.h
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetEMStop.h
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardUnSetEMStop.h
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ActivateMotors.h
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetRelay.h
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/IOBoardSetDigOut.h
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetLCDMsg.h
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/LockPlatform.h
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/UnlockPlatform.h
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ResetOmniWheels.h
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetEMStop.h
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardUnSetEMStop.h
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ActivateMotors.h
 
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetRelay.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetRelay.h: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetRelay.srv
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetRelay.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetRelay.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from neo_srvs/RelayBoardSetRelay.srv"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetRelay.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetRelay.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetRelay.h: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetRelay.srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetRelay.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetRelay.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from neo_srvs/RelayBoardSetRelay.srv"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/user/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetRelay.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/IOBoardSetDigOut.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/IOBoardSetDigOut.h: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/IOBoardSetDigOut.srv
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/IOBoardSetDigOut.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/IOBoardSetDigOut.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from neo_srvs/IOBoardSetDigOut.srv"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/IOBoardSetDigOut.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/IOBoardSetDigOut.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/IOBoardSetDigOut.h: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/IOBoardSetDigOut.srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/IOBoardSetDigOut.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/IOBoardSetDigOut.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from neo_srvs/IOBoardSetDigOut.srv"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/user/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/IOBoardSetDigOut.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetLCDMsg.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetLCDMsg.h: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetLCDMsg.srv
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetLCDMsg.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetLCDMsg.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from neo_srvs/RelayBoardSetLCDMsg.srv"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetLCDMsg.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetLCDMsg.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetLCDMsg.h: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetLCDMsg.srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetLCDMsg.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetLCDMsg.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from neo_srvs/RelayBoardSetLCDMsg.srv"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/user/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetLCDMsg.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/LockPlatform.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/LockPlatform.h: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/LockPlatform.srv
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/LockPlatform.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/LockPlatform.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from neo_srvs/LockPlatform.srv"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/LockPlatform.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/LockPlatform.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/LockPlatform.h: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/LockPlatform.srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/LockPlatform.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/LockPlatform.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from neo_srvs/LockPlatform.srv"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/user/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/LockPlatform.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/UnlockPlatform.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/UnlockPlatform.h: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/UnlockPlatform.srv
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/UnlockPlatform.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/UnlockPlatform.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from neo_srvs/UnlockPlatform.srv"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/UnlockPlatform.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/UnlockPlatform.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/UnlockPlatform.h: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/UnlockPlatform.srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/UnlockPlatform.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/UnlockPlatform.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from neo_srvs/UnlockPlatform.srv"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/user/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/UnlockPlatform.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ResetOmniWheels.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ResetOmniWheels.h: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ResetOmniWheels.srv
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ResetOmniWheels.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ResetOmniWheels.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from neo_srvs/ResetOmniWheels.srv"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ResetOmniWheels.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ResetOmniWheels.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ResetOmniWheels.h: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ResetOmniWheels.srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ResetOmniWheels.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ResetOmniWheels.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from neo_srvs/ResetOmniWheels.srv"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/user/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ResetOmniWheels.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetEMStop.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetEMStop.h: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetEMStop.srv
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetEMStop.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetEMStop.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from neo_srvs/RelayBoardSetEMStop.srv"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetEMStop.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetEMStop.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetEMStop.h: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetEMStop.srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetEMStop.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetEMStop.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from neo_srvs/RelayBoardSetEMStop.srv"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/user/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetEMStop.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardUnSetEMStop.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardUnSetEMStop.h: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardUnSetEMStop.srv
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardUnSetEMStop.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardUnSetEMStop.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from neo_srvs/RelayBoardUnSetEMStop.srv"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardUnSetEMStop.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardUnSetEMStop.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardUnSetEMStop.h: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardUnSetEMStop.srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardUnSetEMStop.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardUnSetEMStop.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from neo_srvs/RelayBoardUnSetEMStop.srv"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/user/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardUnSetEMStop.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ActivateMotors.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ActivateMotors.h: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ActivateMotors.srv
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ActivateMotors.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ActivateMotors.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from neo_srvs/ActivateMotors.srv"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ActivateMotors.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ActivateMotors.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ActivateMotors.h: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ActivateMotors.srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ActivateMotors.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ActivateMotors.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from neo_srvs/ActivateMotors.srv"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs && /home/user/workspace/navegation-warehouse/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ActivateMotors.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 neo_srvs_generate_messages_cpp: neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp
-neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetRelay.h
-neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/IOBoardSetDigOut.h
-neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetLCDMsg.h
-neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/LockPlatform.h
-neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/UnlockPlatform.h
-neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ResetOmniWheels.h
-neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetEMStop.h
-neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardUnSetEMStop.h
-neo_srvs_generate_messages_cpp: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ActivateMotors.h
+neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetRelay.h
+neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/IOBoardSetDigOut.h
+neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetLCDMsg.h
+neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/LockPlatform.h
+neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/UnlockPlatform.h
+neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ResetOmniWheels.h
+neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardSetEMStop.h
+neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/RelayBoardUnSetEMStop.h
+neo_srvs_generate_messages_cpp: /home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_srvs/ActivateMotors.h
 neo_srvs_generate_messages_cpp: neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp.dir/build.make
 
 .PHONY : neo_srvs_generate_messages_cpp
@@ -147,10 +147,10 @@ neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp.dir/build: neo_srvs_generate_
 .PHONY : neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp.dir/build
 
 neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp.dir/clean:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && $(CMAKE_COMMAND) -P CMakeFiles/neo_srvs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && $(CMAKE_COMMAND) -P CMakeFiles/neo_srvs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp.dir/clean
 
 neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp.dir/depend:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/miguelito/workspace/navegation-warehouse/catkin_ws/src /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs /home/miguelito/workspace/navegation-warehouse/catkin_ws/build /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/workspace/navegation-warehouse/catkin_ws/src /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs /home/user/workspace/navegation-warehouse/catkin_ws/build /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : neo_srvs/CMakeFiles/neo_srvs_generate_messages_cpp.dir/depend
 

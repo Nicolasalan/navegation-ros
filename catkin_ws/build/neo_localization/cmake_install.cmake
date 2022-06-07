@@ -1,8 +1,8 @@
-# Install script for directory: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_localization
+# Install script for directory: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_localization
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/miguelito/workspace/navegation-warehouse/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/user/workspace/navegation-warehouse/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_localization/catkin_generated/installspace/neo_localization.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_localization/catkin_generated/installspace/neo_localization.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_localization/cmake" TYPE FILE FILES
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_localization/catkin_generated/installspace/neo_localizationConfig.cmake"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_localization/catkin_generated/installspace/neo_localizationConfig-version.cmake"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_localization/catkin_generated/installspace/neo_localizationConfig.cmake"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_localization/catkin_generated/installspace/neo_localizationConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_localization" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_localization/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_localization" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_localization/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,12 +59,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/neo_localization/neo_localization_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/neo_localization" TYPE EXECUTABLE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/neo_localization/neo_localization_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/neo_localization" TYPE EXECUTABLE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/neo_localization/neo_localization_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/neo_localization/neo_localization_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/neo_localization/neo_localization_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/neo_localization/neo_localization_node"
-         OLD_RPATH "/opt/ros/noetic/lib:"
+         OLD_RPATH "/home/simulations/public_sim_ws/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/neo_localization/neo_localization_node")
@@ -73,6 +73,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/neo_localization" TYPE DIRECTORY FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_localization/include/neo_localization/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/neo_localization" TYPE DIRECTORY FILES "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_localization/include/neo_localization/")
 endif()
 

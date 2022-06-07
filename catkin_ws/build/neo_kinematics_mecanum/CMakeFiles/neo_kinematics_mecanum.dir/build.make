@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/build
+CMAKE_BINARY_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/build
 
 # Include any dependencies generated for this target.
 include neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/depend.make
@@ -58,17 +58,17 @@ include neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/progress.ma
 include neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/flags.make
 
 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.o: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/flags.make
-neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.o: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/src/Mecanum4WKinematics.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.o"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.o -c /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/src/Mecanum4WKinematics.cpp
+neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.o: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/src/Mecanum4WKinematics.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.o"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.o -c /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/src/Mecanum4WKinematics.cpp
 
 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.i"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/src/Mecanum4WKinematics.cpp > CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.i
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/src/Mecanum4WKinematics.cpp > CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.i
 
 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.s"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/src/Mecanum4WKinematics.cpp -o CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.s
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/src/Mecanum4WKinematics.cpp -o CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.s
 
 # Object files for target neo_kinematics_mecanum
 neo_kinematics_mecanum_OBJECTS = \
@@ -77,22 +77,22 @@ neo_kinematics_mecanum_OBJECTS = \
 # External object files for target neo_kinematics_mecanum
 neo_kinematics_mecanum_EXTERNAL_OBJECTS =
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/libneo_kinematics_mecanum.so: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.o
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/libneo_kinematics_mecanum.so: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build.make
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/libneo_kinematics_mecanum.so: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/libneo_kinematics_mecanum.so"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neo_kinematics_mecanum.dir/link.txt --verbose=$(VERBOSE)
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/libneo_kinematics_mecanum.so: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.o
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/libneo_kinematics_mecanum.so: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build.make
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/libneo_kinematics_mecanum.so: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/libneo_kinematics_mecanum.so"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neo_kinematics_mecanum.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/libneo_kinematics_mecanum.so
+neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/libneo_kinematics_mecanum.so
 
 .PHONY : neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build
 
 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/clean:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum && $(CMAKE_COMMAND) -P CMakeFiles/neo_kinematics_mecanum.dir/cmake_clean.cmake
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum && $(CMAKE_COMMAND) -P CMakeFiles/neo_kinematics_mecanum.dir/cmake_clean.cmake
 .PHONY : neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/clean
 
 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/depend:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/miguelito/workspace/navegation-warehouse/catkin_ws/src /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum /home/miguelito/workspace/navegation-warehouse/catkin_ws/build /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/workspace/navegation-warehouse/catkin_ws/src /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum /home/user/workspace/navegation-warehouse/catkin_ws/build /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/depend
 

@@ -1,4 +1,4 @@
-prefix=/home/miguelito/workspace/navegation-warehouse/catkin_ws/install
+prefix=/home/user/workspace/navegation-warehouse/catkin_ws/install
 
 Name: neo_srvs
 Description: Description of neo_srvs

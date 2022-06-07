@@ -1,8 +1,8 @@
-# Install script for directory: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_common
+# Install script for directory: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_common
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/miguelito/workspace/navegation-warehouse/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/user/workspace/navegation-warehouse/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_common/catkin_generated/installspace/neo_common.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_common/catkin_generated/installspace/neo_common.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_common/cmake" TYPE FILE FILES
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_common/catkin_generated/installspace/neo_commonConfig.cmake"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_common/catkin_generated/installspace/neo_commonConfig-version.cmake"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_common/catkin_generated/installspace/neo_commonConfig.cmake"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_common/catkin_generated/installspace/neo_commonConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_common" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_common/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_common" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_common/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/neo_common" TYPE DIRECTORY FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_common/include/neo_common/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/neo_common" TYPE DIRECTORY FILES "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_common/include/neo_common/")
 endif()
 

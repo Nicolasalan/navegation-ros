@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_localization/src/neo_localization_node.cpp" "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_localization/CMakeFiles/neo_localization_node.dir/src/neo_localization_node.cpp.o"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_localization/src/neo_localization_node.cpp" "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_localization/CMakeFiles/neo_localization_node.dir/src/neo_localization_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,8 +17,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_localization/include"
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_common/include"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_localization/include"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_common/include"
+  "/home/simulations/public_sim_ws/devel/include"
+  "/home/simulations/public_sim_ws/src/all/actionlib/actionlib/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

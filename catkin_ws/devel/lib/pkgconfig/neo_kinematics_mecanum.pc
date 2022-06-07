@@ -1,8 +1,8 @@
-prefix=/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel
+prefix=/home/user/workspace/navegation-warehouse/catkin_ws/devel
 
 Name: neo_kinematics_mecanum
 Description: Description of neo_kinematics_mecanum
 Version: 0.1.1
-Cflags: -I/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include
+Cflags: -I/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include
 Libs: -L${prefix}/lib -lneo_kinematics_mecanum
 Requires: std_msgs tf nav_msgs sensor_msgs

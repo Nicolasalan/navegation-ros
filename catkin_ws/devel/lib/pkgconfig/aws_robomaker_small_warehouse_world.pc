@@ -1,4 +1,4 @@
-prefix=/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel
+prefix=/home/user/workspace/navegation-warehouse/catkin_ws/devel
 
 Name: aws_robomaker_small_warehouse_world
 Description: Description of aws_robomaker_small_warehouse_world

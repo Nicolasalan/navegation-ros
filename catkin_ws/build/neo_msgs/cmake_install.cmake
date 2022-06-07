@@ -1,8 +1,8 @@
-# Install script for directory: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs
+# Install script for directory: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/miguelito/workspace/navegation-warehouse/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/user/workspace/navegation-warehouse/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,60 +39,60 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_msgs/msg" TYPE FILE FILES
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_msgs/cmake" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_msgs/catkin_generated/installspace/neo_msgs-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_msgs/cmake" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_msgs/catkin_generated/installspace/neo_msgs-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/include/neo_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/user/workspace/navegation-warehouse/catkin_ws/devel/include/neo_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/roseus/ros/neo_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/roseus/ros/neo_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/common-lisp/ros/neo_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/common-lisp/ros/neo_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_msgs")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_msgs/catkin_generated/installspace/neo_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_msgs/catkin_generated/installspace/neo_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_msgs/cmake" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_msgs/catkin_generated/installspace/neo_msgs-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_msgs/cmake" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_msgs/catkin_generated/installspace/neo_msgs-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_msgs/cmake" TYPE FILE FILES
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_msgs/catkin_generated/installspace/neo_msgsConfig.cmake"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_msgs/catkin_generated/installspace/neo_msgsConfig-version.cmake"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_msgs/catkin_generated/installspace/neo_msgsConfig.cmake"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_msgs/catkin_generated/installspace/neo_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_msgs" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_msgs" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/package.xml")
 endif()
 

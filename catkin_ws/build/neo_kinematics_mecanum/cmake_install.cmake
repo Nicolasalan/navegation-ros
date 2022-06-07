@@ -1,8 +1,8 @@
-# Install script for directory: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum
+# Install script for directory: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/miguelito/workspace/navegation-warehouse/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/user/workspace/navegation-warehouse/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum/catkin_generated/installspace/neo_kinematics_mecanum.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum/catkin_generated/installspace/neo_kinematics_mecanum.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_kinematics_mecanum/cmake" TYPE FILE FILES
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum/catkin_generated/installspace/neo_kinematics_mecanumConfig.cmake"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum/catkin_generated/installspace/neo_kinematics_mecanumConfig-version.cmake"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum/catkin_generated/installspace/neo_kinematics_mecanumConfig.cmake"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum/catkin_generated/installspace/neo_kinematics_mecanumConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_kinematics_mecanum" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_kinematics_mecanum" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/package.xml")
 endif()
 

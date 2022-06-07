@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/build
+CMAKE_BINARY_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum/CMakeFiles/progress.marks
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles 0
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum/CMakeFiles/progress.marks
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/clean
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/preinstall
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/preinstall
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
 .PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ nav_msgs_generate_messages_eus: neo_kinematics_mecanum/CMakeFiles/nav_msgs_gener
 
 # fast build rule for target.
 nav_msgs_generate_messages_eus/fast:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
 .PHONY : nav_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 .PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ nav_msgs_generate_messages_cpp: neo_kinematics_mecanum/CMakeFiles/nav_msgs_gener
 
 # fast build rule for target.
 nav_msgs_generate_messages_cpp/fast:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
 .PHONY : nav_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
 .PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ nav_msgs_generate_messages_lisp: neo_kinematics_mecanum/CMakeFiles/nav_msgs_gene
 
 # fast build rule for target.
 nav_msgs_generate_messages_lisp/fast:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
 .PHONY : nav_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
 .PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ nav_msgs_generate_messages_nodejs: neo_kinematics_mecanum/CMakeFiles/nav_msgs_ge
 
 # fast build rule for target.
 nav_msgs_generate_messages_nodejs/fast:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
 .PHONY : nav_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/rule:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/rule
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/rule
 .PHONY : neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ neo_kinematics_mecanum: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum
 
 # fast build rule for target.
 neo_kinematics_mecanum/fast:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build
 .PHONY : neo_kinematics_mecanum/fast
 
 # Convenience name for target.
 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/rule:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/rule
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/rule
 .PHONY : neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ neo_kinematics_mecanum_node: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_me
 
 # fast build rule for target.
 neo_kinematics_mecanum_node/fast:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/build
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/build
 .PHONY : neo_kinematics_mecanum_node/fast
 
 # Convenience name for target.
 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/rule:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/rule
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/rule
 .PHONY : neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ neo_kinematics_mecanum_sim_node: neo_kinematics_mecanum/CMakeFiles/neo_kinematic
 
 # fast build rule for target.
 neo_kinematics_mecanum_sim_node/fast:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build
 .PHONY : neo_kinematics_mecanum_sim_node/fast
 
 # Convenience name for target.
 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
 .PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -284,7 +284,7 @@ nav_msgs_generate_messages_py: neo_kinematics_mecanum/CMakeFiles/nav_msgs_genera
 
 # fast build rule for target.
 nav_msgs_generate_messages_py/fast:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/build
 .PHONY : nav_msgs_generate_messages_py/fast
 
 common/src/Mecanum4WKinematics.o: common/src/Mecanum4WKinematics.cpp.o
@@ -293,7 +293,7 @@ common/src/Mecanum4WKinematics.o: common/src/Mecanum4WKinematics.cpp.o
 
 # target to build an object file
 common/src/Mecanum4WKinematics.cpp.o:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.o
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.o
 .PHONY : common/src/Mecanum4WKinematics.cpp.o
 
 common/src/Mecanum4WKinematics.i: common/src/Mecanum4WKinematics.cpp.i
@@ -302,7 +302,7 @@ common/src/Mecanum4WKinematics.i: common/src/Mecanum4WKinematics.cpp.i
 
 # target to preprocess a source file
 common/src/Mecanum4WKinematics.cpp.i:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.i
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.i
 .PHONY : common/src/Mecanum4WKinematics.cpp.i
 
 common/src/Mecanum4WKinematics.s: common/src/Mecanum4WKinematics.cpp.s
@@ -311,7 +311,7 @@ common/src/Mecanum4WKinematics.s: common/src/Mecanum4WKinematics.cpp.s
 
 # target to generate assembly for a file
 common/src/Mecanum4WKinematics.cpp.s:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.s
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/common/src/Mecanum4WKinematics.cpp.s
 .PHONY : common/src/Mecanum4WKinematics.cpp.s
 
 ros/src/neo_kinematics_mecanum_node.o: ros/src/neo_kinematics_mecanum_node.cpp.o
@@ -320,7 +320,7 @@ ros/src/neo_kinematics_mecanum_node.o: ros/src/neo_kinematics_mecanum_node.cpp.o
 
 # target to build an object file
 ros/src/neo_kinematics_mecanum_node.cpp.o:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/ros/src/neo_kinematics_mecanum_node.cpp.o
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/ros/src/neo_kinematics_mecanum_node.cpp.o
 .PHONY : ros/src/neo_kinematics_mecanum_node.cpp.o
 
 ros/src/neo_kinematics_mecanum_node.i: ros/src/neo_kinematics_mecanum_node.cpp.i
@@ -329,7 +329,7 @@ ros/src/neo_kinematics_mecanum_node.i: ros/src/neo_kinematics_mecanum_node.cpp.i
 
 # target to preprocess a source file
 ros/src/neo_kinematics_mecanum_node.cpp.i:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/ros/src/neo_kinematics_mecanum_node.cpp.i
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/ros/src/neo_kinematics_mecanum_node.cpp.i
 .PHONY : ros/src/neo_kinematics_mecanum_node.cpp.i
 
 ros/src/neo_kinematics_mecanum_node.s: ros/src/neo_kinematics_mecanum_node.cpp.s
@@ -338,7 +338,7 @@ ros/src/neo_kinematics_mecanum_node.s: ros/src/neo_kinematics_mecanum_node.cpp.s
 
 # target to generate assembly for a file
 ros/src/neo_kinematics_mecanum_node.cpp.s:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/ros/src/neo_kinematics_mecanum_node.cpp.s
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/ros/src/neo_kinematics_mecanum_node.cpp.s
 .PHONY : ros/src/neo_kinematics_mecanum_node.cpp.s
 
 ros/src/neo_kinematics_mecanum_sim_node.o: ros/src/neo_kinematics_mecanum_sim_node.cpp.o
@@ -347,7 +347,7 @@ ros/src/neo_kinematics_mecanum_sim_node.o: ros/src/neo_kinematics_mecanum_sim_no
 
 # target to build an object file
 ros/src/neo_kinematics_mecanum_sim_node.cpp.o:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/ros/src/neo_kinematics_mecanum_sim_node.cpp.o
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/ros/src/neo_kinematics_mecanum_sim_node.cpp.o
 .PHONY : ros/src/neo_kinematics_mecanum_sim_node.cpp.o
 
 ros/src/neo_kinematics_mecanum_sim_node.i: ros/src/neo_kinematics_mecanum_sim_node.cpp.i
@@ -356,7 +356,7 @@ ros/src/neo_kinematics_mecanum_sim_node.i: ros/src/neo_kinematics_mecanum_sim_no
 
 # target to preprocess a source file
 ros/src/neo_kinematics_mecanum_sim_node.cpp.i:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/ros/src/neo_kinematics_mecanum_sim_node.cpp.i
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/ros/src/neo_kinematics_mecanum_sim_node.cpp.i
 .PHONY : ros/src/neo_kinematics_mecanum_sim_node.cpp.i
 
 ros/src/neo_kinematics_mecanum_sim_node.s: ros/src/neo_kinematics_mecanum_sim_node.cpp.s
@@ -365,7 +365,7 @@ ros/src/neo_kinematics_mecanum_sim_node.s: ros/src/neo_kinematics_mecanum_sim_no
 
 # target to generate assembly for a file
 ros/src/neo_kinematics_mecanum_sim_node.cpp.s:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/ros/src/neo_kinematics_mecanum_sim_node.cpp.s
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/ros/src/neo_kinematics_mecanum_sim_node.cpp.s
 .PHONY : ros/src/neo_kinematics_mecanum_sim_node.cpp.s
 
 # Help Target
@@ -409,6 +409,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

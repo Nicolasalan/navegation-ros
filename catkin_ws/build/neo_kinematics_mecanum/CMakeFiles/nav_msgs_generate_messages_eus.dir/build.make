@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/build
+CMAKE_BINARY_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/build
 
 # Utility rule file for nav_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/build: nav_
 .PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
 
 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/clean:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum && $(CMAKE_COMMAND) -P CMakeFiles/nav_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum && $(CMAKE_COMMAND) -P CMakeFiles/nav_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/clean
 
 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/depend:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/miguelito/workspace/navegation-warehouse/catkin_ws/src /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum /home/miguelito/workspace/navegation-warehouse/catkin_ws/build /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/workspace/navegation-warehouse/catkin_ws/src /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum /home/user/workspace/navegation-warehouse/catkin_ws/build /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/depend
 

@@ -7,7 +7,8 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel:$CMAKE_PREFIX_PATH"
-export PWD='/home/miguelito/workspace/navegation-warehouse/catkin_ws/build'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/miguelito/workspace/navegation-warehouse/catkin_ws/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH='/home/user/workspace/navegation-warehouse/catkin_ws/devel:/home/user/simulation_ws/devel:/home/simulations/public_sim_ws/devel:/opt/ros/noetic'
+export LD_LIBRARY_PATH='/home/user/simulation_ws/devel/lib:/home/simulations/public_sim_ws/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'
+export PWD='/home/user/workspace/navegation-warehouse/catkin_ws/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/common-lisp:/home/user/simulation_ws/devel/share/common-lisp:/home/simulations/public_sim_ws/devel/share/common-lisp'
+export ROS_PACKAGE_PATH='/home/user/workspace/navegation-warehouse/catkin_ws/src:/home/user/simulation_ws/src:/home/simulations/public_sim_ws/src:/opt/ros/noetic/share'

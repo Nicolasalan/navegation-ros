@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/build
+CMAKE_BINARY_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_localization/CMakeFiles/progress.marks
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_localization/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles 0
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_localization/CMakeFiles/progress.marks
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_localization/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_localization/clean
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_localization/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_localization/preinstall
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_localization/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_localization/preinstall
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_localization/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 neo_localization/CMakeFiles/neo_localization_node.dir/rule:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_localization/CMakeFiles/neo_localization_node.dir/rule
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_localization/CMakeFiles/neo_localization_node.dir/rule
 .PHONY : neo_localization/CMakeFiles/neo_localization_node.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ neo_localization_node: neo_localization/CMakeFiles/neo_localization_node.dir/rul
 
 # fast build rule for target.
 neo_localization_node/fast:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_localization/CMakeFiles/neo_localization_node.dir/build.make neo_localization/CMakeFiles/neo_localization_node.dir/build
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_localization/CMakeFiles/neo_localization_node.dir/build.make neo_localization/CMakeFiles/neo_localization_node.dir/build
 .PHONY : neo_localization_node/fast
 
 src/neo_localization_node.o: src/neo_localization_node.cpp.o
@@ -188,7 +188,7 @@ src/neo_localization_node.o: src/neo_localization_node.cpp.o
 
 # target to build an object file
 src/neo_localization_node.cpp.o:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_localization/CMakeFiles/neo_localization_node.dir/build.make neo_localization/CMakeFiles/neo_localization_node.dir/src/neo_localization_node.cpp.o
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_localization/CMakeFiles/neo_localization_node.dir/build.make neo_localization/CMakeFiles/neo_localization_node.dir/src/neo_localization_node.cpp.o
 .PHONY : src/neo_localization_node.cpp.o
 
 src/neo_localization_node.i: src/neo_localization_node.cpp.i
@@ -197,7 +197,7 @@ src/neo_localization_node.i: src/neo_localization_node.cpp.i
 
 # target to preprocess a source file
 src/neo_localization_node.cpp.i:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_localization/CMakeFiles/neo_localization_node.dir/build.make neo_localization/CMakeFiles/neo_localization_node.dir/src/neo_localization_node.cpp.i
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_localization/CMakeFiles/neo_localization_node.dir/build.make neo_localization/CMakeFiles/neo_localization_node.dir/src/neo_localization_node.cpp.i
 .PHONY : src/neo_localization_node.cpp.i
 
 src/neo_localization_node.s: src/neo_localization_node.cpp.s
@@ -206,7 +206,7 @@ src/neo_localization_node.s: src/neo_localization_node.cpp.s
 
 # target to generate assembly for a file
 src/neo_localization_node.cpp.s:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_localization/CMakeFiles/neo_localization_node.dir/build.make neo_localization/CMakeFiles/neo_localization_node.dir/src/neo_localization_node.cpp.s
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_localization/CMakeFiles/neo_localization_node.dir/build.make neo_localization/CMakeFiles/neo_localization_node.dir/src/neo_localization_node.cpp.s
 .PHONY : src/neo_localization_node.cpp.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world
+# Install script for directory: /home/user/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/miguelito/workspace/navegation-warehouse/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/user/workspace/navegation-warehouse/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,27 +38,27 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/aws-robomaker-small-warehouse-world/catkin_generated/installspace/aws_robomaker_small_warehouse_world.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/build/aws-robomaker-small-warehouse-world/catkin_generated/installspace/aws_robomaker_small_warehouse_world.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aws_robomaker_small_warehouse_world/cmake" TYPE FILE FILES
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/aws-robomaker-small-warehouse-world/catkin_generated/installspace/aws_robomaker_small_warehouse_worldConfig.cmake"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/aws-robomaker-small-warehouse-world/catkin_generated/installspace/aws_robomaker_small_warehouse_worldConfig-version.cmake"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/build/aws-robomaker-small-warehouse-world/catkin_generated/installspace/aws_robomaker_small_warehouse_worldConfig.cmake"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/build/aws-robomaker-small-warehouse-world/catkin_generated/installspace/aws_robomaker_small_warehouse_worldConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aws_robomaker_small_warehouse_world" TYPE FILE FILES "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aws_robomaker_small_warehouse_world" TYPE FILE FILES "/home/user/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aws_robomaker_small_warehouse_world" TYPE DIRECTORY FILES
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world/launch"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world/models"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world/worlds"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world/maps"
-    "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world/rviz"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world/launch"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world/models"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world/worlds"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world/maps"
+    "/home/user/workspace/navegation-warehouse/catkin_ws/src/aws-robomaker-small-warehouse-world/rviz"
     )
 endif()
 

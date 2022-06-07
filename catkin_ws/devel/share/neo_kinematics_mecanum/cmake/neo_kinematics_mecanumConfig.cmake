@@ -67,14 +67,14 @@ set(neo_kinematics_mecanum_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(neo_kinematics_mecanum_SOURCE_PREFIX /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum)
-  set(neo_kinematics_mecanum_DEVEL_PREFIX /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel)
+  set(neo_kinematics_mecanum_SOURCE_PREFIX /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum)
+  set(neo_kinematics_mecanum_DEVEL_PREFIX /home/user/workspace/navegation-warehouse/catkin_ws/devel)
   set(neo_kinematics_mecanum_INSTALL_PREFIX "")
   set(neo_kinematics_mecanum_PREFIX ${neo_kinematics_mecanum_DEVEL_PREFIX})
 else()
   set(neo_kinematics_mecanum_SOURCE_PREFIX "")
   set(neo_kinematics_mecanum_DEVEL_PREFIX "")
-  set(neo_kinematics_mecanum_INSTALL_PREFIX /home/miguelito/workspace/navegation-warehouse/catkin_ws/install)
+  set(neo_kinematics_mecanum_INSTALL_PREFIX /home/user/workspace/navegation-warehouse/catkin_ws/install)
   set(neo_kinematics_mecanum_PREFIX ${neo_kinematics_mecanum_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(neo_kinematics_mecanum_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include " STREQUAL " ")
+if(NOT "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include " STREQUAL " ")
   set(neo_kinematics_mecanum_INCLUDE_DIRS "")
-  set(_include_dirs "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include")
+  set(_include_dirs "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://www.neobotix-robots.com " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinemat
         message(FATAL_ERROR "Project 'neo_kinematics_mecanum' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'neo_kinematics_mecanum' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'neo_kinematics_mecanum' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/${idir}'.  ${_report}")
     endif()
     _list_append_unique(neo_kinematics_mecanum_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib;/home/miguelito/ros_workspace/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib;/home/user/simulation_ws/devel/lib;/home/simulations/public_sim_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/build
+CMAKE_BINARY_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/build
 
 # Utility rule file for neo_srvs_genpy.
 
@@ -63,10 +63,10 @@ neo_srvs/CMakeFiles/neo_srvs_genpy.dir/build: neo_srvs_genpy
 .PHONY : neo_srvs/CMakeFiles/neo_srvs_genpy.dir/build
 
 neo_srvs/CMakeFiles/neo_srvs_genpy.dir/clean:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && $(CMAKE_COMMAND) -P CMakeFiles/neo_srvs_genpy.dir/cmake_clean.cmake
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && $(CMAKE_COMMAND) -P CMakeFiles/neo_srvs_genpy.dir/cmake_clean.cmake
 .PHONY : neo_srvs/CMakeFiles/neo_srvs_genpy.dir/clean
 
 neo_srvs/CMakeFiles/neo_srvs_genpy.dir/depend:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/miguelito/workspace/navegation-warehouse/catkin_ws/src /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs /home/miguelito/workspace/navegation-warehouse/catkin_ws/build /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs/CMakeFiles/neo_srvs_genpy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/workspace/navegation-warehouse/catkin_ws/src /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs /home/user/workspace/navegation-warehouse/catkin_ws/build /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs/CMakeFiles/neo_srvs_genpy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : neo_srvs/CMakeFiles/neo_srvs_genpy.dir/depend
 

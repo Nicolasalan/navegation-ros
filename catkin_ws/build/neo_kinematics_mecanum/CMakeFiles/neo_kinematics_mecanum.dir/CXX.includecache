@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include/Kinematics.h
+/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include/Kinematics.h
 geometry_msgs/Twist.h
 -
 sensor_msgs/JointState.h
@@ -18,9 +18,9 @@ nav_msgs/Odometry.h
 tf/transform_broadcaster.h
 -
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include/MecanumKinematics.h
+/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include/MecanumKinematics.h
 Kinematics.h
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include/Kinematics.h
+/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include/Kinematics.h
 geometry_msgs/Twist.h
 -
 sensor_msgs/JointState.h
@@ -32,9 +32,9 @@ trajectory_msgs/JointTrajectoryPoint.h
 nav_msgs/Odometry.h
 -
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/src/Mecanum4WKinematics.cpp
+/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/src/Mecanum4WKinematics.cpp
 ../include/MecanumKinematics.h
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include/MecanumKinematics.h
+/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_kinematics_mecanum/common/include/MecanumKinematics.h
 geometry_msgs/Vector3.h
 -
 

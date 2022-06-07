@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/neo_localization/neo_localization_node"
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/neo_localization/neo_localization_node.pdb"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/neo_localization/neo_localization_node"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/neo_localization/neo_localization_node.pdb"
   "CMakeFiles/neo_localization_node.dir/src/neo_localization_node.cpp.o"
 )
 

@@ -2,7 +2,7 @@
 
 message(STATUS "neo_msgs: 7 messages, 0 services")
 
-set(MSG_I_FLAGS "-Ineo_msgs:/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Ineo_msgs:/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,39 +17,39 @@ add_custom_target(neo_msgs_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" NAME_WE)
 add_custom_target(_neo_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" NAME_WE)
 add_custom_target(_neo_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" NAME_WE)
 add_custom_target(_neo_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" NAME_WE)
 add_custom_target(_neo_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" NAME_WE)
 add_custom_target(_neo_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" NAME_WE)
 add_custom_target(_neo_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" NAME_WE)
 add_custom_target(_neo_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "neo_msgs" "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" "std_msgs/Header"
 )
 
 #
@@ -59,43 +59,43 @@ add_custom_target(_neo_msgs_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_cpp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_cpp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_cpp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_cpp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_cpp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_cpp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/neo_msgs
@@ -115,19 +115,19 @@ add_custom_target(neo_msgs_generate_messages_cpp
 add_dependencies(neo_msgs_generate_messages neo_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_cpp _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_cpp _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_cpp _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_cpp _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_cpp _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_cpp _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_cpp _neo_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -140,43 +140,43 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS neo_msgs_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_eus(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_eus(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_eus(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_eus(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_eus(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_eus(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/neo_msgs
@@ -196,19 +196,19 @@ add_custom_target(neo_msgs_generate_messages_eus
 add_dependencies(neo_msgs_generate_messages neo_msgs_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_eus _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_eus _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_eus _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_eus _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_eus _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_eus _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_eus _neo_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -221,43 +221,43 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS neo_msgs_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_lisp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_lisp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_lisp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_lisp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_lisp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_lisp(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/neo_msgs
@@ -277,19 +277,19 @@ add_custom_target(neo_msgs_generate_messages_lisp
 add_dependencies(neo_msgs_generate_messages neo_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_lisp _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_lisp _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_lisp _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_lisp _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_lisp _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_lisp _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_lisp _neo_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -302,43 +302,43 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS neo_msgs_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_nodejs(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_nodejs(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_nodejs(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_nodejs(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_nodejs(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_nodejs(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/neo_msgs
@@ -358,19 +358,19 @@ add_custom_target(neo_msgs_generate_messages_nodejs
 add_dependencies(neo_msgs_generate_messages neo_msgs_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_nodejs _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_nodejs _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_nodejs _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_nodejs _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_nodejs _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_nodejs _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_nodejs _neo_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -383,43 +383,43 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS neo_msgs_generate_messages_nodejs)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_py(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_py(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_py(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_py(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_py(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/neo_msgs
 )
 _generate_msg_py(neo_msgs
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/neo_msgs
@@ -439,19 +439,19 @@ add_custom_target(neo_msgs_generate_messages_py
 add_dependencies(neo_msgs_generate_messages neo_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/EmergencyStopState.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_py _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/Keypad.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_py _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/LCDOutput.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_py _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoard.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_py _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/USBoardV2.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_py _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/RelayBoardV2.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_py _neo_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" NAME_WE)
+get_filename_component(_filename "/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_msgs/msg/IOBoard.msg" NAME_WE)
 add_dependencies(neo_msgs_generate_messages_py _neo_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

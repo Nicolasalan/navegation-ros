@@ -43,97 +43,97 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/miguelito/workspace/navegation-warehouse/catkin_ws/build
+CMAKE_BINARY_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/build
 
 # Utility rule file for neo_srvs_generate_messages_py.
 
 # Include the progress variables for this target.
 include neo_srvs/CMakeFiles/neo_srvs_generate_messages_py.dir/progress.make
 
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetRelay.py
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_IOBoardSetDigOut.py
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetLCDMsg.py
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_LockPlatform.py
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_UnlockPlatform.py
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ResetOmniWheels.py
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetEMStop.py
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardUnSetEMStop.py
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ActivateMotors.py
-neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetRelay.py
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_IOBoardSetDigOut.py
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetLCDMsg.py
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_LockPlatform.py
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_UnlockPlatform.py
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ResetOmniWheels.py
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetEMStop.py
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardUnSetEMStop.py
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ActivateMotors.py
+neo_srvs/CMakeFiles/neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py
 
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetRelay.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetRelay.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetRelay.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV neo_srvs/RelayBoardSetRelay"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetRelay.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetRelay.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetRelay.py: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetRelay.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV neo_srvs/RelayBoardSetRelay"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetRelay.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_IOBoardSetDigOut.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_IOBoardSetDigOut.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/IOBoardSetDigOut.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV neo_srvs/IOBoardSetDigOut"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/IOBoardSetDigOut.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_IOBoardSetDigOut.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_IOBoardSetDigOut.py: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/IOBoardSetDigOut.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV neo_srvs/IOBoardSetDigOut"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/IOBoardSetDigOut.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetLCDMsg.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetLCDMsg.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetLCDMsg.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV neo_srvs/RelayBoardSetLCDMsg"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetLCDMsg.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetLCDMsg.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetLCDMsg.py: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetLCDMsg.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV neo_srvs/RelayBoardSetLCDMsg"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetLCDMsg.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_LockPlatform.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_LockPlatform.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/LockPlatform.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV neo_srvs/LockPlatform"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/LockPlatform.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_LockPlatform.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_LockPlatform.py: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/LockPlatform.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV neo_srvs/LockPlatform"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/LockPlatform.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_UnlockPlatform.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_UnlockPlatform.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/UnlockPlatform.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV neo_srvs/UnlockPlatform"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/UnlockPlatform.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_UnlockPlatform.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_UnlockPlatform.py: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/UnlockPlatform.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV neo_srvs/UnlockPlatform"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/UnlockPlatform.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ResetOmniWheels.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ResetOmniWheels.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ResetOmniWheels.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python code from SRV neo_srvs/ResetOmniWheels"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ResetOmniWheels.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ResetOmniWheels.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ResetOmniWheels.py: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ResetOmniWheels.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python code from SRV neo_srvs/ResetOmniWheels"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ResetOmniWheels.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetEMStop.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetEMStop.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetEMStop.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python code from SRV neo_srvs/RelayBoardSetEMStop"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetEMStop.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetEMStop.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetEMStop.py: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetEMStop.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python code from SRV neo_srvs/RelayBoardSetEMStop"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardSetEMStop.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardUnSetEMStop.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardUnSetEMStop.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardUnSetEMStop.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python code from SRV neo_srvs/RelayBoardUnSetEMStop"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardUnSetEMStop.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardUnSetEMStop.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardUnSetEMStop.py: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardUnSetEMStop.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python code from SRV neo_srvs/RelayBoardUnSetEMStop"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/RelayBoardUnSetEMStop.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ActivateMotors.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ActivateMotors.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ActivateMotors.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Python code from SRV neo_srvs/ActivateMotors"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ActivateMotors.srv -p neo_srvs -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ActivateMotors.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ActivateMotors.py: /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ActivateMotors.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Python code from SRV neo_srvs/ActivateMotors"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs/srv/ActivateMotors.srv -p neo_srvs -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetRelay.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_IOBoardSetDigOut.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetLCDMsg.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_LockPlatform.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_UnlockPlatform.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ResetOmniWheels.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetEMStop.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardUnSetEMStop.py
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ActivateMotors.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/miguelito/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Python srv __init__.py for neo_srvs"
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv --initpy
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetRelay.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_IOBoardSetDigOut.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetLCDMsg.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_LockPlatform.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_UnlockPlatform.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ResetOmniWheels.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetEMStop.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardUnSetEMStop.py
+/home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ActivateMotors.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/navegation-warehouse/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Python srv __init__.py for neo_srvs"
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv --initpy
 
 neo_srvs_generate_messages_py: neo_srvs/CMakeFiles/neo_srvs_generate_messages_py
-neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetRelay.py
-neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_IOBoardSetDigOut.py
-neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetLCDMsg.py
-neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_LockPlatform.py
-neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_UnlockPlatform.py
-neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ResetOmniWheels.py
-neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetEMStop.py
-neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardUnSetEMStop.py
-neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ActivateMotors.py
-neo_srvs_generate_messages_py: /home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py
+neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetRelay.py
+neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_IOBoardSetDigOut.py
+neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetLCDMsg.py
+neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_LockPlatform.py
+neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_UnlockPlatform.py
+neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ResetOmniWheels.py
+neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardSetEMStop.py
+neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_RelayBoardUnSetEMStop.py
+neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/_ActivateMotors.py
+neo_srvs_generate_messages_py: /home/user/workspace/navegation-warehouse/catkin_ws/devel/lib/python3/dist-packages/neo_srvs/srv/__init__.py
 neo_srvs_generate_messages_py: neo_srvs/CMakeFiles/neo_srvs_generate_messages_py.dir/build.make
 
 .PHONY : neo_srvs_generate_messages_py
@@ -144,10 +144,10 @@ neo_srvs/CMakeFiles/neo_srvs_generate_messages_py.dir/build: neo_srvs_generate_m
 .PHONY : neo_srvs/CMakeFiles/neo_srvs_generate_messages_py.dir/build
 
 neo_srvs/CMakeFiles/neo_srvs_generate_messages_py.dir/clean:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && $(CMAKE_COMMAND) -P CMakeFiles/neo_srvs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs && $(CMAKE_COMMAND) -P CMakeFiles/neo_srvs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : neo_srvs/CMakeFiles/neo_srvs_generate_messages_py.dir/clean
 
 neo_srvs/CMakeFiles/neo_srvs_generate_messages_py.dir/depend:
-	cd /home/miguelito/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/miguelito/workspace/navegation-warehouse/catkin_ws/src /home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_srvs /home/miguelito/workspace/navegation-warehouse/catkin_ws/build /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs /home/miguelito/workspace/navegation-warehouse/catkin_ws/build/neo_srvs/CMakeFiles/neo_srvs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/workspace/navegation-warehouse/catkin_ws/src /home/user/workspace/navegation-warehouse/catkin_ws/src/neo_srvs /home/user/workspace/navegation-warehouse/catkin_ws/build /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs /home/user/workspace/navegation-warehouse/catkin_ws/build/neo_srvs/CMakeFiles/neo_srvs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : neo_srvs/CMakeFiles/neo_srvs_generate_messages_py.dir/depend
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_common/include/neo_common/Matrix.h
+/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_common/include/neo_common/Matrix.h
 cmath
 -
 cstdint
@@ -20,7 +20,7 @@ stdexcept
 initializer_list
 -
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_localization/include/neo_localization/Convert.h
+/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_localization/include/neo_localization/Convert.h
 neo_localization/GridMap.h
 -
 ros/ros.h
@@ -30,7 +30,7 @@ tf/transform_datatypes.h
 nav_msgs/OccupancyGrid.h
 -
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_localization/include/neo_localization/GridMap.h
+/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_localization/include/neo_localization/GridMap.h
 math.h
 -
 stdint.h
@@ -44,7 +44,7 @@ memory
 vector
 -
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_localization/include/neo_localization/Solver.h
+/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_localization/include/neo_localization/Solver.h
 neo_common/Matrix.h
 -
 neo_localization/Util.h
@@ -54,13 +54,13 @@ neo_localization/GridMap.h
 vector
 -
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_localization/include/neo_localization/Util.h
+/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_localization/include/neo_localization/Util.h
 neo_common/Matrix.h
 -
 vector
 -
 
-/home/miguelito/workspace/navegation-warehouse/catkin_ws/src/neo_localization/src/neo_localization_node.cpp
+/home/user/workspace/navegation-warehouse/catkin_ws/src/neo_localization/src/neo_localization_node.cpp
 neo_localization/Util.h
 -
 neo_localization/Convert.h

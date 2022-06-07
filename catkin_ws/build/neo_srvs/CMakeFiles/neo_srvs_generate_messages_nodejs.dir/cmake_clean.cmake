@@ -1,13 +1,13 @@
 file(REMOVE_RECURSE
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/ActivateMotors.js"
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/IOBoardSetDigOut.js"
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/LockPlatform.js"
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/RelayBoardSetEMStop.js"
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/RelayBoardSetLCDMsg.js"
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/RelayBoardSetRelay.js"
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/RelayBoardUnSetEMStop.js"
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/ResetOmniWheels.js"
-  "/home/miguelito/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/UnlockPlatform.js"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/ActivateMotors.js"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/IOBoardSetDigOut.js"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/LockPlatform.js"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/RelayBoardSetEMStop.js"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/RelayBoardSetLCDMsg.js"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/RelayBoardSetRelay.js"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/RelayBoardUnSetEMStop.js"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/ResetOmniWheels.js"
+  "/home/user/workspace/navegation-warehouse/catkin_ws/devel/share/gennodejs/ros/neo_srvs/srv/UnlockPlatform.js"
   "CMakeFiles/neo_srvs_generate_messages_nodejs"
 )
 
