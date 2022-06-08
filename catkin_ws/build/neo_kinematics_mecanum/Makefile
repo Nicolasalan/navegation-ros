@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/user/workspace/navegation-warehouse/catkin_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -80,27 +68,27 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
-.PHONY : test/fast
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -113,27 +101,39 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : list_install_components/fast
+.PHONY : edit_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,79 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-.PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/rule:
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/rule
+.PHONY : neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/rule
 
 # Convenience name for target.
-nav_msgs_generate_messages_eus: neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+neo_kinematics_mecanum_sim_node: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/rule
 
-.PHONY : nav_msgs_generate_messages_eus
+.PHONY : neo_kinematics_mecanum_sim_node
 
 # fast build rule for target.
-nav_msgs_generate_messages_eus/fast:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
-.PHONY : nav_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_cpp: neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nav_msgs_generate_messages_cpp/fast:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-.PHONY : nav_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-.PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_lisp: neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_lisp
-
-# fast build rule for target.
-nav_msgs_generate_messages_lisp/fast:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-.PHONY : nav_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-.PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_nodejs: neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : nav_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-nav_msgs_generate_messages_nodejs/fast:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
-.PHONY : nav_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/rule:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/rule
-.PHONY : neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/rule
-
-# Convenience name for target.
-neo_kinematics_mecanum: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/rule
-
-.PHONY : neo_kinematics_mecanum
-
-# fast build rule for target.
-neo_kinematics_mecanum/fast:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build
-.PHONY : neo_kinematics_mecanum/fast
+neo_kinematics_mecanum_sim_node/fast:
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build
+.PHONY : neo_kinematics_mecanum_sim_node/fast
 
 # Convenience name for target.
 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_node.dir/rule:
@@ -258,34 +198,19 @@ neo_kinematics_mecanum_node/fast:
 .PHONY : neo_kinematics_mecanum_node/fast
 
 # Convenience name for target.
-neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/rule:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/rule
-.PHONY : neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/rule
+neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/rule:
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/rule
+.PHONY : neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/rule
 
 # Convenience name for target.
-neo_kinematics_mecanum_sim_node: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/rule
+neo_kinematics_mecanum: neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/rule
 
-.PHONY : neo_kinematics_mecanum_sim_node
+.PHONY : neo_kinematics_mecanum
 
 # fast build rule for target.
-neo_kinematics_mecanum_sim_node/fast:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum_sim_node.dir/build
-.PHONY : neo_kinematics_mecanum_sim_node/fast
-
-# Convenience name for target.
-neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_py: neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-.PHONY : nav_msgs_generate_messages_py
-
-# fast build rule for target.
-nav_msgs_generate_messages_py/fast:
-	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make neo_kinematics_mecanum/CMakeFiles/nav_msgs_generate_messages_py.dir/build
-.PHONY : nav_msgs_generate_messages_py/fast
+neo_kinematics_mecanum/fast:
+	cd /home/user/workspace/navegation-warehouse/catkin_ws/build && $(MAKE) -f neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build.make neo_kinematics_mecanum/CMakeFiles/neo_kinematics_mecanum.dir/build
+.PHONY : neo_kinematics_mecanum/fast
 
 common/src/Mecanum4WKinematics.o: common/src/Mecanum4WKinematics.cpp.o
 
@@ -374,21 +299,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... nav_msgs_generate_messages_eus"
-	@echo "... nav_msgs_generate_messages_cpp"
-	@echo "... nav_msgs_generate_messages_lisp"
-	@echo "... nav_msgs_generate_messages_nodejs"
-	@echo "... neo_kinematics_mecanum"
-	@echo "... neo_kinematics_mecanum_node"
-	@echo "... neo_kinematics_mecanum_sim_node"
-	@echo "... test"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... nav_msgs_generate_messages_py"
-	@echo "... list_install_components"
 	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... install/strip"
+	@echo "... neo_kinematics_mecanum_sim_node"
+	@echo "... neo_kinematics_mecanum_node"
+	@echo "... neo_kinematics_mecanum"
 	@echo "... common/src/Mecanum4WKinematics.o"
 	@echo "... common/src/Mecanum4WKinematics.i"
 	@echo "... common/src/Mecanum4WKinematics.s"
