@@ -49,7 +49,7 @@
   #stt : 0.2
   #Odometry error in rotation as a function of rotation (theta/theta) 
 
-  linearUpdate : 0.05
+  linearUpdate : 0.05 # taxa de atualização linear
   #Process a scan each time the robot translates this far 
 
   angularUpdate : 0.02
