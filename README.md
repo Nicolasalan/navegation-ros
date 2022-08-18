@@ -7,12 +7,12 @@ Instale as seguintes dependências:
 ```
 cd navegation-warehouse
 chmod +x requirements.sh
-sudo ./requirements.sh
+./requirements.sh
 ```
 ## **Uso**
 Para inicializar o robô, execute o seguinte comando:
 ```
-cd ./catkin_ws
+cd navegation-warehouse/catkin_ws
 catkin_make
 source devel/setup.bash
 ```
