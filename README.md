@@ -12,7 +12,7 @@ sudo ./requirements.sh
 ## **Uso**
 Para inicializar o robô, execute o seguinte comando:
 ```
-cd navegation-warehouse/catkin_ws
+cd ./catkin_ws
 catkin_make
 source devel/setup.bash
 ```
