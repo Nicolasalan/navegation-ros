@@ -7,7 +7,7 @@
       <real_time_update_rate>1000</real_time_update_rate>
     </physics>
     <model name='aws_robomaker_warehouse_ShelfF_01_001'>
-      <frame name='aws_robomaker_warehouse_ShelfF_01::__model__' attached_to='aws_robomaker_warehouse_ShelfF_01::link'>
+      <frame name='aws_robomaker_warehouse_ShelfF_01::__model__' attached_to='aws_robomaker_warehouse_ShelfF_01::link'> //attached_to is the name of the link the frame is attached to
         <pose relative_to='__model__'>0 0 0 0 -0 0</pose>
       </frame>
       <link name='aws_robomaker_warehouse_ShelfF_01::link'>
