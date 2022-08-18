@@ -12,7 +12,7 @@
 
 <!---=================================================================================================================================================================-->
 
-  <!--Gazebo Variables--> 
+  <!-- Gazebo Variables --> 
   <arg name="world" default="empty"/> 
   <arg name="paused" default="false"/>
   <arg name="use_sim_time" default="true"/>
