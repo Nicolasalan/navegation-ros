@@ -1,4 +1,4 @@
-# navegation-warehouse
+# Navegation Warehouse
 
 ## About
 Autonomous navigation of an omnidirectional robot for warehouse automation. 
