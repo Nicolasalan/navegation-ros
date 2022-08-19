@@ -1,10 +1,3 @@
-/*
- * Solver.h
- *
- *  Created on: Apr 7, 2020
- *      Author: mad
- */
-
 #ifndef INCLUDE_SOLVER_H_
 #define INCLUDE_SOLVER_H_
 

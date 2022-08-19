@@ -1,10 +1,3 @@
-/*
- * Util.h
- *
- *  Created on: Apr 27, 2020
- *      Author: mad
- */
-
 #ifndef INCLUDE_NEO_LOCALIZATION_UTIL_H_
 #define INCLUDE_NEO_LOCALIZATION_UTIL_H_
 
