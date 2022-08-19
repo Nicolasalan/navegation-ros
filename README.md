@@ -18,6 +18,6 @@ source devel/setup.bash
 ```
 Para iniciar a simulação:
 ```
-roslaunch neo_simulation mpo_500_simulation_basic.launch
+roslaunch neo_simulation simulation_basic.launch
 ```
 
