@@ -23,7 +23,7 @@ roslaunch neo_simulation simulation_basic.launch
 ## **Configuração**
 ```
 |-- src
-    |-- aws-robomaker-small-warehouse-worls
+    |-- aws-robomaker-small-warehouse-world 
     |-- neo_common
     |-- neo_kinematics_mecanum
     |-- neo_localization
