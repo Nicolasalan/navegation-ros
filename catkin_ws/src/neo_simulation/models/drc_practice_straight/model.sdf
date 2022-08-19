@@ -3,7 +3,7 @@
   <model name='drc_practice_straight'>
     <link name='eight::link'>
       <pose frame=''>10.1496 5.51614 -0 0 0 -0.785398</pose>
-      <self_collide>0</self_collide>
+      <self_collide>0</self_collide> 
       <kinematic>0</kinematic>
       <visual name='visual'>
         <geometry>
