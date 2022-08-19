@@ -6,7 +6,7 @@
 
   <!--To launch amcl-->
   <!--NOTE: Do not forget to configure the correct Map for AMCL-->
-  <!--NOTE: Use file neo_simulation/config/mpo_500/amcl/mpo_500_amcl.launch-->
+  <!--NOTE: Use file neo_simulation/config/amcl/amcl.launch-->
   <arg name="amcl" value="true"/>
 
   <!-- To use neo_localization -->
@@ -22,23 +22,23 @@
  <!--if arg gmapping is set to true (default=false)-->
 
  <group if="$(arg gmapping)">
- 	<include file="$(find neo_simulation)/config/mpo_500/gmapping/mpo_500_gmapping.launch"/>
+ 	<include file="$(find neo_simulation)/config/gmapping/gmapping.launch"/>
  </group>
 
  <!--if arg amcl is set to true (default=false)-->
 
  <group if="$(arg amcl)">
- 	<include file="$(find neo_simulation)/config/mpo_500/amcl/mpo_500_amcl.launch"/>
+ 	<include file="$(find neo_simulation)/config/amcl/amcl.launch"/>
  </group>
 
   <group if="$(arg neo_localization)">
-    <include file="$(find neo_simulation)/launch/mpo_500/mpo_500_neo_localization.launch"/>
+    <include file="$(find neo_simulation)/launch/neo_localization.launch"/>
   </group>
 
  <!--if arg move_base is set to true-->
 
  <group if="$(arg move_base)">
- 	<include file="$(find neo_simulation)/config/mpo_500/move_base/mpo_500_move_base.launch"/>
+ 	<include file="$(find neo_simulation)/config/move_base/move_base.launch"/>
  </group> 
 
 

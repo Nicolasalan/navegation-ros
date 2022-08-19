@@ -176,7 +176,7 @@
   </plugin>
 </gazebo>
 <gazebo>
-    <plugin name="mpo_500_controller" filename="libgazebo_ros_planar_move.so">
+    <plugin name="controller" filename="libgazebo_ros_planar_move.so">
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>

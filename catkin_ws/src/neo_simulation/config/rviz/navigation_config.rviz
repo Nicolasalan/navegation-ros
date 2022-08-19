@@ -83,22 +83,22 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        mpo_500_omni_wheel_back_left_link:
+        omni_wheel_back_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        mpo_500_omni_wheel_back_right_link:
+        omni_wheel_back_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        mpo_500_omni_wheel_front_left_link:
+        omni_wheel_front_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        mpo_500_omni_wheel_front_right_link:
+        omni_wheel_front_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false

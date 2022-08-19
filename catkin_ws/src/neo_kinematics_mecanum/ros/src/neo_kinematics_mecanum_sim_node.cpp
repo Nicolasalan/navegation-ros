@@ -123,10 +123,10 @@ NeoMecKinSimNode::NeoMecKinSimNode()
 	topicSub_ComVel = nh.subscribe("/cmd_vel", 1, &NeoMecKinSimNode::receiveCmd, this);
 
 	// Virtual controllers created for simulating the wheels  
-	wheel0 = nh.advertise<std_msgs::Float64>("/mpo_500_omni_wheel_back_left_controller/command", 1);
-	wheel1 = nh.advertise<std_msgs::Float64>("/mpo_500_omni_wheel_back_right_controller/command", 1);
-	wheel2 = nh.advertise<std_msgs::Float64>("/mpo_500_omni_wheel_front_left_controller/command", 1);
-	wheel3 = nh.advertise<std_msgs::Float64>("/mpo_500_omni_wheel_front_right_controller/command", 1);
+	wheel0 = nh.advertise<std_msgs::Float64>("/omni_wheel_back_left_controller/command", 1);
+	wheel1 = nh.advertise<std_msgs::Float64>("/omni_wheel_back_right_controller/command", 1);
+	wheel2 = nh.advertise<std_msgs::Float64>("/omni_wheel_front_left_controller/command", 1);
+	wheel3 = nh.advertise<std_msgs::Float64>("/omni_wheel_front_right_controller/command", 1);
 }
 
 NeoMecKinSimNode::~NeoMecKinSimNode()

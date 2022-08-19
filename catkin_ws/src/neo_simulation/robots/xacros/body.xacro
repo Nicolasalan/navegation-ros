@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="mpo_500">
 
-  <xacro:macro name="mpo_500_base" params="name parent *origin">
+  <xacro:macro name="base" params="name parent *origin">
     <joint name="${name}_joint" type="fixed">
       <xacro:insert_block name="origin" />
       <axis xyz="0 0 -1" />
