@@ -3,7 +3,7 @@
 
   <node pkg="gmapping" name="slam_gmapping" type="slam_gmapping" output="screen">
     <remap from="scan" to="/lidar_1/scan_filtered"/>
-    <rosparam file="$(find neo_simulation)/config/mpo_500/gmapping/gmapping_config.yaml" command="load" />
+    <rosparam file="$(find neo_simulation)/config/gmapping/gmapping_config.yaml" command="load" />
   </node>
 
 </launch>

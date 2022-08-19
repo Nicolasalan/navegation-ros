@@ -15,7 +15,7 @@
   <!-- Localization Node -->
   <node pkg="neo_localization" type="neo_localization_node" name="neo_localization_node" output="screen">
 
-    <rosparam file="$(find neo_simulation)/config/mpo_500/neo_localization/neo_localization.yaml" command="load" />
+    <rosparam file="$(find neo_simulation)/config/neo_localization/neo_localization.yaml" command="load" />
 
   </node>
 
