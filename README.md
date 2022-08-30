@@ -28,7 +28,7 @@ roslaunch neo_simulation simulation_basic.launch
     |-- neo_kinematics_mecanum
     |-- neo_localization
     |-- neo_msgs
-    |-- neo_simulation
+    |-- neo_simulation # simualação do robô
     |-- slam_gmapping
 
 ```
