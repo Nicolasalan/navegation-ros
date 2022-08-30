@@ -16,14 +16,6 @@
   <!-- Microscan - Comment/Uncomment if required -->
   <xacro:include filename="$(find neo_simulation)/robots/xacros/micro_scan.xacro" /> 
 
-  <!--Ultrasonics, cameras and IMU's  -->
-  <!-->
-  <xacro:include filename="$(find neo_simulation)/robots/xacros/imu.xacro" />
-  <xacro:include filename="$(find neo_simulation)/robots/xacros/ultrasonic.xacro" />
-  <-->
-  <!-- <xacro:include filename="$(find neo_simulation)/robots/xacros/camera.xacro" />  -->
-  
-
 
   <link name="base_link" />
 
