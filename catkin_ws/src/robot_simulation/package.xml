@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>neo_mpo_500</name>
+  <name>robot_nav</name>
   <version>0.1.0</version>
-  <description>The neo_mpo_500 package</description>
+  <description>The robot_nav package</description>
 
 	<maintainer email="ros@neobotix.de">Neobotix</maintainer>
   <license>BSD</license>
