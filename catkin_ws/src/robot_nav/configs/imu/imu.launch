@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!--Phidgets-->
+	<include file="$(find robot_nav)/configs/imu/phidgets/phidgets_imu.launch"/>
+
+</launch>
