@@ -2,19 +2,19 @@
 <robot name="mpo_500" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <!--GAZEBO REFERENCES -->
-  <xacro:include filename="$(find neo_simulation)/robots/xacros/gazebo.xacro" />
+  <xacro:include filename="$(find robot_nav)/robots/xacros/gazebo.xacro" />
 
   <!-- BODY -->
-  <xacro:include filename="$(find neo_simulation)/robots/xacros/body.xacro" />
+  <xacro:include filename="$(find robot_nav)/robots/xacros/body.xacro" />
  
   <!-- WHEELS -->
-  <xacro:include filename="$(find neo_simulation)/robots/xacros/omni_wheel.xacro" />
+  <xacro:include filename="$(find robot_nav)/robots/xacros/omni_wheel.xacro" />
 
   <!-- SENSORS --> 
-  <!-- <xacro:include filename="$(find neo_simulation)/robots/xacros/sick_S300.xacro" /> -->
+  <!-- <xacro:include filename="$(find robot_nav)/robots/xacros/sick_S300.xacro" /> -->
 
   <!-- Microscan - Comment/Uncomment if required -->
-  <xacro:include filename="$(find neo_simulation)/robots/xacros/micro_scan.xacro" /> 
+  <xacro:include filename="$(find robot_nav)/robots/xacros/micro_scan.xacro" /> 
 
 
   <link name="base_link" />

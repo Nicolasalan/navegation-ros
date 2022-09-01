@@ -24,14 +24,14 @@
     <visual>
      <origin xyz="0 0 0" rpy="0 0 0"/>
      <geometry>
-        <mesh filename="package://neo_simulation/robots/meshes/MPO-500-WHEEL.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://robot_nav/robots/meshes/MPO-500-WHEEL.dae" scale="0.001 0.001 0.001"/>
      </geometry>
     </visual>
 
     <collision>
      <origin xyz="0 0 0" rpy="0 1.57 1.57" />
      <geometry>
-        <!-- <mesh filename="package://neo_simulation/robots/meshes/MPO-500-WHEEL.dae" scale="0.001 0.001 0.001"/> -->
+        <!-- <mesh filename="package://robot_nav/robots/meshes/MPO-500-WHEEL.dae" scale="0.001 0.001 0.001"/> -->
        <!-- <cylinder radius="0.126" length="0.110"/> -->
       <sphere radius="0.117" />
      </geometry>
