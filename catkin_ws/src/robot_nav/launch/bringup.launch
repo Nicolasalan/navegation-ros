@@ -1,9 +1,58 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <launch>
 
-	<!--robot platform-->
-	<include file="$(find robot_nav)/configs/relayboard_v2/relayboard_v2.launch"/>
+	<!--should be configured in simulation.launch-->
+	<arg name="world_name_global" default="worlds/empty.world"/>
+
+	<!--To launch scanunifier set the value to true-->
+	<arg name="scanunifier" value="true"/>
+
+	<!--To move robot using teleop_keyboard-->
+	<arg name="software_joystick" value="true"/> 
+
+<!---=================================================================================================================================================================-->
+
+	<!-- Gazebo Variables --> 
+	<arg name="world" default="empty"/> 
+	<arg name="paused" default="false"/>
+	<arg name="use_sim_time" default="true"/>
+	<arg name="gui" default="true"/>
+	<arg name="headless" default="false"/>
+	<arg name="debug" default="false"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find neo_simulation)/worlds/small_warehouse.world"/>
+    <arg name="paused" default="false"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+    <arg name="verbose" default="true"/>
+  </include>
+<!---=================================================================================================================================================================-->
+
+	<!--Robot description to param server-->
+	<param name="robot_description" command="$(find xacro)/xacro '$(find robot_nav)/robots/robot.urdf.xacro'"/>
+
+	<node name="spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+	args="-urdf -param robot_description -model robot" />	
+
+	<!--To publish Joint and Robot state-->
+
+	<include file="$(find robot_nav)/config/controller/launch/controller_utils.launch"/>
+
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+		<param name="rate" value="100.0"/>
+	</node>
+
+	<!-- Launching wheel controllers -->
+
+	<rosparam file="$(find neo_simulation)/config/controller/wheel_controller.yaml" command="load"/>
+	<node name="wheel_controller_spawner" pkg="controller_manager" type="controller_manager" 
+	args="spawn omni_wheel_front_left_controller omni_wheel_front_right_controller omni_wheel_back_left_controller omni_wheel_back_right_controller" respawn="false" output="screen"/>
+
+	<!-- Launching kinematics node -->
 	
 	<!--kinemaics-->
 	<include file="$(find robot_nav)/configs/kinematics/kinematics.launch"/> 
@@ -13,12 +62,5 @@
 
 	<!--teleoperation-->
 	<include file="$(find robot_nav)/configs/teleop/teleop.launch"/>
-
-	<!--robot model-->
-    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robot_nav)/robot_model/mpo_500.urdf.xacro'" />
-	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
-		<param name="use_gui" value="false" />
-	</node>
-	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />			
 
 </launch>
