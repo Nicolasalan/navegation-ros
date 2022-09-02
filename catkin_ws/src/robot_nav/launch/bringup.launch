@@ -58,9 +58,12 @@
 	<include file="$(find robot_nav)/configs/kinematics/kinematics.launch"/> 
 
 	<!--sensors-->
-	<!--<include file="$(find robot_nav)/configs/lidar/lidar.launch"/>-->
 
 	<!--teleoperation-->
-	<include file="$(find robot_nav)/configs/teleop/teleop.launch"/>
+	<!--<include file="$(find robot_nav)/configs/teleop/teleop.launch"/>-->
+	<group if="$(arg software_joystick)">
+   		<node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_keyboard"  output="screen">
+  		</node>
+ 	</group>
 
 </launch>
