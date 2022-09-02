@@ -1,4 +1,4 @@
-port: /dev/neo-s300-2
+port: /dev/s300-2
 baud: 500000
 frame_id: lidar_2_link
 scan_delay: 0.045
