@@ -4,15 +4,15 @@
 
   <arg name="env_map" default="$(find robot_nav)/configs/navigation/maps/$(env MAP_NAME).yaml" />
 
-  <!-- MAP SERVER -->
+  <!-- SERVIDOR DE MAPA -->
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg env_map)">
   </node>
 
-  <!-- Topic Relays -->
+  <!-- Retransmissões de tópicos -->
   <node pkg="topic_tools" type="relay" ns="/lidar_1" name="relay" args="/lidar_1/scan_filtered /scan" />
   <node pkg="topic_tools" type="relay" ns="/lidar_2" name="relay" args="/lidar_2/scan_filtered /scan" />
 
-  <!-- AMCL Node -->
+  <!-- No AMCL -->
   <node pkg="amcl" type="amcl" name="amcl">
     <rosparam file="$(find robot_nav)/configs/navigation/amcl/amcl_basic.yaml" command="load" />
   </node>

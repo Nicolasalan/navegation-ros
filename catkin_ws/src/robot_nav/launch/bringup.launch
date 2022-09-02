@@ -2,18 +2,18 @@
 
 <launch>
 
-	<!--should be configured in simulation.launch-->
+	<!--deve ser configurado em simulação.launch-->
 	<arg name="world_name_global" default="worlds/empty.world"/>
 
-	<!--To launch scanunifier set the value to true-->
+	<!--Para iniciar o scanunifier, defina o valor como true-->
 	<arg name="scanunifier" value="true"/>
 
-	<!--To move robot using teleop_keyboard-->
+	<!--Para mover o robô usando teleop_keyboard-->
 	<arg name="software_joystick" value="true"/> 
 
 <!---=================================================================================================================================================================-->
 
-	<!-- Gazebo Variables --> 
+	<!-- Variáveis Gazebo --> 
 	<arg name="world" default="empty"/> 
 	<arg name="paused" default="false"/>
 	<arg name="use_sim_time" default="true"/>
@@ -32,13 +32,13 @@
   </include>
 <!---=================================================================================================================================================================-->
 
-	<!--Robot description to param server-->
+	<!--Descrição do robô para o servidor de parâmetros-->
 	<param name="robot_description" command="$(find xacro)/xacro '$(find robot_nav)/robots/robot.urdf.xacro'"/>
 
 	<node name="spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
 	args="-urdf -param robot_description -model robot" />	
 
-	<!--To publish Joint and Robot state-->
+	<!--Para publicar o estado Joint e Robot-->
 
 	<include file="$(find robot_nav)/configs/controller/launch/controller_utils.launch"/>
 
@@ -46,20 +46,20 @@
 		<param name="rate" value="100.0"/>
 	</node>
 
-	<!-- Launching wheel controllers -->
+	<!--Lançamento de controladores de roda-->
 
 	<rosparam file="$(find robot_nav)/configs/controller/wheel_controller.yaml" command="load"/>
 	<node name="wheel_controller_spawner" pkg="controller_manager" type="controller_manager" 
 	args="spawn omni_wheel_front_left_controller omni_wheel_front_right_controller omni_wheel_back_left_controller omni_wheel_back_right_controller" respawn="false" output="screen"/>
 
-	<!-- Launching kinematics node -->
+	<!--Iniciando o nó de cinemática-->
 
-	<!--kinemaics-->
+	<!--cinemática-->
 	<include file="$(find robot_nav)/configs/kinematics/kinematics.launch"/> 
 
-	<!--sensors-->
+	<!--sensores-->
 
-	<!--teleoperation-->
+	<!--teleoperacao-->
 	<!--<include file="$(find robot_nav)/configs/teleop/teleop.launch"/>-->
 	<group if="$(arg software_joystick)">
    		<node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_keyboard"  output="screen">

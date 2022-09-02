@@ -1,291 +1,289 @@
 TebLocalPlannerROS:
 
 ####################################################
-#Robot Configuration Parameters
+# Parâmetros de configuração do robô
 ####################################################
  acc_lim_x: 0.25
- #Maximum translational acceleration of the robot in meters/sec^2 
+ # Aceleração translacional máxima do robô em metros/s^2 
 
  acc_lim_theta: 0.8
- #Maximum angular acceleration of the robot in radians/sec^2 
+ # Aceleração angular máxima do robô em radianos/s^2 
 
  max_vel_x: 0.6
- #Maximum translational velocity of the robot in meters/sec 
+ # Velocidade máxima de translação do robô em metros/s
 
  max_vel_x_backwards: 0.4
- #Maximum absolute translational velocity of the robot while driving backwards in meters/sec. See optimization parameter weight_kinematics_forward_drive 
+ # Velocidade de translação absoluta máxima do robô durante a marcha para trás em metros/seg. Consulte o parâmetro de otimização weight_kinematics_forward_drive
 
  max_vel_theta: 0.8
- #Maximum angular velocity of the robot in radians/sec 
+ # Velocidade angular máxima do robô em radianos/s
  
  footprint_model/type: "line"
- #Specify the robot footprint model type used for optimization. Different types are "point", "circular", "line", 
- #"two_circles" and "polygon." 
- #The type of the model significantly influences the required computation time.
+ # Especifique o tipo de modelo de pegada do robô usado para otimização. Diferentes tipos são "ponto", "circular", "linha",
+ # "two_circles" e "polygon."
+ # O tipo do modelo influencia significativamente o tempo de computação necessário.
 
 ############################
-###Type Point
+### Tipo de ponto
 ############################
 
-#no other params needed
+# nenhum outro parâmetro necessário
 
 ############################
-###Type Line
+### Digite a linha
 ############################
  footprint_model/line_start: [-0.4, 0.0] 
- #This parameter is only relevant for type "line". It contains the start coordinates of the line segment. 
+ # Este parâmetro só é relevante para o tipo "linha". Ele contém as coordenadas iniciais do segmento de linha.
 
  footprint_model/line_end: [0.4, 0.0]
- #This parameter is only relevant for type "line". It contains the end coordinates of the line segment.
+ # Este parâmetro só é relevante para o tipo "linha". Ele contém as coordenadas finais do segmento de linha.
 
 ############################
-###For Holonomic robots
+### Para robôs holonômicos
 ############################
  max_vel_y: 0.6
 
  acc_lim_y: 0.25
 
- #Set both to 0.0 for nonholonomic
+ # Defina ambos como 0.0 para não-holonômico
 
 ####################################################
-#Goal Tolerance Parameters 
+# Parâmetros de tolerância da meta 
 ####################################################
  xy_goal_tolerance: 0.05
- #Allowed final euclidean distance to the goal position in meters 
+ # Permitida a distância euclidiana final até a posição do gol em metros 
 
  yaw_goal_tolerance: 0.02
- #Allowed final orientation error in radians 
+ # Permitido erro de orientação final em radianos 
 
  free_goal_vel: false
- #Remove the goal velocity constraint such that the robot can arrive at the goal with maximum speed
+ # Remova a restrição de velocidade do objetivo para que o robô possa chegar ao objetivo com velocidade máxima
 
 ####################################################
-#Trajectory Configuration Parameters
+# Parâmetros de configuração da trajetória
 ####################################################
  dt_ref: 0.3
- #Desired temporal resolution of the trajectory
+ # Resolução temporal desejada da trajetória
 
  dt_hysteresis: 0.1
- #Hysteresis for automatic resizing depending on the current temporal resolution, 
- #usually approx. 10% of dt_ref is recommended
+ # Hysteresis para redimensionamento automático dependendo da resolução temporal atual,
+ # geralmente aprox. 10% de dt_ref é recomendado
 
  min_samples: 3
- #Minimum number of samples
+ # Número mínimo de amostras
 
  global_plan_overwrite_orientation: true
- #Overwrite orientation of local subgoals provided by the global planner (since they often provide only a 2D path)
+ #Sobrescrever a orientação de subobjetivos locais fornecidos pelo planejador global (já que eles geralmente fornecem apenas um caminho 2D)
 
  global_plan_viapoint_sep: -0.1
- #If positive, via-points are extrected from the global plan (path-following mode). 
- #The value determines the resolution of the reference path (min. separation between each two consecutive via-points along the global plan, 
- #if negative (disabled). Refer to parameter weight_viapoint for adjusting the intensity. New in version 0.4
+ # Se positivo, os pontos de via são extraídos do plano global (modo de acompanhamento de caminho).
+ # O valor determina a resolução do caminho de referência (separação mínima entre cada dois pontos de passagem consecutivos ao longo do plano global,
+ # Se negativo (desativado). Consulte o parâmetro weight_viapoint para ajustar a intensidade. Novo na versão 0.4
 
  max_global_plan_lookahead_dist: 100.0
- #Specify the maximum length (cumulative Euclidean distances) of the subset of the global plan taken into account for optimization. 
- #The actual length is than determined by the logical conjunction of the local costmap size and this maximum bound. 
- #Set to zero or negative in order to deactivate this limitation.
+ # Especifique o comprimento máximo (distâncias euclidianas cumulativas) do subconjunto do plano global considerado para otimização.
+ # O comprimento real é determinado pela conjunção lógica do tamanho do mapa de custos local e esse limite máximo.
+ # Definir como zero ou negativo para desativar esta limitação.
 
  force_reinit_new_goal_dist: 1.0
- #Reinitialize the trajectory if a previous goal is updated with a separation of more than the specified value in meters 
+ # Reinicializa a trajetória se uma meta anterior for atualizada com uma separação maior que o valor especificado em metros 
 
  feasibility_check_no_poses : 4
- #Specify up to which pose on the predicted plan the feasibility should be checked each sampling interval. 
+ # Especifique até qual pose no plano previsto a viabilidade deve ser verificada a cada intervalo de amostragem. 
 
  shrink_horizon_backup: true
- #Allows the planner to shrink the horizon temporary (50%) in case of automatically detected issues (e.g. infeasibility). 
- #Also see parameter shrink_horizon_min_duration.
+ # Permite que o planejador reduza o horizonte temporariamente (50%) em caso de problemas detectados automaticamente (por exemplo, inviabilidade).
+ # Veja também o parâmetro shrink_horizon_min_duration.
 
  publish_feedback: false
- #Publish planner feedback containing the full trajectory and a list of active obstacles 
- #(should be enabled only for evaluation or debugging. See list of publishers above. 
+ # Publique o feedback do planejador contendo a trajetória completa e uma lista de obstáculos ativos
+ # (deve ser ativado apenas para avaliação ou depuração. Veja a lista de editores acima. 
 
  allow_init_with_backwards_motion: true
- #allows backward motion incase the goal behind start
+ # permite movimento para trás caso o gol atrás do início
 
  exact_arc_length: true
- #If true, the planner uses the exact arc length in velocity, acceleration and turning rate computations 
- #(-> increased cpu time), otherwise the Euclidean approximation is used.
+ # Se verdadeiro, o planejador usa o comprimento exato do arco em velocidade rápida, e taxa de giro
+ # (-> aumento do tempo de CPU), caso contrário, a aproximação euclidiana é usada.
 
  shrink_horizon_min_duration: 10.0
- #Specify minimum duration for the reduced horizon in case an infeasible trajectory is detected 
- #(refer to parameter shrink_horizon_backup in order to activate the reduced horizon mode).
+ # Especifique a duração mínima para o horizonte reduzido caso seja detectada uma trajetória inviável
+ # (consulte o parâmetro shrink_horizon_backup para ativar o modo de horizonte reduzido).
 
 ####################################################
-#Obstacle Parameters
+# Parâmetros de obstáculo
 ####################################################
 
  min_obstacle_dist: 0.6
- #Minimum desired separation from obstacles in meters 
+ # Separação mínima desejada de obstáculos em metros 
 
  include_costmap_obstacles: true
- #Specify if obstacles of the local costmap should be taken into account. Each cell that is marked as 
- #obstacle is considered as a point-obstacle. Therefore do not choose a very small resolution of the costmap 
- #since it increases computation time. In future releases this circumstance is going to be addressed as 
- #well as providing an additional api for dynamic obstacles.
+ # Especifique se os obstáculos do mapa de custos local devem ser levados em consideração. Cada célula marcada como
+ # obstacle é considerado um ponto-obstáculo. Portanto, não escolha uma resolução muito pequena do mapa de custos
+ # pois aumenta o tempo de computação. Em versões futuras, essa circunstância será abordada como
+ # bem como fornecer uma API adicional para obstáculos dinâmicos.
 
  costmap_obstacles_behind_robot_dist: 1.0
- #Limit the occupied local costmap obstacles taken into account for planning behind the robot (specify distance in meters).
+ # Limite os obstáculos do mapa de custos locais ocupados levados em consideração para o planejamento atrás do robô (especifique a distância em metros).
 
  obstacle_poses_affected: 30
- #Each obstacle position is attached to the closest pose on the trajectory in order to keep a distance. 
- #Additional neighbors can be taken into account as well. Note, this parameter might be removed in future versions, 
- #since the the obstacle association strategy has been modified in kinetic+. Refer to the parameter description of legacy_obstacle_association.
+ # Cada posição de obstáculo é anexada à pose mais próxima da trajetória para manter a distância.
+ # Vizinhos adicionais também podem ser levados em consideração. Observe que esse parâmetro pode ser removido em versões futuras,
+ # desde que a estratégia de associação de obstáculos foi modificada no kinetic+. Consulte a descrição do parâmetro de legacy_obstacle_association.
 
  inflation_dist: 0.8
- #Buffer zone around obstacles with non-zero penalty costs (should be larger than min_obstacle_dist in order to take effect). 
- #Also refer to the weight weight_inflation.
+ # Zona de buffer em torno de obstáculos com custos de penalidade diferentes de zero (deve ser maior que min_obstacle_dist para ter efeito).
+ # Consulte também o peso weight_inflation.
 
  include_dynamic_obstacles: false
- #If this parameter is set to true, the motion of obstacles with non-zero velocity (provided via user-supplied obstacles on 
- #topic ~/obstacles or obtained from the costmap_converter) is predicted and considered during optimization via a constant velocity model.
+ # Se este parâmetro for definido como verdadeiro, o movimento de obstáculos com velocidade diferente de zero (fornecido por meio de obstáculos fornecidos pelo usuário no
+ # topic ~/obstacles ou obtido do costmap_converter) é previsto e considerado durante a otimização por meio de um modelo de velocidade constante.
 
  legacy_obstacle_association: false
- #The strategy of connecting trajectory poses with obstacles for optimization has been modified (see changelog). 
- #You can switch to the old/previous strategy by setting this parameter to true. 
- #Old strategy for each obstacle, find the nearest TEB pose 
- #New strategy for each teb pose, find only "relevant" obstacles.
+ # A estratégia de conectar poses de trajetória com obstáculos para otimização foi modificada (veja changelog).
+ # Você pode alternar para a estratégia antiga/anterior definindo este parâmetro como verdadeiro.
+ # Estratégia antiga para cada obstáculo, encontre a pose TEB mais próxima
+ # Nova estratégia para cada pose de teb, encontre apenas obstáculos "relevantes".
 
  obstacle_association_force_inclusion_factor: 1.5
- #he non-legacy obstacle association strategy tries to connect only relevant obstacles with the discretized trajectory during optimization. 
- #But all obstacles within a specifed distance are forced to be included (as a multiple of min_obstacle_dist). 
- #E.g. choose 2.0 in order toenforce the consideration obstacles within a radius of 2.0*min_obstacle_dist. 
- #[This parameter is used only if parameter legacy_obstacle_association is false]
+ # a estratégia de associação de obstáculos não legados tenta conectar apenas obstáculos relevantes com a trajetória discretizada durante a otimização.
+ # Mas todos os obstáculos dentro de uma distância especificada são forçados a serem incluídos (como um múltiplo de min_obstacle_dist).
+ # Por exemplo. escolha 2.0 para impor os obstáculos de consideração dentro de um raio de 2.0*min_obstacle_dist.
+ # [Este parâmetro é usado apenas se o parâmetro legacy_obstacle_association for false]
 
  obstacle_association_cutoff_factor: 5
- #See obstacle_association_force_inclusion_factor, but beyond a multiple of [value]*min_obstacle_dist all obstacles are ignored during optimization. 
- #Parameter obstacle_association_force_inclusion_factor is processed first. 
- #[This parameter is used only if parameter legacy_obstacle_association is false]
+ # Consulte obstáculo_association_force_inclusion_factor, mas além de um múltiplo de [valor]*min_obstacle_dist todos os obstáculos são ignorados durante a otimização.
+ # parâmetroobstance_association_force_inclusion_factor é processado primeiro.
+ # [Este parâmetro é usado apenas se o parâmetro legacy_obstacle_association for false]
 
 ####################################################
-#Optimization Parameters
+# Parâmetros de otimização
 ####################################################
 
  no_inner_iterations: 2
- #Number of actual solver iterations called in each outerloop iteration. 
- #See param no_outer_iterations.
+ # Número de iterações reais do solver chamadas em cada iteração de loop externo.
+ # Consulte o parâmetro no_outer_iterations.
 
  no_outer_iterations: 2
- #Each outerloop iteration automatically resizes the trajectory according to the desired temporal resolution dt_ref 
- #and invokes the internal optimizer (that performs no_inner_iterations). 
- #The total number of solver iterations in each planning cycle is therefore the product of both values.
+ # Cada iteração de loop externo redimensiona automaticamente a trajetória de acordo com a resolução temporal desejada dt_ref
+ # e invoca o otimizador interno (que executa no_inner_iterations).
+ # O número total de iterações do solver em cada ciclo de planejamento é, portanto, o produto de ambos os valores.
 
  penalty_epsilon: 0.1  
- #small safety margin to penalty functions for hard-constraint approximations
+ # pequena margem de segurança para funções de penalidade para aproximações de restrição rígida
 
  weight_max_vel_x: 1.0 
- #Optimization weight for satisfying the maximum allowed translational velocity 
+ # Peso de otimização para satisfazer a velocidade de translação máxima permitida
 
  weight_max_vel_theta: 1.0 
- #Optimization weight for satisfying the maximum allowed angular velocity 
+ # Peso de otimização para satisfazer a velocidade angular máxima permitida
 
  weight_acc_lim_x: 1.0 
- #Optimization weight for satisfying the maximum allowed translational acceleration 
+ # Peso de otimização para satisfazer a aceleração translacional máxima permitida 
 
  weight_acc_lim_theta: 1.0 
- #Optimization weight for satisfying the maximum allowed angular acceleration 
+ # Peso de otimização para satisfazer a aceleração angular máxima permitida 
 
- weight_kinematics_nh: 1 # Default 1000.0 => WE HAVE A HOLONOMIC ROBOT, JUST ADD A SMALL PENALTY
- #Optimization weight for satisfying the non-holonomic kinematics (this parameter must be high 
- #since the kinematics equation constitutes an equality constraint, even a value of 1000 does not 
- #imply a bad matrix condition due to small 'raw' cost values in comparison to other costs).
+ weight_kinematics_nh: 1 # Default 1000.0 => TEMOS UM ROBÔ HOLONOMIC, BASTA ADICIONAR UMA PEQUENA PENALIDADE
+ # Peso de otimização para satisfazer a cinemática não holonômica (este parâmetro deve ser alto
+ # uma vez que a equação cinemática constitui uma restrição de igualdade, mesmo um valor de 1000 não
+ # implica uma condição de matriz ruim devido a pequenos valores de custo 'bruto' em comparação com outros custos).
 
  weight_kinematics_forward_drive: 10.0
- #Optimization weight for forcing the robot to choose only forward directions (positive transl. velocities). 
- #A small weight (e.g. 1.0) still allows driving backwards.
+ # Peso de otimização para forçar o robô a escolher apenas direções para frente (velocidades de translação positivas).
+ # Um pequeno peso (por exemplo, 1,0) ainda permite dirigir para trás.
 
  weight_kinematics_turning_radius: 1.0
- #Optimization weight for enforcing a minimum turning radius (only for carlike robots).
+ # Peso de otimização para impor um raio de giro mínimo (somente para robôs semelhantes a carros).
 
  weight_optimaltime: 1.0
- #Optimization weight for contracting the trajectory w.r.t transition/execution time
+ # Peso de otimização para contratação da trajetória w.r.t tempo de transição/execução
 
  weight_obstacle: 100.0
- #Optimization weight for keeping a minimum distance from obstacles
+ # Peso de otimização para manter uma distância mínima dos obstáculos
 
  weight_viapoint: 1.0
- #Optimization weight for minimzing the distance to via-points (resp. reference path). 
- #New in version 0.4
+ # Peso de otimização para minimizar a distância até os pontos de passagem (resp. caminho de referência). #Novo na versão 0.4
 
  weight_inflation: 0.1
- #Optimization weight for the inflation penalty (should be small).
+ # Peso de otimização para a penalidade de inflação (deve ser pequeno).
 
  weight_adapt_factor: 2.0
- #Some special weights (currently weight_obstacle) are repeatedly scaled by this factor in each outer TEB iteration 
- #(weight_new = weight_old*factor). 
- #Increasing weights iteratively instead of setting a huge value a-priori leads to better numerical conditions of 
- #the underlying optimization problem.
+ # Alguns pesos especiais (atualmente weight_obstacle) são escalados repetidamente por esse fator em cada iteração TEB externa
+ # (peso_novo = peso_antigo*fator).
+ # Aumentar os pesos iterativamente em vez de definir um valor enorme a priori leva a melhores condições numéricas de
+ # o problema de otimização subjacente.
 
 ####################################################
-#Parallel Planning in distinctive Topologies
+# Planejamento Paralelo em Topologias Distintas
 ####################################################
 
  enable_homotopy_class_planning: true
- #Activate parallel planning in distinctive topologies (
- #requires much more CPU resources, since multiple trajectories are optimized at once)
+ # Ativar o planejamento paralelo em topologias distintas (
+ # requer muito mais recursos de CPU, pois várias trajetórias são otimizadas de uma só vez)
 
  enable_multithreading: true
- #Activate multiple threading in order to plan each trajectory in a different thread
+ # Ativar encadeamento múltiplo para planejar cada trajetória em um encadeamento diferente
 
  max_number_classes: 2
- #Specify the maximum number of distinctive trajectories taken into account 
- #(limits computational effort)
+ # Especifique o número máximo de trajetórias distintas consideradas
+ # (limita o esforço computacional)
 
  selection_cost_hysteresis: 1.0
- #Specify how much trajectory cost must a new candidate have w.r.t. a previously selected 
- #trajectory in order to be selected (selection if new_cost < old_cost*factor). 
+ # Especifique quanto custo de trajetória um novo candidato deve ter w.r.t. um previamente selecionado
+ # trajetória para ser selecionado (seleção se new_cost < old_cost*factor).
 
  selection_obst_cost_scale: 100.0
- #Extra scaling of obstacle cost terms just for selecting the 'best' candidate.
+ # Extra dimensionamento de termos de custo de obstáculo apenas para selecionar o 'melhor' candidato.
 
  selection_viapoint_cost_scale: 1.0
- #Extra scaling of via-point cost terms just for selecting the 'best' candidate. 
- #New in version 0.4
+ # Extra dimensionamento de termos de custo de ponto de passagem apenas para selecionar o 'melhor' candidato.
 
  selection_alternative_time_cost: false
- #If true, time cost (sum of squared time differences) is replaced by the total 
- #transition time (sum of time differences).
+ # Se verdadeiro, o custo do tempo (soma das diferenças de tempo ao quadrado) é substituído pelo total
+ # tempo de transição (soma das diferenças de tempo).
 
  roadmap_graph_no_samples: 15
- #Specify the number of samples generated for creating the roadmap graph
+ # Especifique o número de amostras geradas para criar o gráfico de roteiro
 
  roadmap_graph_area_width: 6
- #Random keypoints/waypoints are sampled in a rectangular region between start and goal. 
- #Specify the width of that region in meters.
+ # Pontos-chave/pontos de passagem aleatórios são amostrados em uma região retangular entre o início e o objetivo.
+ # Especifique a largura dessa região em metros.
 
  h_signature_prescaler: 1.0
- #Scale internal parameter (H-signature) that is used to distinguish between homotopy classes. 
- #Warning reduce this parameter only, if you observe problems with too many obstacles in the local cost map,
- #do not choose it extremly low, otherwise obstacles cannot be distinguished from each other (0.2<value<=1).
+ # Parâmetro interno de escala (assinatura H) que é usado para distinguir entre classes de homotopia.
+ # Aviso reduza este parâmetro apenas, se observar problemas com muitos obstáculos no mapa de custo local,
+ # não escolha muito baixo, caso contrário os obstáculos não podem ser distinguidos uns dos outros (0,2<valor<=1).
 
  h_signature_threshold: 0.1
- #Two H-signatures are assumed to be equal, if both the difference of real parts and 
- #complex parts are below the specified threshold.
+ # Duas assinaturas H são consideradas iguais, se a diferença das partes reais e
+ # partes complexas estão abaixo do limite especificado.
 
  obstacle_heading_threshold: 1.0
- #Specify the value of the scalar product between obstacle heading and goal heading 
- #in order to take them (obstacles) into account for exploration.
+ # Especifique o valor do produto escalar entre a direção do obstáculo e a direção da meta
+ # para levá-los (obstáculos) em conta para a exploração.
 
  visualize_hc_graph: false
- #Visualize the graph that is created for exploring distinctive trajectories 
- #(check marker message in rviz)
+ # Visualize o gráfico criado para explorar trajetórias distintas
+ # (verifique a mensagem do marcador no rviz)
 
  viapoints_all_candidates: true
- #If true, all trajectories of different topologies are attached to the set of via-points, 
- #otherwise only the trajectory sharing the same topology as the initial/global plan is 
- #connected with them (no effect on test_optim_node). New in version 0.4
+ # Se verdadeiro, todas as trajetórias de diferentes topologias são anexadas ao conjunto de pontos de passagem,
+ # caso contrário, apenas a trajetória que compartilha a mesma topologia do plano inicial/global é
+ # conectado com eles (sem efeito no test_optim_node). Novo na versão 0.4
 
  switching_blocking_period: 2.0
- #Specify a time duration in seconds that needs to be expired before a switch to a new equivalence class is allowed.
+ # Especifique uma duração de tempo em segundos que precisa ser expirada antes que uma mudança para uma nova classe de equivalência seja permitida.
 
 ####################################################
-#Miscellaneous Parameters
+# Parâmetros diversos
 ####################################################
 
  odom_topic: odom
- #Topic name of the odometry message, provided by the robot driver or simulator.
+ # Nome do tópico da mensagem de odometria, fornecido pelo driver do robô ou simulador.
 
  map_frame: map
- #Global planning frame (in case of a static map, this parameter must be usually changed to "/map".
+ # Quadro de planejamento global (no caso de um mapa estático, este parâmetro deve ser normalmente alterado para "/map".
 
 
 

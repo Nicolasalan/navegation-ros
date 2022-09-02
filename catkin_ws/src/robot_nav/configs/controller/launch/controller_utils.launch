@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <launch>
 
-  <!-- Fake Calibration -->
+  <!-- Calibração Falsa -->
   <node pkg="rostopic" type="rostopic" name="fake_joint_calibration"
         args="pub /calibrated std_msgs/Bool true" />
   
-  <!-- joint_state_controller -->
+  <!-- controlador de estado conjunto -->
   <rosparam file="$(find robot_nav)/configs/controller/joint_state_controller.yaml" command="load"/>
   <node name="joint_state_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn joint_state_controller" respawn="false" output="screen"/>
   

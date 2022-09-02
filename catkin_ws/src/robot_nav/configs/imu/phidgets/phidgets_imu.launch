@@ -2,34 +2,33 @@
 
 <launch>
 
-  #### Nodelet manager ######################################################
-
+  <!--  Gerenciador de nós -->
   <node pkg="nodelet" type="nodelet" name="imu_manager" 
     args="manager" output="screen" />
 
-  #### IMU Driver ###########################################################
+  <!-- Motorista IMU -->
 
   <node pkg="nodelet" type="nodelet" name="PhidgetsImuNodelet" 
     args="load phidgets_imu/PhidgetsImuNodelet imu_manager" 
     output="screen">
 
-    # supported data rates: 4 8 16 24 32 40 ... 1000 (in ms)
+    <!-- supported data rates: 4 8 16 24 32 40 ... 1000 (in ms) -->
     <param name="period" value="4"/>
 
-    # frame id of IMU
+    <!-- frame id of IMU -->
     <param name="frame_id" value="imu_1_link"/>
 
-    # optional param serial_number, default is -1
+    <!-- optional param serial_number, default is -1 -->
     <!-- <param name="serial_number" value="123456"/> -->
 
-    # standard deviation for angual velocities, default: 0.000349056
+    <!-- standard deviation for angual velocities, default: 0.000349056 -->
     <param name="angular_velocity_stdev" value="0.632"/>
 
-    # standard deviation for linear velocities, default: 0.002943
+    <!-- standard deviation for linear velocities, default: 0.002943 -->
     <param name="linear_acceleration_stdev" value="0.01"/>
 
-    # compass correction params (see http://www.phidgets.com/docs/1044_User_Guide)
-    <!-- <param name="cc_mag_field" value="0.52859"/>
+    <!-- compass correction params (see http://www.phidgets.com/docs/1044_User_Guide) 
+       <param name="cc_mag_field" value="0.52859"/>
          <param name="cc_offset0" value="0.03921"/>
          <param name="cc_offset1" value="0.19441"/>
          <param name="cc_offset2" value="-0.03493"/>
@@ -44,11 +43,11 @@
          <param name="cc_t5" value="-0.05672"/> -->
   </node>
 
-  #### IMU Orientation Filter ###############################################
+  <!-- IMU Orientation Filter -->
 
-  <!--node pkg="nodelet" type="nodelet" name="ImuFilterNodelet" 
+  <!--node pkg="nodelet" type="nodelet" name="ImuFilterNodelet"  
     args="load imu_filter_madgwick/ImuFilterNodelet imu_manager" 
-    output="screen">
+    output="screen"> -->
 
     <param name="use_mag" value="true"/>
     <param name="use_magnetic_field_msg" value="true"/>

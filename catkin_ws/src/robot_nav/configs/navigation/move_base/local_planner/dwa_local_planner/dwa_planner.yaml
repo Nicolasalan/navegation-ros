@@ -1,139 +1,100 @@
 DWAPlannerROS:
 
-###Robot Configuration Parameters
+### Parâmetros de configuração do robô
 
   acc_lim_x : 2.5
-
-    #The x acceleration limit of the robot in meters/sec^2 
+  # O limite de aceleração x do robô em metros/seg^2
 
   acc_lim_y : 2.5
-
-    #The y acceleration limit of the robot in meters/sec^2 
+  # O limite de aceleração y do robô em metros/seg^2
 
   acc_lim_theta : 3
-
-    #The rotational acceleration limit of the robot in radians/sec^2 
+  # O limite de aceleração rotacional do robô em radianos/s^2 
 
   max_trans_vel : 0.8
-
-    #The absolute value of the maximum translational velocity for the robot in m/s 
+  # O valor absoluto da velocidade de translação máxima para o robô em m/s 
 
   min_trans_vel : 0.1
-
-    #The absolute value of the minimum translational velocity for the robot in m/s 
+  # O valor absoluto da velocidade translacional mínima para o robô em m/s
 
   max_vel_x : 0.8
-
-    #The maximum x velocity for the robot in m/s. 
+  # A velocidade máxima x para o robô em m/s.
 
   min_vel_x : -0.8
-
-    #The minimum x velocity for the robot in m/s, negative for backwards motion. 
+  # A velocidade x mínima para o robô em m/s, negativa para o movimento para trás.
 
   max_vel_y : 0
-
-    #The maximum y velocity for the robot in m/s 
+  # A velocidade y máxima para o robô em m/s
 
   min_vel_y : 0
-
-    #The minimum y velocity for the robot in m/s 
+  # A velocidade y mínima para o robô em m/s 
 
   max_rot_vel : 1.6
-
-    #The absolute value of the maximum rotational velocity for the robot in rad/s 
+  # O valor absoluto da velocidade rotacional máxima para o robô em rad/s 
 
   min_rot_vel : 0.6
-
-    #The absolute value of the minimum rotational velocity for the robot in rad/s 
-
+  # O valor absoluto da velocidade rotacional mínima para o robô em rad/s 
 
 
-###Goal Tolerance Parameters
 
-
+### Parâmetros de tolerância da meta
   yaw_goal_tolerance : 0.05
-
-    #The tolerance in radians for the controller in yaw/rotation when achieving its goal 
+  # A tolerância em radianos para o controlador em guinada/rotação ao atingir seu objetivo 
 
   xy_goal_tolerance : 0.1
+  # A tolerância em metros para o controlador na distância x e y ao atingir uma meta 
 
-    #The tolerance in meters for the controller in the x & y distance when achieving a goal 
-
-  #latch_xy_goal_tolerance : false
-
-    #If goal tolerance is latched, if the robot ever reaches the goal xy location it will simply rotate in place, even if it ends up outside the goal tolerance while it is doing so. 
+  # latch_xy_goal_tolerance : false
+  # Se a tolerância da meta estiver travada, se o robô chegar ao local xy da meta, ele simplesmente girará no lugar, mesmo que termine fora da tolerância da meta enquanto estiver fazendo isso. 
 
 
 
-###Forward Simulation Parameters
-
-
+### Parâmetros de simulação de encaminhamento
   sim_time : 1.0
-
-    #The amount of time to forward-simulate trajectories in seconds 
+  # A quantidade de tempo para simular trajetórias em segundos 
 
   sim_granularity : 0.025
-
-    #The step size, in meters, to take between points on a given trajectory 
+  # O tamanho do passo, em metros, a ser percorrido entre pontos em uma determinada trajetória 
 
   vx_samples : 20
-
-    #The number of samples to use when exploring the x velocity space 
+  # O número de amostras a serem usadas ao explorar o espaço de velocidade x 
 
   #vy_samples : 0
-
-    #The number of samples to use when exploring the y velocity space 
+  # O número de amostras a serem usadas ao explorar o espaço de velocidade y 
 
   vth_samples : 40
-
-    #The number of samples to use when exploring the theta velocity space 
-
+  # O número de amostras a serem usadas ao explorar o espaço de velocidade teta 
 
 
-###Trajectory Scoring Parameters
-
-
+### Parâmetros de pontuação da trajetória
   path_distance_bias : 48
-
-    #The weighting for how much the controller should stay close to the path it was given 
+  # A ponderação de quanto o controlador deve ficar próximo ao caminho que lhe foi dado 
 
   goal_distance_bias : 88
-
-    #The weighting for how much the controller should attempt to reach its local goal, also controls speed 
+  # A ponderação de quanto o controlador deve tentar atingir seu objetivo local, também controla a velocidade 
 
   occdist_scale : 0.05
-
-    #The weighting for how much the controller should attempt to avoid obstacles 
+  # A ponderação de quanto o controlador deve tentar evitar obstáculos 
 
   forward_point_distance : 0.325
-
-    #The distance from the center point of the robot to place an additional scoring point, in meters 
+  # A distância do ponto central do robô para colocar um ponto de pontuação adicional, em metros 
 
   stop_time_buffer : 0.2
-
-    #The amount of time that the robot must stop before a collision in order for a trajectory to be considered valid in seconds 
+  # A quantidade de tempo que o robô deve parar antes de uma colisão para que uma trajetória seja considerada válida em segundos 
 
   scaling_speed : 0.5
-
-    #The absolute value of the velocity at which to start scaling the robot's footprint, in m/s 
+  # O valor absoluto da velocidade na qual começar a dimensionar a pegada do robô, em m/s 
 
   max_scaling_factor : 0.2
-
-    #The maximum factor to scale the robot's footprint by 
-
+  # O fator máximo para dimensionar a pegada do robô por 
 
 
-###Oscillation Prevention Parameters
 
-
+### Oscillation Prevention Parameters
   oscillation_reset_dist : 0.05
-
-    #How far the robot must travel in meters before oscillation flags are reset
-
-
-##Global Plan Parameters
+  # Qual a distância que o robô deve percorrer em metros antes que os sinalizadores de oscilação sejam redefinidos
 
 
+## Parâmetros do Plano Global
   prune_plan : true
-
-    #Defines whether or not to eat up the plan as the robot moves along the path. If set to true, points will fall off the end of the plan once the robot moves 1 meter past them. 
+  # Define se deve ou não consumir o plano enquanto o robô se move ao longo do caminho. Se definido como verdadeiro, os pontos cairão no final do plano quando o robô passar 1 metro além deles. 

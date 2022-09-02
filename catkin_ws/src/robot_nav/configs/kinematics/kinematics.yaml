@@ -1,10 +1,10 @@
-#robot's geometric parameters:
+# parâmetros geométricos do robô:
 
-#Diameter of std. mecanum wheel
+# Diâmetro de std. roda mecanum
 wheelDiameter: 0.254
-#Length of the mobile robot from wheel center to wheel center
+# Comprimento do robô móvel do centro da roda ao centro da roda
 robotLength: 0.475
-#Width from wheel center to wheel center
+# Largura do centro da roda ao centro da roda
 robotWidth: 0.548
 #stddev vel x
 devX: 0.447

@@ -1,64 +1,64 @@
-#######OVERALL FILTER PARAMETER########
+#######PARÂMETRO GERAL DE FILTRO########
 
 min_particles : 500
-#####Minimum allowed number of particles (default:100)
+##### Número mínimo permitido de partículas (padrão: 100)
 
 max_particles : 1250
-#####Maximum allowed number of particles (default:5000)
+##### Número máximo permitido de partículas (padrão: 5000)
 
 kld_err : 0.01
-#####Maximum error between the true distribution and the estimated distribution. 
+##### Erro máximo entre a distribuição verdadeira e a distribuição estimada. 
 
 kld_z : 0.99
-#####Upper standard normal quantile for (1 - p), where p is the probability that the error on the estimated distrubition will be less than kld_err. 
+##### Quantil normal padrão superior para (1 - p), onde p é a probabilidade de que o erro na distribuição estimada seja menor que kld_err.
 
 update_min_d : 0.05
-#####Translational movement required before performing a filter update. (default:0.2)
+##### Movimento translacional necessário antes de realizar uma atualização de filtro. (padrão: 0,2)
 
 update_min_a: 0.05
-#####Rotational movement required before performing a filter update. 
+##### Movimento rotacional necessário antes de realizar uma atualização de filtro.
 
 resample_interval : 2
-#####Number of filter updates required before resampling. 
+##### Número de atualizações de filtro necessárias antes da reamostragem.
 
 transform_tolerance : 0.1 
-#####Time with which to post-date the transform that is published, to indicate that this transform is valid into the future. (default:0.1)
+##### Tempo para a data posterior da transformação publicada, para indicar que essa transformação é válida no futuro. (padrão: 0,1)
 
 #recovery_alpha_slow : 0.0001
-#####Exponential decay rate for the slow average weight filter, used in deciding when to recover by adding random poses. A good value might be 0.001. 
+##### Taxa de decaimento exponencial para o filtro de peso médio lento, usado para decidir quando recuperar adicionando poses aleatórias. Um bom valor pode ser 0,001. 
 
 #recovery_alpha_fast : 0.1
-#####Exponential decay rate for the fast average weight filter, used in deciding when to recover by adding random poses. A good value might be 0.1. 
+##### Taxa de decaimento exponencial para o filtro de peso médio rápido, usado para decidir quando recuperar adicionando poses aleatórias. Um bom valor pode ser 0,1.
 
 initial_pose_x : 0.0 
-#####Initial pose mean (x), used to initialize filter with Gaussian distribution. 
+##### Média de pose inicial (x), usada para inicializar o filtro com distribuição gaussiana.
 
 initial_pose_y : 0.0
-#####Initial pose mean (y), used to initialize filter with Gaussian distribution. 
+##### Média da pose inicial (y), usada para inicializar o filtro com distribuição gaussiana. 
 
 initial_pose_a : 0.0 
-####Initial pose mean (yaw), used to initialize filter with Gaussian distribution. 
+#### Média de pose inicial (guinada), usada para inicializar o filtro com distribuição gaussiana.
 
 initial_cov_xx : 0.25
-#####Initial pose covariance (x*x), used to initialize filter with Gaussian distribution. 
+##### Covariância de pose inicial (x*x), usada para inicializar o filtro com distribuição gaussiana.
 
 initial_cov_yy : 0.25
-#####Initial pose covariance (y*y), used to initialize filter with Gaussian distribution. 
+##### Covariância de pose inicial (y*y), usada para inicializar o filtro com distribuição gaussiana. 
 
 initial_cov_aa : 0.1
-#####Initial pose covariance (yaw*yaw), used to initialize filter with Gaussian distribution. 
+##### Covariância de pose inicial (yaw*yaw), usada para inicializar o filtro com distribuição gaussiana.
 
 gui_publish_rate : 2.0 
-#####Maximum rate (Hz) at which scans and paths are published for visualization, -1.0 to disable. 
+##### Taxa máxima (Hz) na qual varreduras e caminhos são publicados para visualização, -1,0 para desabilitar. 
 
 save_pose_rate : 0.5
-#####Maximum rate (Hz) at which to store the last estimated pose and covariance to the parameter server, in the variables ~initial_pose_* and ~initial_cov_*. This saved pose will be used on subsequent #####runs to initialize the filter. -1.0 to disable. 
+##### Taxa máxima (Hz) na qual armazenar a última pose e covariância estimadas para o servidor de parâmetros, nas variáveis ~initial_pose_* e ~initial_cov_*. Essa pose salva será usada em #####execuções subsequentes para inicializar o filtro. -1.0 para desabilitar. 
 
 use_map_topic : true
-#####When set to true, AMCL will subscribe to the map topic rather than making a service call to receive its map. New in navigation 1.4.2 (default:false)
+##### Quando definido como true, o AMCL assinará o tópico do mapa em vez de fazer uma chamada de serviço para receber seu mapa. Novo na navegação 1.4.2 (padrão: falso)
 
 first_map_only : false
-#####When set to true, AMCL will only use the first map it subscribes to, rather than updating each time a new one is received. New in navigation 1.4.2 (default:false)
+##### Quando definido como verdadeiro, o AMCL usará apenas o primeiro mapa ao qual se inscrever, em vez de atualizar sempre que um novo for recebido. Novo na navegação 1.4.2 (padrão: falso)
 
 
 
@@ -66,68 +66,68 @@ first_map_only : false
 
  
 laser_min_range : -1.0
-#####Minimum scan range to be considered; -1.0 will cause the laser's reported minimum range to be used. 
+##### Faixa de varredura mínima a ser considerada; -1.0 fará com que o alcance mínimo relatado do laser seja usado.
 
 laser_max_range : -1.0
-#####Maximum scan range to be considered; -1.0 will cause the laser's reported maximum range to be used. 
+##### Faixa máxima de varredura a ser considerada; -1.0 fará com que o alcance máximo relatado do laser seja usado. 
 
 laser_max_beams : 200
-#####How many evenly-spaced beams in each scan to be used when updating the filter. (Default:30)
+##### Quantos feixes uniformemente espaçados em cada varredura devem ser usados ao atualizar o filtro. (Padrão: 30)
 
 #laser_z_hit : 0.95
-#####Mixture weight for the z_hit part of the model. 
+##### Peso da mistura para a parte z_hit do modelo. 
 
 #laser_z_short : 0.1
-#####Mixture weight for the z_short part of the model. 
+##### Peso da mistura para a parte z_short do modelo. 
 
 #laser_z_max : 0.05
-#####Mixture weight for the z_max part of the model. 
+##### Peso da mistura para a parte z_max do modelo. 
 
 #laser_z_rand : 0.05
-#####Mixture weight for the z_rand part of the model. 
+##### Peso da mistura para a parte z_rand do modelo. 
 
 #laser_sigma_hit : 0.2 
-#####Standard deviation for Gaussian model used in z_hit part of the model. 
+##### Desvio padrão para o modelo gaussiano usado na parte z_hit do modelo. 
 
 #laser_lambda_short : 0.1
-#####Exponential decay parameter for z_short part of model. 
+##### Parâmetro de decaimento exponencial para a parte z_short do modelo. 
 
 laser_likelihood_max_dist : 2.0 
-#####Maximum distance to do obstacle inflation on map, for use in likelihood_field model. 
+##### Distância máxima para fazer a inflação de obstáculos no mapa, para uso no modelo verossimilhança_campo. 
 
 laser_model_type : "likelihood_field"
-#####Which model to use, either beam, likelihood_field, or likelihood_field_prob (same as likelihood_field but incorporates the beamskip feature, if enabled).
+##### Qual modelo usar, feixe, campo_verossimilhança ou campo_verossimilhança_prob (o mesmo que campo_verossimilhança, mas incorpora o recurso beamskip, se ativado).
 
 
-#######ODOMETRY MODEL PARAMETRS####### 
+#######PARÂMETROS DO MODELO DE ODOMETRIA####### 
 
 odom_model_type : omni-corrected
-#####Which model to use, either "diff", "omni", "diff-corrected" or "omni-corrected". 
+##### Qual modelo usar, "diff", "omni", "diff corrigido" ou "omni-corrigido". 
 
 odom_alpha1 : 0.05
-#####Specifies the expected noise in odometry's rotation estimate from the rotational component of the robot's motion. 
+##### Especifica o ruído esperado na estimativa de rotação da odometria do componente rotacional do movimento do robô. 
 
 odom_alpha2 : 0.05
-#####Specifies the expected noise in odometry's rotation estimate from translational component of the robot's motion. 
+##### Especifica o ruído esperado na estimativa de rotação da odometria do componente translacional do movimento do robô. 
 
 odom_alpha3 : 0.05
-#####Specifies the expected noise in odometry's translation estimate from the translational component of the robot's motion. 
+##### Especifica o ruído esperado na estimativa de translação da odometria do componente translacional do movimento do robô. 
 
 odom_alpha4 : 0.05
-#####Specifies the expected noise in odometry's translation estimate from the rotational component of the robot's motion. 
+##### Especifica o ruído esperado na estimativa de translação da odometria do componente rotacional do movimento do robô. 
 
 odom_alpha5 : 0.05
-#####Translation-related noise parameter (only used if model is "omni"). 
+##### Parâmetro de ruído relacionado à tradução (usado apenas se o modelo for "omni"). 
 
 odom_frame_id : "odom"
-#####Which frame to use for odometry. 
+##### Qual armação usar para odometria. 
 
 base_frame_id : "base_link"
-#####Which frame to use for the robot base 
+##### Qual estrutura usar para a base do robô 
 
 global_frame_id : "map"
-#####The name of the coordinate frame published by the localization system 
+##### O nome do quadro de coordenadas publicado pelo sistema de localização 
 
 tf_broadcast : true
-#####Set this to false to prevent amcl from publishing the transform between the global frame and the odometry frame. 
+##### Defina como false para evitar que o amcl publique a transformação entre o quadro global e o quadro de odometria. 
 

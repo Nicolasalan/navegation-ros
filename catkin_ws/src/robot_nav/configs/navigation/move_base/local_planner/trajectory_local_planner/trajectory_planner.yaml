@@ -1,135 +1,104 @@
 TrajectoryPlannerROS: 
 
  acc_lim_x  : 2.5  
-
-    #The x acceleration limit of the robot in meters/sec^2 
+ # O limite de aceleração x do robô em metros/seg^2
 
  acc_lim_y  : 2.5  
-
-    #The y acceleration limit of the robot in meters/sec^2 
+ # O limite de aceleração y do robô em metros/seg^2 
 
  acc_lim_theta  : 3.2  
-
-    #The rotational acceleration limit of the robot in radians/sec^2 
+ # O limite de aceleração rotacional do robô em radianos/s^2 
 
  max_vel_x  : 0.8  
-
-    #The maximum forward velocity allowed for the base in meters/sec 
+ # A velocidade máxima de avanço permitida para a base em metros/s
 
  min_vel_x  : 0.1  
-
-    #The minimum forward velocity allowed for the base in meters/sec. It is useful to specify this to guarantee that velocity commands sent to a mobile base are high enough to allow the base to overcome #friction. 
+ # A velocidade mínima de avanço permitida para a base em metros/seg. É útil especificar isso para garantir que os comandos de velocidade enviados para uma base móvel sejam altos o suficiente para permitir que a base supere o #friction. 
 
  max_vel_theta  : 1.0  
-
-   #The maximum rotational velocity allowed for the base in radians/sec 
+ # A velocidade de rotação máxima permitida para a base em radianos/s 
 
  min_vel_theta  : -1.0  
-
-    #The minimum rotational velocity allowed for the base in radians/sec 
+ # A velocidade de rotação mínima permitida para a base em radianos/s 
 
  min_in_place_vel_theta  : 0.4  
-
-    #The minimum rotational velocity allowed for the base while performing in-place rotations in radians/sec  
+ # A velocidade rotacional mínima permitida para a base durante a execução de rotações no local em radianos/s  
 
  escape_vel  : -0.1  
-
-    #Speed used for driving during escapes in meters/sec. Note that it must be negative in order for the robot to actually reverse. A positive speed will cause the robot to move forward while attempting #to escape. New in navigation 1.3.1 
+ # Velocidade utilizada para condução em fugas em metros/seg. Observe que deve ser negativo para que o robô realmente reverta. Uma velocidade positiva fará com que o robô avance enquanto tenta #escapar. Novo na navegação 1.3.1 
 
  holonomic_robot  : true  
+ # Determina se os comandos de velocidade são gerados para um robô holonômico ou não holonômico. Para robôs holonômicos, comandos de velocidade de ataque podem ser emitidos para a base. Para robôs não holonômicos, nenhum comando de velocidade #strafing será emitido. 
 
-    #Determines whether velocity commands are generated for a holonomic or non-holonomic robot. For holonomic robots, strafing velocity commands may be issued to the base. For non-holonomic robots, no #strafing velocity commands will be issued. 
-
-#The following parameters are only used if holonomic_robot is set to true:
+# Os parâmetros a seguir são usados apenas se holonomic_robot for definido como true:
 
  y_vels : [-0.1, -0.1, 0.1, 0.1]  
+ # As velocidades de strafing que um robô holonômico considerará em metros/s 
 
-    #The strafing velocities that a holonomic robot will consider in meters/sec 
-
-###Goal Tolerance Parameters
+### Parâmetros de tolerância da meta
 
  yaw_goal_tolerance  : 0.05  
-
-    #The tolerance in radians for the controller in yaw/rotation when achieving its goal 
+ # A tolerância em radianos para o controlador em guinada/rotação ao atingir seu objetivo 
 
  xy_goal_tolerance  : 0.10  
-
-    #The tolerance in meters for the controller in the x & y distance when achieving a goal 
+ # A tolerância em metros para o controlador na distância x e y ao atingir uma meta 
 
  latch_xy_goal_tolerance  : false  
+ # Se a tolerância da meta estiver travada, se o robô chegar ao local xy da meta, ele simplesmente girará no lugar, mesmo que termine fora da tolerância da meta enquanto estiver fazendo isso. - Novo na navegação 1.3.1 
 
-    #If goal tolerance is latched, if the robot ever reaches the goal xy location it will simply rotate in place, even if it ends up outside the goal tolerance while it is doing so. - New in navigation 1.3.1 
-
-###Forward Simulation Parameters
+### Parâmetros de simulação de encaminhamento
 
  sim_time  : 1.0  
-
-    #The amount of time to forward-simulate trajectories in seconds 
+ # A quantidade de tempo para simular trajetórias em segundos 
 
  sim_granularity  : 0.025  
-
-    #The step size, in meters, to take between points on a given trajectory 
+ # O tamanho do passo, em metros, a ser percorrido entre pontos em uma determinada trajetória 
 
  angular_sim_granularity  :  sim_granularity  
-
-    #The step size, in radians, to take between angular samples on a given trajectory. - New in navigation 1.3.1 
+ # O tamanho do passo, em radianos, a ser obtido entre amostras angulares em uma determinada trajetória. - Novo na navegação 1.3.1 
 
  vx_samples : 20  
-
-    #The number of samples to use when exploring the x velocity space 
+ # O número de amostras a serem usadas ao explorar o espaço de velocidade x 
 
  vtheta_samples : 40  
+ # O número de amostras a serem usadas ao explorar o espaço de velocidade teta 
 
-    #The number of samples to use when exploring the theta velocity space 
-
-
-###Trajectory Scoring Parameters
+### Parâmetros de pontuação da trajetória
 
  meter_scoring  : false  
-
-    #Whether the gdist_scale and pdist_scale parameters should assume that goal_distance and path_distance are expressed in units of meters or cells. Cells are assumed by default. New in navigation 1.3.1 
+ # Se os parâmetros gdist_scale e pdist_scale devem assumir que goal_distance e path_distance são expressos em unidades de metros ou células. As células são assumidas por padrão. Novo na navegação 1.3.1
 
  pdist_scale : 0.9  
-
-    #The weighting for how much the controller should stay close to the path it was given, maximal possible value is 5.0 
+ # A ponderação de quanto o controlador deve ficar próximo ao caminho que lhe foi dado, o valor máximo possível é 5.0
 
  gdist_scale : 0.6  
-
-    #The weighting for how much the controller should attempt to reach its local goal, also controls speed, maximal possible value is 5.0 
+ # A ponderação de quanto o controlador deve tentar atingir seu objetivo local, também controla a velocidade, o valor máximo possível é 5,0 
 
  occdist_scale : 0.01  
+ # A ponderação de quanto o controlador deve tentar evitar obstáculos 
 
-    #The weighting for how much the controller should attempt to avoid obstacles 
-
- heading_lookahead : 0.325  
-
-    #How far to look ahead in meters when scoring different in-place-rotation trajectories 
+ heading_lookahead : 0.325 # Em metros
+ # O quão longe olhar para frente em metros ao marcar diferentes trajetórias de rotação no local 
 
  heading_scoring  : false  
-
-    #Whether to score based on the robot's heading to the path or its distance from the path 
+ #Seja pontuar com base no rumo do robô para o caminho ou sua distância do caminho 
 
  heading_scoring_timestep : 1.0  
-
-    #How far to look ahead in time in seconds along the simulated trajectory when using heading scoring 
+ # Quanto olhar para frente no tempo em segundos ao longo da trajetória simulada ao usar a pontuação de direção 
 
  dwa  : true  
-
-    #Whether to use the Dynamic Window Approach (DWA  _ or whether to use Trajectory Rollout (NOTE: In our experience DWA worked as well as Trajectory Rollout and is computationally less expensive. It is possible that robots with extremely poor acceleration limits could gain from running Trajectory Rollout, but we recommend trying DWA first.   
+ # Se usar a abordagem de janela dinâmica (DWA _ ou se usar o rollout de trajetória (OBSERVAÇÃO: em nossa experiência, o DWA funcionou tão bem quanto o rollout de trajetória e é computacionalmente mais barato. É possível que robôs com limites de aceleração extremamente baixos possam ganhar com a execução Lançamento de trajetória, mas recomendamos experimentar o DWA primeiro.   
 
  publish_cost_grid_pc  : false  
-
-    #Whether or not to publish the cost grid that the planner will use when planning. When true, a sensor_msgs/PointCloud2 will be available on the  cost_cloud topic. Each point cloud represents the cost #grid and has a field for each individual scoring function component as well as the overall cost for each cell, taking the scoring parameters into account. New in navigation 1.4.0 
+ # Publicar ou não a grade de custos que o planejador usará no planejamento. Quando verdadeiro, um sensor_msgs/PointCloud2 estará disponível no tópico cost_cloud. Cada nuvem de pontos representa o #grid de custo e possui um campo para cada componente individual da função de pontuação, bem como o custo geral de cada célula, levando em consideração os parâmetros de pontuação. Novo na navegação 1.4.0 
 
  
-###Oscillation Prevention Parameters
+### Parâmetros de prevenção de oscilação
 
  oscillation_reset_dist : 0.05  
+ # Qual a distância que o robô deve percorrer em metros antes que os sinalizadores de oscilação sejam redefinidos
 
-    #How far the robot must travel in meters before oscillation flags are reset 
-
-###Global Plan Parameters
+### Parâmetros do Plano Global
 
  prune_plan  : true  
-
-    #Defines whether or not to eat up the plan as the robot moves along the path. If set to true, points will fall off the end of the plan once the robot moves 1 meter past them.
+ # Define se deve ou não consumir o plano à medida que o robô se move ao longo do caminho. Se definido como verdadeiro, os pontos cairão no final do plano quando o robô passar 1 metro além deles.

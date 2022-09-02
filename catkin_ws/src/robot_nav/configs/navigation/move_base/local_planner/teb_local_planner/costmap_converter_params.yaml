@@ -1,10 +1,10 @@
 ############################
-###Only if using Costmap Converter plugins
+### Apenas se estiver usando plugins Costmap Converter
 ############################
 
 TebLocalPlannerROS:
 
-  ## Costmap converter plugin   
+  ## Plugin conversor de mapa de custos  
   costmap_converter_plugin: "costmap_converter::CostmapToPolygonsDBSMCCH"
   #costmap_converter_plugin: "costmap_converter::CostmapToLinesDBSRANSAC"
   #costmap_converter_plugin: "costmap_converter::CostmapToLinesDBSMCCH"
@@ -14,8 +14,8 @@ TebLocalPlannerROS:
   costmap_converter_rate: 5
  
  
-  ## Configure plugins (namespace move_base/TebLocalPlannerROS/PLUGINNAME)
-  ## The parameters must be added for each plugin separately
+  ## Configurar plugins (namespace move_base/TebLocalPlannerROS/PLUGINNAME)
+  ## Os parâmetros devem ser adicionados para cada plugin separadamente
   costmap_converter/CostmapToLinesDBSRANSAC:
     cluster_max_distance: 0.4
     cluster_min_pts: 2

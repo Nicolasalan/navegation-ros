@@ -5,99 +5,99 @@
   odom_frame : "odom"
 
   map_update_interval : 1.0
-  # How long (in seconds) between updates to the map. Lowering this number updates the occupancy grid more often, at the expense of greater computational load.
+  # Quanto tempo (em segundos) entre as atualizações do mapa. A redução desse número atualiza a grade de ocupação com mais frequência, em detrimento de uma maior carga computacional.
 
   maxUrange : 28
-  # The maximum usable range of the laser. A beam is cropped to this value. 
+  # O alcance máximo utilizável do laser. Um feixe é cortado para este valor.
 
   sigma : 0.05
-  #The sigma used by the greedy endpoint matching 
+  # O sigma usado pela correspondência de endpoint gananciosa
 
   kernelSize : 1
-  #The kernel in which to look for a correspondence 
+  # O kernel no qual procurar uma correspondência 
 
   lstep : 0.05
-  #The optimization step in translation 
+  # A etapa de otimização na tradução
 
   astep : 0.05
-  #The optimization step in rotation 
+  # A etapa de otimização na rotação 
 
   iterations : 5
-  #The number of iterations of the scanmatcher 
+  # A etapa de otimização na rotação 
 
   lsigma : 0.075
-  #The sigma of a beam used for likelihood computation 
+  # O sigma de um feixe usado para cálculo de probabilidade
 
   ogain : 3.0
-  #Gain to be used while evaluating the likelihood, for smoothing the resampling effects 
+  # Ganho a ser usado ao avaliar a probabilidade, para suavizar os efeitos de reamostragem 
 
   lskip : 0
-  #Number of beams to skip in each scan. 
+  # Número de feixes a serem ignorados em cada varredura. 
 
   minimumScore : 100.0
-  #Minimum score for considering the outcome of the scan matching good. Can avoid jumping pose estimates in large open spaces when using laser scanners with limited range (e.g. 5m). Scores go up to 600' #try 50 for example when experiencing jumping estimate issues. 
+  # Pontuação mínima por considerar o resultado da verificação como bom. Pode evitar estimativas de poses saltitantes em grandes espaços abertos ao usar scanners a laser com alcance limitado (por exemplo, 5m). As pontuações vão até 600' #tente 50, por exemplo, ao enfrentar problemas de estimativa de salto. 
 
   srr : 0.25
-  #Odometry error in translation as a function of translation (rho/rho) 
+  # Erro de odometria na tradução em função da tradução (rho/rho)
 
   srt : 0.5
-  #Odometry error in translation as a function of rotation (rho/theta) 
+  # Erro de odometria na translação em função da rotação (rho/theta) 
 
   str : 0.25
-  #Odometry error in rotation as a function of translation (theta/rho) 
+  # Erro de odometria na rotação em função da translação (teta/rho) 
 
   stt : 0.5
-  #Odometry error in rotation as a function of rotation (theta/theta) 
+  # Erro de odometria na rotação em função da rotação (teta/teta)
 
   linearUpdate : 0.1
-  #Process a scan each time the robot translates this far 
+  # Processar uma varredura cada vez que o robô traduz até aqui 
 
   angularUpdate : 0.1
-  #Process a scan each time the robot rotates this far 
+  # Processar uma varredura cada vez que o robô gira até aqui 
 
   temporalUpdate : 0.5
-  #Process a scan if the last scan processed is older than the update time in seconds. A value less than zero will turn time based updates off. 
+  # Processar uma verificação se a última verificação processada for anterior ao tempo de atualização em segundos. Um valor menor que zero desativará as atualizações baseadas em tempo. 
 
   resampleThreshold : 0.5
-  #The Neff based resampling threshold 
+  # Limite de reamostragem baseado em Neff
 
   particles : 100
-  #Number of particles in the filter.
+  # Número de partículas no filtro.
 
   xmin : -20.0
-  #Initial map size 
+  #Tamanho inicial do mapa 
 
   ymin : -20.0
-  #Initial map size 
+  #Tamanho inicial do mapa
 
   xmax : 20.0
-  #Initial map size 
+  #Tamanho inicial do mapa 
 
   ymax : 20.0
-  #Initial map size 
+  #Tamanho inicial do mapa 
 
   delta : 0.03
-  #Resolution of the map.
+  # Resolução do mapa.
 
-  #llsamplerange : 0.01
-  #Translational sampling range for the likelihood 
+  #llsamplerange: 0,01
+  # Intervalo de amostragem translacional para a probabilidade
 
-  #llsamplestep : 0.01
-  #Translational sampling step for the likelihood 
+  #llsamplestep : 0,01
+  # Etapa de amostragem translacional para a probabilidade
 
-  #lasamplerange : 0.005
-  #Angular sampling range for the likelihood 
+  #lasamplerange : 0,005
+  # Intervalo de amostragem angular para a probabilidade
 
-  #lasamplestep : 0.005
-  #Angular sampling step for the likelihood 
+  #lasamplestep : 0,005
+  # Etapa de amostragem angular para a probabilidade
 
   transform_publish_period : 0.05
-  #How long (in seconds) between transform publications. 
+  # Quanto tempo (em segundos) entre as publicações de transformação.
 
   occ_thresh : 0.25
-  #Threshold on gmapping's occupancy values. Cells with greater occupancy are considered occupied (i.e., set to 100 in the resulting sensor_msgs/LaserScan). New in 1.1.0. 
+  # Limite nos valores de ocupação do gmapping. As células com maior ocupação são consideradas ocupadas (ou seja, definidas como 100 no sensor_msgs/LaserScan resultante). Novo em 1.1.0.
 
   #maxRange
-  #The maximum range of the sensor. If regions with no obstacles within the range of the sensor should appear as free space in the map, set maxUrange < maximum range of the real sensor <= maxRan
+  # O alcance máximo do sensor. Se as regiões sem obstáculos dentro do alcance do sensor devem aparecer como espaço livre no mapa, defina maxUrange < alcance máximo do sensor real <= maxRan
 
 

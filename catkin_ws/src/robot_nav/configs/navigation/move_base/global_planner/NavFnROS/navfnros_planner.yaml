@@ -1,58 +1,53 @@
-#
-#Documentation:
-#http://wiki.ros.org/global_planner
-#
-
 allow_unknown: true
-#Specifies whether or not to allow the planner to create plans that traverse unknown space. 
-#NOTE: if you are using a layered costmap_2d costmap with a voxel or obstacle layer, 
-#you must also set the track_unknown_space param for that layer to be true, 
-#or it will convert all your unknown space to free space (which planner will then happily go right through). 
-#(bool, default: true)
+# Especifica se permite ou não que o planejador crie planos que percorram um espaço desconhecido.
+# NOTA: se você estiver usando um mapa de custos costmap_2d em camadas com uma camada de voxel ou obstáculo,
+# você também deve definir o parâmetro track_unknown_space para que essa camada seja verdadeira,
+# ou converterá todo o seu espaço desconhecido em espaço livre (pelo qual o planejador passará alegremente).
+# (bool, default: true)
 
 default_tolerance: 0.0
-#A tolerance on the goal point for the planner. The planner will attempt to create a plan that is as close to 
-#the specified goal as possible but no further than default_tolerance away.
-#(double, default: 0.0)
+# A tolerância no ponto de meta para o planejador. O planejador tentará criar um plano que seja o mais próximo possível
+# a meta especificada possível, mas não além de default_tolerance.
+# (duplo, padrão: 0.0)
 
 visualize_potential: false
-#Specifies whether or not to visualize the potential area computed via a PointCloud2.
-#(bool, default: false)
+# Especifica se deseja ou não visualizar a área potencial calculada por meio de um PointCloud2.
+# (bool, default: false)
 
 use_dijkstra: true
-#If true, use dijkstra's algorithm. Otherwise, A*.
-#(bool, default: true)
+# Se verdadeiro, use o algoritmo de dijkstra. Caso contrário, A*.
+# (bool, default: true)
 
 use_quadratic: true
-#If true, use the quadratic approximation of the potential. Otherwise, use a simpler calculation.
-#(bool, default: true)
+# Se verdadeiro, use a aproximação quadrática do potencial. Caso contrário, use um cálculo mais simples.
+# (bool, default: true)
 
 use_grid_path: false
-#If true, create a path that follows the grid boundaries. Otherwise, use a gradient descent method.
-#(bool, default: false)
+# Se verdadeiro, crie um caminho que siga os limites da grade. Caso contrário, use o método de gradiente descendente.
+# (bool, default: false)
 
 old_navfn_behavior: false
-#If for some reason, you want global_planner to exactly mirror the behavior of navfn, 
-#set this to true (and use the defaults for the other boolean parameters)
-#(bool, default: false)
+# Se, por algum motivo, você quiser que o global_planner espelhe exatamente o comportamento do navfn,
+# defina isso como true (e use os padrões para os outros parâmetros booleanos)
+# (bool, default: false)
 
 lethal_cost: 253 
-#Lethal Cost (dynamic reconfigure) (int, default: 253)
+# Custo Letal (reconfiguração dinâmica) (int, padrão: 253)
 
 neutral_cost: 50
-#Neutral Cost (dynamic reconfigure) (int, default: 50)
+# Custo Neutro (reconfiguração dinâmica) (int, default: 50)
 
 cost_factor: 3.0
-#Factor to multiply each cost from costmap by (dynamic reconfigure) (double, default: 3.)
+# Fator para multiplicar cada custo do mapa de custos por (reconfiguração dinâmica) (duplo, padrão: 3.)
 
 publish_potential: true
-#Publish Potential Costmap (dynamic reconfigure) (bool, default: True)
+# Publicar Mapa de Custo Potencial (reconfiguração dinâmica) (bool, padrão: True)
 
 orientation_mode: 0
-#How to set the orientation of each point 
-#(None=0, Forward=1, Interpolate=2, ForwardThenInterpolate=3, Backward=4, Leftward=5, Rightward=6) (dynamic reconfigure)
-#(int, default: 0)
+# Como definir a orientação de cada ponto
+# (Nenhum=0, Forward=1, Interpolate=2, ForwardThenInterpolate=3, Backward=4, Leftward=5, Rightward=6) (reconfiguração dinâmica)
+# (int, padrão: 0)
 
 orientation_window_size: 1
-#What window to use to determine the orientation based on the position derivative specified by the orientation mode (dynamic reconfigure)
-#(int, default: 1)
+# Qual janela usar para determinar a orientação com base na derivada de posição especificada pelo modo de orientação (reconfiguração dinâmica)
+# (int, padrão: 1)
