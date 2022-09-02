@@ -4,8 +4,8 @@
 	<param if="$(arg sendTF)" name="mecanum_node/sendTransform" value="true"/>
 	<param unless="$(arg sendTF)" name="mecanum_node/sendTransform" value="false"/>
 	<rosparam command="load" ns="mecanum_node" file="$(find robot_nav)/configs/kinematics/kinematics.yaml"/>
-	<node pkg="neo_kinematics_mecanum" type="neo_kinematics_mecanum_node" name="mecanum_node" ns="mecanum_node" respawn="false" output="screen">
-	</node>
+	<!-- <node pkg="neo_kinematics_mecanum" type="neo_kinematics_mecanum_node" name="mecanum_node" ns="mecanum_node" respawn="false" output="screen">
+	</node>-->
 </launch>
 
 
