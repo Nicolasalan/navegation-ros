@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-
-<launch>
-
-        <include file="$(find robot_nav)/configs/navigation/neo_localization/neo_localization.launch"/>
-        <include file="$(find robot_nav)/configs/navigation/move_base/move_base.launch"/>
-
-</launch>

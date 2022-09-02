@@ -36,7 +36,7 @@ rosrun map_server map_saver -f your_map_name
 Isso criará dois arquivos, um arquivo “your_map_name.pgm” e um arquivo “your_map_name.yaml”. Ambos os arquivos são necessários e devem estar sempre no mesmo diretório.
 **Instalando o mapa:**
 ```
-cp your_map_name.* ~/ros_workspace/src/neo_mp[...]/configs/navigation/maps/
+cp your_map_name.* ~/navegation-warehouse/catkin_ws/src/robot_nav/configs/navigation/maps/
 ```
 **Para utilizar o mapa que foi salvo:**
 ```
