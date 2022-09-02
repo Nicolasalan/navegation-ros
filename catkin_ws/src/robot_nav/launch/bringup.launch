@@ -58,7 +58,7 @@
 	<include file="$(find robot_nav)/configs/kinematics/kinematics.launch"/> 
 
 	<!--sensors-->
-	 <include file="$(find robot_nav)/configs/lidar/lidar.launch"/>
+	<!--<include file="$(find robot_nav)/configs/lidar/lidar.launch"/>-->
 
 	<!--teleoperation-->
 	<include file="$(find robot_nav)/configs/teleop/teleop.launch"/>
