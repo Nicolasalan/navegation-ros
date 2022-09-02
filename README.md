@@ -2,6 +2,9 @@
 
 ## **Sobre o Projeto**
 Navegação autônoma de um robô omnidirecional para automação de armazéns. 
+
+## RNS - ROS Navigation Stack
+A Pilha de Navegação é um conjunto de nós e algoritmos ROS que são usados ​​para mover um robô de um ponto a outro de forma autônoma, evitando todos os obstáculos que o robô possa encontrar em seu caminho. O ROS Navigation Stack vem com uma implementação de vários algoritmos relacionados à navegação que podem ajudá-lo a realizar navegação autônoma em seus robôs móveis.
 ## **Dependências**
 Instale as seguintes dependências:
 ```
