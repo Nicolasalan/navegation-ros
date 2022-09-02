@@ -1,1 +1,3 @@
+# move_base
+
 A principal função do nó `move_base` é mover um robô de sua posição atual para uma posição de objetivo com a ajuda de outros nós de navegação. Este nó liga o planejador global e o planejador local para o planejamento do caminho, conectando ao pacote de recuperação rotativa caso o robô esteja preso em algum obstáculo, e conectando o mapa de custos global e mapa de custos local para obter o mapa de obstáculos do ambiente.
