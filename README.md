@@ -15,53 +15,57 @@ A Pilha de Navegação é um conjunto de nós e algoritmos ROS que são usados �
 * **sensor transforms/tf:** os dados capturados pelos diferentes sensores do robô devem ser referenciados a um quadro de referência comum (geralmente o `base_link`) para poder comparar os dados provenientes de diferentes sensores. O robô deve publicar a relação entre o quadro de coordenadas do robô principal e os quadros dos diferentes sensores usando transformações ROS.
 
 * **base_controller:** A função principal do controlador base é converter a saída da pilha de navegação, que é uma mensagem Twist (`geometry_msgs/Twist`), em velocidades de motor correspondentes para o robô.
+## Clonar o repositório
+```bash
+git clone https://github.com/Nicolasalan/navegation-warehouse.git
+```
 ## **Dependências**
 Instale as seguintes dependências:
-```
+```bash
 cd navegation-warehouse
 chmod +x requirements.sh
 ./requirements.sh
 ```
 ## **Uso**
 **Para inicializar o robô, execute o seguinte comando:**
-```
+```bash
 cd navegation-warehouse/catkin_ws
 catkin_make
 source devel/setup.bash
 ```
 **Para iniciar a simulação:**
-```
+```bash
 roslaunch robot_nav bringup.launch
 ```
 ### Mapeamento
 **Iniciar o mapa:**
-```
+```bash
 roslaunch robot_nav gmapping_basic.launch
 ```
 **Para visualizar a navegação enquando o mapa é gerado:**
-```
+```bash
 roslaunch robot_nav rviz_navigation.launch
 ```
 **Salvar o mapa:**
-```
+```bash
 rosrun map_server map_saver -f your_map_name
 ```
 Isso criará dois arquivos, um arquivo “your_map_name.pgm” e um arquivo “your_map_name.yaml”. Ambos os arquivos são necessários e devem estar sempre no mesmo diretório.
 **Instalando o mapa:**
-```
+```bash
 cp your_map_name.* ~/navegation-warehouse/catkin_ws/src/robot_nav/configs/navigation/maps/
 ```
 **Para utilizar o mapa que foi salvo:**
-```
+```bash
 export MAP_NAME=your_map_name
 ```
 ### Localização
 **Iniciar a localização:**
-```
+```bash
 roslaunch robot_nav navigation_basic_amcl.launch
 ```
 **Para visualizar a navegação:**
-```
+```bash
 roslaunch robot_nav rviz_navigation.launch
 ```
 
