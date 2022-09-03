@@ -65,3 +65,136 @@ Ao contrário do planejador global, o planejador local monitora a odometria e os
 Depois que o plano local é calculado, ele é publicado em um tópico chamado `/local_plan`. O planejador local também publica a parte do plano global que está tentando seguir no tópico `/global_plan`. Vamos fazer um exercício para que você possa ver isso melhor.
 
 **NOTA** Quanto ao planejador global, existem também diferentes tipos de planejadores locais. Dependendo da configuração e uso como o ambiente em que navega, etc.) e o tipo de desempenho que você deseja, você usará um ou outro.
+
+# dwa_local_planner
+O planejador local do DWA fornece uma implementação do algoritmo Dynamic Window Approach. É basicamente uma reescrita da opção DWA (Dynamic Window Approach) do planejador local base, mas o código é muito mais limpo e fácil de entender, principalmente na forma como as trajetórias são simuladas.
+
+Portanto, para aplicativos que usam a abordagem DWA para planejamento local, o `dwa_local_planner` é provavelmente a melhor escolha. Esta é a opção mais utilizada.
+
+# eband_local_planner
+O planejador local eband implementa o método `Elastic Band` para calcular o plano local a seguir. [http://wiki.ros.org/eband_local_planner]
+
+# teb_local_planner
+O planejador local teb implementa o método `Timed Elastic Band` para calcular o plano local. [http://wiki.ros.org/teb_local_planner]
+
+## Parâmetros do planejador local
+
+* **/acc_lim_x (padrão: `2.5`):** o limite de aceleração x do robô em metros/s^2
+* **/acc_lim_th (padrão: `3.2`):** o limite de aceleração rotacional do robô em radianos/s^2
+* **/max_vel_trans (padrão: `0,55`):** O valor absoluto da velocidade de translação máxima para o robô em m/s
+* **/min_vel_trans (padrão: `0.1`):** O valor absoluto da velocidade de translação mínima para o robô em m/s
+* **/max_vel_x (padrão: `0,55`):** A velocidade máxima x para o robô em m/s.
+* **/min_vel_x (padrão: 0.0): A velocidade mínima x para o robô em m/s, negativa para o movimento para trás.
+* **/max_vel_theta (padrão: `1.0`):** O valor absoluto da velocidade rotacional máxima do robô em rad/s
+* **/min_vel_theta (padrão: `0,4`):** O valor absoluto da velocidade rotacional mínima para o robô em rad/s
+
+## Parâmetros de tolerância de meta
+* **/yaw_goal_tolerance (double, default: `0.05`):** A tolerância, em radianos, para o controlador em yaw/rotation ao atingir seu objetivo
+* **/xy_goal_tolerance (double, default: `0.10`):** A tolerância, em metros, para o controlador na distância xey ao atingir uma meta
+* **/latch_xy_goal_tolerance (bool, default: `false`):** Se a tolerância da meta estiver travada, se o robô alcançar o local xy da meta, ele simplesmente girará no lugar, mesmo que termine fora da tolerância da meta enquanto estiver fazendo isso.
+
+## Parâmetros de simulação direta
+* **/sim_time (padrão: `1,7`):** a quantidade de tempo para simular trajetórias em segundos
+* **/sim_granularity (padrão: `0,025`):** o tamanho do passo, em metros, a ser percorrido entre pontos em uma determinada trajetória
+* **/vx_samples (padrão: `3`):** o número de amostras a serem usadas ao explorar o espaço de velocidade x
+* **/vy_samples (padrão: `10`):** o número de amostras a serem usadas ao explorar o espaço de velocidade y
+* **/vtheta_samples (padrão: `20`):** o número de amostras a serem usadas ao explorar o espaço de velocidade teta
+
+## Parâmetros de pontuação da trajetória
+* **/path_distance_bias (padrão: `32.0`):** O peso de quanto o controlador deve ficar próximo ao caminho que recebeu
+* **/goal_distance_bias (padrão: `24.0`):** O peso de quanto o controlador deve tentar atingir seu objetivo local; também controla a velocidade
+* **/occdist_scale (padrão: `0.01`):** O peso de quanto o controlador deve tentar evitar obstáculos
+
+# Local Costmap
+A primeira coisa que você precisa saber é que o planejador local usa o mapa de custos local para calcular os planos locais.
+
+Ao contrário do mapa de custos global, o mapa de custos local é criado diretamente das leituras do sensor do robô. Dada uma largura e uma altura para o mapa de custos (que são definidas pelo usuário), ele mantém o robô no centro do mapa de custos enquanto se move pelo ambiente, retirando informações de obstáculos do mapa à medida que o robô se move.
+
+O mapa de custos local detecta novos objetos que aparecem na simulação, enquanto o mapa de custos global não.
+
+Isso acontece, porque o mapa de custos global é criado a partir de um arquivo de mapa estático. Isso significa que o mapa de custos não mudará, mesmo que o ambiente mude. O mapa de custos local, em vez disso, é criado a partir das leituras dos sensores do robô, portanto, ele sempre será atualizado com novas leituras dos sensores.
+
+Como o mapa de custos global e o mapa de custos local não têm o mesmo comportamento, o arquivo de parâmetros também deve ser diferente. 
+
+## Parâmetros do mapa de custos local
+
+* **global_frame:** O quadro global para o mapa de custos operar. No mapa de custos local, este parâmetro deve ser definido como "/odom".
+* **robot_base_frame:** O nome do quadro para o link base do robô.
+rolling_window: se deve ou não usar uma versão de janela rolante do mapa de custos. Se o * * * **parâmetro static_map** for configurado como true, esse parâmetro deverá ser configurado como false. No mapa de custos local, esse parâmetro deve ser definido como "true".
+* **update_frequency (padrão: `5.0`):** A frequência em Hz para o mapa a ser atualizado.
+* **width (padrão: `10`):** A largura do mapa de custos.
+* **heigth (padrão: `10`):** A altura do mapa de custos.
+* **plugins:** Sequência de especificações de plugins, uma por camada. Cada especificação é um dicionário com campos de nome e tipo. O nome é usado para definir o namespace do parâmetro para o plug-in.
+
+O mapa de custos se inscreve automaticamente nos tópicos do sensor e se atualiza de acordo com os dados que recebe deles. Cada sensor é usado para marcar (inserir informações de obstáculos no mapa de custos), limpar (remover informações de obstáculos do mapa de custos) ou ambos.
+
+Uma operação de marcação é apenas um índice em uma matriz para alterar o custo de uma célula.
+Uma operação de limpeza, no entanto, consiste em raytracing através de uma grade da origem do sensor para fora para cada observação relatada.
+
+As operações de marcação e limpeza podem ser definidas na camada de obstáculos.
+
+## Parâmetros comuns do mapa de custos
+
+footprint: footprint é o contorno da base móvel. No ROS, é representado por uma matriz bidimensional da forma [x0, y0], [x1, y1], [x2, y2], ...]. Esta pegada será usada para calcular o raio de círculos inscritos e círculos circunscritos, que são usados ​​para inflar obstáculos de uma forma que se encaixe neste robô. Normalmente, por segurança, queremos que a footprint seja um pouco maior que o contorno real do robô.
+robot_radius: Caso o robô seja circular, especificaremos este parâmetro ao invés do footprint.
+parâmetros das camadas: Aqui vamos definir os parâmetros para cada camada.
+Cada camada tem seus próprios parâmetros.
+
+### Camada de Obstáculos
+A camada de obstáculos é responsável pelas operações de marcação e limpeza.
+
+O mapa de custos se inscreve automaticamente nos tópicos do sensor e se atualiza de acordo com os dados que recebe deles. Cada sensor é usado para marcar (inserir informações de obstáculos no mapa de custos), limpar (remover informações de obstáculos do mapa de custos) ou ambos.
+
+Uma operação de marcação é apenas um índice em uma matriz para alterar o custo de uma célula.
+Uma operação de limpeza, no entanto, consiste em raytracing através de uma grade da origem do sensor para fora para cada observação relatada.
+
+As operações de marcação e limpeza podem ser definidas na camada de obstáculos.
+
+Para configurar a camada de obstáculo, precisamos primeiro definir um nome para a camada e, em seguida, definir o parâmetro `observ_sources`.
+
+### Parâmetros da camada de obstáculos
+* **/source_name/topic (padrão: `source_name`):** O tópico no qual os dados do sensor são recebidos para esta origem. O padrão é o nome da fonte.
+* **/source_name/data_type (padrão: "`PointCloud`"):** o tipo de dados associado ao tópico, no momento, apenas "PointCloud", "PointCloud2" e "LaserScan" são suportados.
+* **/source_name/clearing (padrão: `false`):** se esta observação deve ou não ser usada para limpar o espaço livre.
+* **/source_name/marking (padrão: `true`):** se esta observação deve ou não ser usada para marcar obstáculos.
+* **/source_name/inf_is_valid (padrão: `false`):** Permite valores Inf em mensagens de observação "LaserScan". Os valores Inf são convertidos para o alcance máximo do laser.
+* **/source_name/max_obstacle_height (`padrão: 2.0`):** A altura máxima de qualquer obstáculo a ser inserido no mapa de custos, em metros. Este parâmetro deve ser definido para ser um pouco mais alto que a altura do seu robô.
+* **/source_name/obstacle range (`padrão: 2.5`):** A distância máxima padrão do robô na qual um obstáculo será inserido no mapa de custo, em metros. Isso pode ser substituído por sensor.
+* **/source_name/raytrace_range (`padrão: 3.0`):** O intervalo padrão em metros no qual traçar os obstáculos do mapa usando dados do sensor. Isso pode ser substituído por sensor.
+
+## Inflation Layer
+A camada de insuflação é responsável por realizar a insuflação em cada célula com um obstáculo.
+
+* **inflation_radius (padrão: `0,55`):** O raio em metros para o qual o mapa infla os valores de custo de obstáculo.
+* **cost_scaling_factor (padrão: `10.0`):** Um fator de escala para aplicar aos valores de custo durante a inflação.
+
+##  Static Layer
+A camada estática é responsável por fornecer o mapa estático aos mapas de custos que o requerem (mapa de custos global).
+
+map_topic (string, default: "map"): O tópico que o mapa de custos assina para o mapa estático.
+
+## Recovery Behaviors
+Pode acontecer que, ao tentar realizar uma trajetória, o robô fique preso por algum motivo. Felizmente, se isso acontecer, o ROS Navigation Stack fornece métodos que podem ajudar o robô a se soltar e continuar navegando. Estes são os comportamentos de recuperação.
+
+O ROS Navigation Stack oferece dois comportamentos de recuperação: mapa de custos claro e recuperação rotativa.
+
+Para habilitar os comportamentos de recuperação, precisamos definir o seguinte parâmetro no arquivo de parâmetros move_base:
+
+recovery_behavior_enabled (padrão: true): habilita ou desabilita os comportamentos de recuperação.
+
+### Rotate Recovery
+Basicamente, o comportamento de recuperação de rotação é um comportamento de recuperação simples que tenta liberar espaço girando o robô 360 graus. Dessa forma, o robô poderá encontrar um caminho livre de obstáculos para continuar navegando.
+
+Possui alguns parâmetros para alterar seu comportamento:
+* **/sim_granularity (padrão: `0,017`):** A distância, em radianos, entre verificações de obstáculos ao verificar se uma rotação no local é segura. Padrões para 1 grau.
+* **/frequency (padrão: `20.0`):** A frequência, em HZ, na qual enviar comandos de velocidade para a base móvel.
+Outros parâmetros
+* **/yaw_goal_tolerance (double, default: `0.05`):** A tolerância, em radianos, para o controlador em yaw/rotation ao atingir seu objetivo
+* **/acc_lim_th (double, default: `3.2`):** O limite de aceleração rotacional do robô, em radianos/s^2
+* **/max_rotational_vel (double, default: `1.0`):** A velocidade rotacional máxima permitida para a base, em radianos/s
+* **/min_in_place_rotational_vel (double, default: `0,4`):** a velocidade rotacional mínima permitida para a base durante a execução de rotações no local, em radianos/s
+
+# Clear Costmap
+A recuperação clara do mapa de custos é um comportamento de recuperação simples que libera espaço eliminando obstáculos fora de uma região especificada do mapa do robô. Basicamente, o mapa de custos local reverte para o mesmo estado que o mapa de custos global.
+
+Vamos tentar um exercício rápido para testar os comportamentos de recuperação.
