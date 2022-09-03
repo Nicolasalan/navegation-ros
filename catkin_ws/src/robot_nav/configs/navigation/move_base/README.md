@@ -3,11 +3,11 @@
 A principal função do nó `move_base` é mover um robô de sua posição atual para uma posição de objetivo com a ajuda de outros nós de navegação. Este nó liga o planejador global e o planejador local para o planejamento do caminho, conectando ao pacote de recuperação rotativa caso o robô esteja preso em algum obstáculo, e conectando o mapa de custos global e mapa de custos local para obter o mapa de obstáculos do ambiente. Basicamente, este nó é uma implementação de um SimpleActionServer, que assume uma pose de objetivo com o tipo de mensagem `geometry_msgs/PoseStamped`.
 
 ### Tópicos que o move_base publica
-* move_base/goal (move_base_msgs/MoveBaseActionGoal)
-* move_base/cancel (actionlib_msgs/GoalID)
-* move_base/feedback (move_base_msgs/MoveBaseActionFeedback)
-* move_base/status (actionlib_msgs/GoalStatusArray)
-* move_base/result (move_base_msgs/MoveBaseActionResult)
+* `move_base/goal` (move_base_msgs/MoveBaseActionGoal)
+* `move_base/cancel` (actionlib_msgs/GoalID)
+* `move_base/feedback` (move_base_msgs/MoveBaseActionFeedback)
+* `move_base/status` (actionlib_msgs/GoalStatusArray)
+* `move_base/result` (move_base_msgs/MoveBaseActionResult)
 
 # Planejador Global
 Quando uma nova meta é recebida pelo nó `move_base`, essa meta é imediatamente enviada ao planejador global. Então, o planejador global fica encarregado de calcular um caminho seguro para chegar a essa pose de objetivo. Esse caminho é calculado antes que o robô comece a se mover, portanto, não levará em consideração as leituras que os sensores do robô estão fazendo durante o movimento.
