@@ -196,5 +196,3 @@ Outros parâmetros
 
 # Clear Costmap
 A recuperação clara do mapa de custos é um comportamento de recuperação simples que libera espaço eliminando obstáculos fora de uma região especificada do mapa do robô. Basicamente, o mapa de custos local reverte para o mesmo estado que o mapa de custos global.
-
-Vamos tentar um exercício rápido para testar os comportamentos de recuperação.
