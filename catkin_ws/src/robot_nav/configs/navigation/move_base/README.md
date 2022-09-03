@@ -64,4 +64,4 @@ Ao contrário do planejador global, o planejador local monitora a odometria e os
 
 Depois que o plano local é calculado, ele é publicado em um tópico chamado `/local_plan`. O planejador local também publica a parte do plano global que está tentando seguir no tópico `/global_plan`. Vamos fazer um exercício para que você possa ver isso melhor.
 
-**NOTA** Quanto ao planejador global, existem também diferentes tipos de planejadores locais. Dependendo da configuração e uso como o ambiente em que navega, etc.) e o tipo de desempenho.
+**NOTA** Quanto ao planejador global, existem também diferentes tipos de planejadores locais. Dependendo da configuração e uso como o ambiente em que navega, etc.) e o tipo de desempenho que você deseja, você usará um ou outro.
