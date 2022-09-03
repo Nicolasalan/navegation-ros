@@ -29,7 +29,7 @@ A imagem descreve o estado de ocupação de cada célula do mundo na cor do pixe
 
 Quando comunicada via mensagens ROS, a ocupação é representada como um inteiro no intervalo [0,100], com 0 significando completamente livre e 100 significando completamente ocupado, e o valor especial -1 para completamente desconhecido.
 
-Os dados da imagem são lidos via SDL_Image; os formatos suportados variam, dependendo do que o `SDL_Image` fornece em uma plataforma específica. De um modo geral, os formatos de imagem mais populares são amplamente suportados.
+Os dados da imagem são lidos via `SDL_Image`; os formatos suportados variam, dependendo do que o `SDL_Image` fornece em uma plataforma específica. De um modo geral, os formatos de imagem mais populares são amplamente suportados.
 
 # Observação
 O mapa criado é um mapa estático. Isso significa que o mapa sempre permanecerá como estava quando foi criado. Assim, quando cria um Mapa, ele irá capturar o ambiente como está no exato momento em que o processo de mapeamento está sendo realizado. Se, por algum motivo, o ambiente mudar no futuro, essas mudanças não aparecerão no mapa, portanto, não serão mais válidas (ou não corresponderão ao ambiente real).
@@ -51,24 +51,29 @@ O comando acima irá gerar um arquivo .pdf com a árvore de transformação do s
 # Configurando o pacote gmapping
 Este nó é altamente configurável e possui muitos parâmetros que podem ser alterados para melhorar o desempenho do mapeamento. Esses parâmetros serão lidos do ROS Parameter Server e podem ser definidos no próprio arquivo de inicialização ou em arquivos de parâmetros separados (arquivo YAML).
 
-* base_frame (padrão: `base_link`): Indica o nome do quadro anexado à base móvel.
-* map_frame (padrão: `map`): Indica o nome do frame anexado ao mapa.
-* odom_frame (padrão: `odom`): Indica o nome do quadro anexado ao sistema de odometria.
-* map_update_interval (padrão: `5.0`): Define o tempo (em segundos) para esperar até atualizar o mapa.
+* **base_frame (padrão: `base_link`):** Indica o nome do quadro anexado à base móvel.
+* **map_frame (padrão: `map`):** Indica o nome do frame anexado ao mapa.
+* **odom_frame (padrão: `odom`):** Indica o nome do quadro anexado ao sistema de odometria.
+* **map_update_interval (padrão: `5.0`):** Define o tempo (em segundos) para esperar até atualizar o mapa.
 
 ## Parâmetros do sensor laser
-* maxRange(float): Define o alcance máximo do laser. Defina este valor para algo ligeiramente superior ao alcance máximo do sensor real.
-* maxUrange(padrão: 80.0): Define o alcance máximo utilizável do laser. Os feixes de laser serão cortados para este valor.
-* MinimumScore (padrão: 0.0): Define a pontuação mínima para considerar uma leitura de laser boa.
+* **maxRange(float):** Define o alcance máximo do laser. Defina este valor para algo ligeiramente superior ao alcance máximo do sensor real.
+* **maxUrange(padrão: `80.0`):** Define o alcance máximo utilizável do laser. Os feixes de laser serão cortados para este valor.
+* **MinimumScore (padrão: `0.0`):** Define a pontuação mínima para considerar uma leitura de laser boa.
 
 ## Parâmetros do mapa
-* xmin (default: -100.0): Tamanho inicial do mapa
-* ymin (default: -100.0): Tamanho inicial do mapa
-* xmax (default: 100.0): Tamanho inicial do mapa
-* ymax (default: 100.0): Tamanho inicial do mapa
-* delta (default: 0.05): Define a resolução do mapa
+* **xmin (default: `-100.0`):** Tamanho inicial do mapa
+* **ymin (default: `-100.0`):** Tamanho inicial do mapa
+* **xmax (default: `100.0`):** Tamanho inicial do mapa
+* **ymax (default: `100.0`):** Tamanho inicial do mapa
+* **delta (default: `0.05`):** Define a resolução do mapa
 
-* linearUpdate (padrão: 1.0): Define a distância linear que o robô deve percorrer para processar uma leitura a laser.
-* angularUpdate (padrão: 0,5): Define a distância angular que o robô deve se mover para processar uma leitura a laser.
-* temporalUpdate (padrão: -1.0): Define o tempo (em segundos) de espera entre as leituras do laser. Se esse valor for definido como -1,0, essa função será desativada.
-* particles (padrão: 30): Número de partículas no filtro
+* **linearUpdate (padrão: `1.0`):** Define a distância linear que o robô deve percorrer para processar uma leitura a laser.
+* **angularUpdate (padrão: `0,5`):** Define a distância angular que o robô deve se mover para processar uma leitura a laser.
+* **temporalUpdate (padrão: `-1.0`):** Define o tempo (em segundos) de espera entre as leituras do laser. Se esse valor for definido como -1,0, essa função será desativada.
+* **particles (padrão: `30`):** Número de partículas no filtro
+
+Todos esses parâmetros podem ser alterados no arquivo YAML.
+```
+navegation-warehouse/catkin_ws/src/robot_nav/configs/navigation/gmapping/gmapping_basic.yaml
+```
