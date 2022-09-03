@@ -21,7 +21,7 @@ Quando você solicita que o map_saver salve o mapa atual, os dados do mapa são 
 ```bash
 rosrun map_server map_saver -f ~/map
 ```
-1. O atributo `-f` permite que você dê aos arquivos um nome personalizado. Por padrão (se você não usar o atributo `-f`), os nomes do arquivo seriam map.pgm e map.yaml.
+1. O atributo `-f` permite que você dê aos arquivos um nome personalizado. Por padrão (se você não usar o atributo `-f`), os nomes do arquivo seriam `map.pgm` e `map.yaml`.
 
 2. Lembre-se que, para poder visualizar os arquivos gerados através do IDE, estes arquivos devem estar no diretório `/home/user/catkin_ws/src`. Os arquivos serão salvos inicialmente no diretório onde você executa o comando.
 
