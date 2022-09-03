@@ -56,3 +56,10 @@ O mapa de custos global também possui seus próprios parâmetros, que são defi
 * **robot_base_frame (padrão: `base_link`):** O nome do quadro para o link base do robô.
 * **rolling_window (padrão: `false`):** se deve ou não usar uma versão de janela contínua do mapa de custos.
 * **plugins:** Sequência de especificações de plugins, uma por camada.
+
+# Planejador Local
+Uma vez que o planejador global calculou o caminho a seguir, este caminho é enviado ao planejador local. O planejador local, então, executará cada segmento do plano global (vamos imaginar o plano local como uma parte menor do plano global). Assim, dado um plano a seguir (fornecido pelo planejador global) e um mapa, o planejador local fornecerá comandos de velocidade para mover o robô.
+
+Ao contrário do planejador global, o planejador local monitora a odometria e os dados do laser e escolhe um plano local livre de colisões (vamos imaginar o plano local como uma parte menor do plano global) para o robô. Assim, o planejador local pode recalcular o caminho do robô em tempo real para evitar que o robô atinja objetos, mas ainda permitindo que ele chegue ao seu destino.
+
+Depois que o plano local é calculado, ele é publicado em um tópico chamado `/local_plan`. O planejador local também publica a parte do plano global que está tentando seguir no tópico `/global_plan`. Vamos fazer um exercício para que você possa ver isso melhor.
