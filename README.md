@@ -13,7 +13,7 @@ A Pilha de Navegação é um conjunto de nós e algoritmos ROS que são usados �
 * **Fonte do sensor:** Os sensores são usados ​​para duas tarefas na navegação: uma para localizar o robô no mapa (usando, por exemplo, o laser) e outra para detectar obstáculos no caminho do robô (usando o laser, sonares ou nuvens de pontos) .
 
 * **sensor transforms/tf:** os dados capturados pelos diferentes sensores do robô devem ser referenciados a um quadro de referência comum (geralmente o `base_link`) para poder comparar os dados provenientes de diferentes sensores. O robô deve publicar a relação entre o quadro de coordenadas do robô principal e os quadros dos diferentes sensores usando transformações ROS.
-
+ 
 * **base_controller:** A função principal do controlador base é converter a saída da pilha de navegação, que é uma mensagem Twist (`geometry_msgs/Twist`), em velocidades de motor correspondentes para o robô.
 ## Clonar o repositório
 ```bash
