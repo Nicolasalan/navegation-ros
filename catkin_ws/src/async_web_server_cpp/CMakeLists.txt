@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10.2)
 project(async_web_server_cpp VERSION 2.0.0 LANGUAGES CXX)
-find_package(async_web_server_cpp REQUIRED)
+
 find_package(ament_cmake_ros REQUIRED)
 
 ## System dependencies are found with CMake's conventions
@@ -12,15 +12,15 @@ find_package(OpenSSL REQUIRED)
 ###########
 
 add_library(${PROJECT_NAME}
-    webPage/async_web_server_cpp/src/http_connection.cpp
-    webPage/async_web_server_cpp/src/http_reply.cpp
-    webPage/async_web_server_cpp/src/http_request.cpp
-    webPage/async_web_server_cpp/src/http_request_handler.cpp
-    webPage/async_web_server_cpp/src/http_request_parser.cpp
-    webPage/async_web_server_cpp/src/http_server.cpp
-    webPage/async_web_server_cpp/src/websocket_connection.cpp
-    webPage/async_web_server_cpp/src/websocket_message.cpp
-    webPage/async_web_server_cpp/src/websocket_request_handler.cpp
+    src/http_connection.cpp
+    src/http_reply.cpp
+    src/http_request.cpp
+    src/http_request_handler.cpp
+    src/http_request_parser.cpp
+    src/http_server.cpp
+    src/websocket_connection.cpp
+    src/websocket_message.cpp
+    src/websocket_request_handler.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
