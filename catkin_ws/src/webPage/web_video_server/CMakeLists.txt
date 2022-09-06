@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(web_video_server)
-set(web_video_server "/webPage/web_video_server")
+set(catkin "/webPage/web_video_server")
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(web_video_server REQUIRED)
+find_package(catkin REQUIRED)
 find_package(catkin REQUIRED COMPONENTS roscpp roslib cv_bridge image_transport async_web_server_cpp sensor_msgs)
 find_package(OpenCV REQUIRED)
 find_package(Boost REQUIRED COMPONENTS thread)

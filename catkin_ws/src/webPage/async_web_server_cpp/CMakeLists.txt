@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.10.2)
 project(async_web_server_cpp VERSION 2.0.0 LANGUAGES CXX)
 
-set(async_web_server_cpp "/webPage/async_web_server_cpp")
+set(catkin "/webPage/async_web_server_cpp")
+find_package(catkin REQUIRED)
 find_package(async_web_server_cpp REQUIRED)
 find_package(ament_cmake_ros REQUIRED)
 
