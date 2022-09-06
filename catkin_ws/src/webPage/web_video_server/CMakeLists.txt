@@ -39,16 +39,16 @@ include_directories(include
 
 ## Declare a cpp executable
 add_executable(${PROJECT_NAME}
-  src/web_video_server.cpp
-  src/image_streamer.cpp
-  src/libav_streamer.cpp
-  src/vp8_streamer.cpp
-  src/h264_streamer.cpp
-  src/vp9_streamer.cpp
-  src/multipart_stream.cpp
-  src/ros_compressed_streamer.cpp
-  src/jpeg_streamers.cpp
-  src/png_streamers.cpp
+  webPage/web_video_server/src/web_video_server.cpp
+  webPage/web_video_server/src/image_streamer.cpp
+  webPage/web_video_server/src/libav_streamer.cpp
+  webPage/web_video_server/src/vp8_streamer.cpp
+  webPage/web_video_server/src/h264_streamer.cpp
+  webPage/web_video_server/src/vp9_streamer.cpp
+  webPage/web_video_server/src/multipart_stream.cpp
+  webPage/web_video_server/src/ros_compressed_streamer.cpp
+  webPage/web_video_server/src/jpeg_streamers.cpp
+  webPage/web_video_server/src/png_streamers.cpp
 )
 
 ## Specify libraries to link a library or executable target against

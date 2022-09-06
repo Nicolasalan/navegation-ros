@@ -12,15 +12,15 @@ find_package(OpenSSL REQUIRED)
 ###########
 
 add_library(${PROJECT_NAME}
-    src/http_connection.cpp
-    src/http_reply.cpp
-    src/http_request.cpp
-    src/http_request_handler.cpp
-    src/http_request_parser.cpp
-    src/http_server.cpp
-    src/websocket_connection.cpp
-    src/websocket_message.cpp
-    src/websocket_request_handler.cpp
+    webPage/async_web_server_cpp/src/http_connection.cpp
+    webPage/async_web_server_cpp/src/http_reply.cpp
+    webPage/async_web_server_cpp/src/http_request.cpp
+    webPage/async_web_server_cpp/src/http_request_handler.cpp
+    webPage/async_web_server_cpp/src/http_request_parser.cpp
+    webPage/async_web_server_cpp/src/http_server.cpp
+    webPage/async_web_server_cpp/src/websocket_connection.cpp
+    webPage/async_web_server_cpp/src/websocket_message.cpp
+    webPage/async_web_server_cpp/src/websocket_request_handler.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
