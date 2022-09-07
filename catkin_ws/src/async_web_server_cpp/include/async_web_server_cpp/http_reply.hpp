@@ -117,7 +117,7 @@ public:
 
 private:
     HttpReply::status_type status_;
-    std::shared_ptr<std::vector<HttpHeader>> headers_;
+    boost::shared_ptr<std::vector<HttpHeader>> headers_;
 };
 
 /**

@@ -1,6 +1,6 @@
 #include "async_web_server_cpp/http_reply.hpp"
 
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/make_shared.hpp>
 
 namespace async_web_server_cpp
@@ -21,7 +21,7 @@ boost::asio::ip::tcp::socket& HttpConnection::socket()
 void HttpConnection::start()
 {
     async_read(
-        boost::bind(&HttpConnection::handle_read, shared_from_this(), _1, _2));
+        boost::bind(&HttpConnection::handle_read, shared_from_this(), boost::placeholders::_1, boost::placeholders::_2));
 }
 
 void HttpConnection::handle_read(const char* begin, const char* end)
@@ -52,7 +52,7 @@ void HttpConnection::handle_read(const char* begin, const char* end)
     else
     {
         async_read(boost::bind(&HttpConnection::handle_read, shared_from_this(),
-                               _1, _2));
+                               boost::placeholders::_1, boost::placeholders::_2));
     }
 }
 
@@ -85,7 +85,7 @@ void HttpConnection::async_read(ReadHandler callback)
 
 void HttpConnection::write_and_clear(std::vector<unsigned char>& data)
 {
-    std::shared_ptr<std::vector<unsigned char>> buffer(
+    boost::shared_ptr<std::vector<unsigned char>> buffer(
         new std::vector<unsigned char>());
     buffer->swap(data);
     write(boost::asio::buffer(*buffer), buffer);
@@ -93,7 +93,7 @@ void HttpConnection::write_and_clear(std::vector<unsigned char>& data)
 
 void HttpConnection::write(const std::string& content)
 {
-    std::shared_ptr<std::string> str(new std::string(content));
+    boost::shared_ptr<std::string> str(new std::string(content));
     write(boost::asio::buffer(*str), str);
 }
 

@@ -37,7 +37,7 @@ class HttpConnection : public boost::enable_shared_from_this<HttpConnection>,
 public:
     typedef boost::function<void(const char* begin, const char* end)>
         ReadHandler;
-    typedef std::shared_ptr<const void> ResourcePtr;
+    typedef boost::shared_ptr<const void> ResourcePtr;
 
     explicit HttpConnection(boost::asio::io_service& io_service,
                             HttpServerRequestHandler request_handler);
