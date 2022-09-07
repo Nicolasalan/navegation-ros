@@ -6,7 +6,7 @@ var app = new Vue({
         ros: null,
         logs: [],
         loading: false,
-        rosbridge_address: '',
+        rosbridge_address: 'wss://i-06c7fc330376c8a8f.robotigniteacademy.com/c08449ac-e515-4199-9d57-19dc073245ea/rosbridge/',
         port: '9090',
         mapViewer: null,
         mapGridClient: null,
