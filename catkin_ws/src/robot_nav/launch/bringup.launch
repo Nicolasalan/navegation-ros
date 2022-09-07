@@ -66,4 +66,7 @@
   		</node>
  	</group>
 
+	<!--launch web-->
+	<include file="$(find robot_nav)/launch/web.launch"/>
+
 </launch>
