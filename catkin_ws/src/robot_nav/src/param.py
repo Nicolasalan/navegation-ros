@@ -18,6 +18,7 @@ def perform_task():
     msg.angular.z = angular_z
 
     pub.publish(msg)
+    rospy.loginfo("Mensaje publicado: ")
 
 def robot_services():
     # global vars
