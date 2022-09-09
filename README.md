@@ -42,10 +42,6 @@ roslaunch robot_nav bringup.launch
 ```bash
 roslaunch robot_nav gmapping_basic.launch
 ```
-**Para visualizar a navegação enquando o mapa é gerado:**
-```bash
-roslaunch robot_nav rviz_navigation.launch
-```
 **Salvar o mapa:**
 ```bash
 rosrun map_server map_saver -f your_map_name
