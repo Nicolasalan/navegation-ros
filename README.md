@@ -79,4 +79,7 @@ roslaunch robot_nav rviz_navigation.launch
         |-- robots
         |-- worlds
 ```
-
+Documentação sobre como funciona a pilha de navegação em ROS
+* [amcl](https://github.com/Nicolasalan/navegation-ros/tree/main/catkin_ws/src/robot_nav/configs/navigation/amcl)
+* [gmapping](https://github.com/Nicolasalan/navegation-ros/tree/main/catkin_ws/src/robot_nav/configs/navigation/gmapping)
+* [move_base](https://github.com/Nicolasalan/navegation-ros/tree/main/catkin_ws/src/robot_nav/configs/navigation/gmapping)
