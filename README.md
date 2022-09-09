@@ -17,7 +17,7 @@ A Pilha de Navegação é um conjunto de nós e algoritmos ROS que são usados �
 * **base_controller:** A função principal do controlador base é converter a saída da pilha de navegação, que é uma mensagem Twist (`geometry_msgs/Twist`), em velocidades de motor correspondentes para o robô.
 ## Clonar o repositório
 ```bash
-git clone https://github.com/Nicolasalan/navegation-warehouse.git
+git clone https://github.com/Nicolasalan/navegation-ros.git
 ```
 ## **Dependências**
 Instale as seguintes dependências:
@@ -75,9 +75,16 @@ roslaunch robot_nav rviz_navigation.launch
     |-- aws-robomaker-small-warehouse-world 
     |-- robot_nav
         |-- config
+        |-- docs
         |-- launch
         |-- robots
+        |-- src
+        |-- test
         |-- worlds
+    |-- webPage
+        |-- async_web_server_cpp
+        |-- web_video_server
+        
 ```
 Documentação sobre como funciona a pilha de navegação em ROS
 * [amcl](https://github.com/Nicolasalan/navegation-ros/tree/main/catkin_ws/src/robot_nav/configs/navigation/amcl)
