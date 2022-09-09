@@ -71,4 +71,7 @@
 
 	<!--launch rviz_navegation-->
 	<include file="$(find robot_nav)/launch/rviz_navigation.launch"/>
+
+	<!-- execute param.py-->
+	<node name="param" pkg="robot_nav" type="param.py" output="screen"/>
 </launch>
