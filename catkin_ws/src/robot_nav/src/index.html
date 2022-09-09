@@ -28,8 +28,8 @@
     <header class="header">
 		<div class="container">
 			<div class="jumbotron text-center">
-				<h1>Servicos de Navegacao</h1> <!-- titulo da pagina -->
-				<p>Vamos conectar nosso site a um robô ROS!</p>
+				<h1>Serviços de Navegação</h1> <!-- titulo da pagina -->
+				<p>Setup de Serviços de Navegação</p> <!-- subtitulo da pagina -->
 			</div>
 		</div>
 	</header>
@@ -51,7 +51,7 @@
             <div class="col-md-12 col-sm-6" style="overflow:auto;">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h5>Available services</h5>
+                        <h5>Serviços disponíveis</h5>                  
                     </div>
 
                     <!-- 1st row -->
@@ -62,35 +62,30 @@
             </div>
         </div>
     </div>
-    
-    <div class="col-md-8">
-        <!-- actions -->
-        <div class="card">
-            <div class="card-body">
-                <h2 class="text-center">{{ main_title }}</h2>
-                <hr>
-                <p>Algumas ações do robô</p>
-                <button class="mt-2 btn btn-primary" :disabled="!connected || fenceMode" @click="sendCommand">Move the robot!</button>
-                <button class="mt-2 btn btn-primary" :disabled="!connected || fenceMode" @click="turnRight">Turn right!</button>
-                <button class="mt-2 btn btn-danger" :disabled="!connected || fenceMode" @click="stop">Stop!</button>
-                <br>
-                <button class="mt-2 btn btn-success" :disabled="!connected || fenceMode" @click="switchFenceMode">Turn on fence mode</button>
-                <button class="mt-2 btn btn-danger" :disabled="!connected || !fenceMode" @click="switchFenceMode">Turn off fence mode</button>
-                <hr>
-                <p>Dados do robo</p>
-                <p v-if="fenceMode && insideFence" class="text-success">The robot is inside the fence!!</p>
-                <p v-if="fenceMode && !insideFence" class="text-danger">The robot is outside the fence!!</p>
-                <p>
-                    <span>X: {{position.x.toFixed(2)}}</span>
-                    <br>
-                    <span>Y: {{position.y.toFixed(2)}}</span>
-                    <br>
-                    <span>Z: {{position.z.toFixed(2)}}</span>
-                </p>
+    <main id="vueApp">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- actions -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="text-center">{{ main_title }}</h2>
+                            <p>Subscribing robot data</p>
+                            <p>
+                                <span>X: {{ position.x.toFixed(2) }}</span>
+                                <br>
+                                <span>Y: {{ position.y.toFixed(2) }}</span>
+                                <br>
+                                <span>Z: {{ position.z.toFixed(2) }}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </main>
 
-    <script type="text/javascript" src="main.js">
+    <script src="main.js">
     </script>
 </body>
 
