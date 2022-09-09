@@ -22,14 +22,14 @@ git clone https://github.com/Nicolasalan/navegation-ros.git
 ## **Dependências**
 Instale as seguintes dependências:
 ```bash
-cd navegation-warehouse
+cd navegation-ros
 chmod +x requirements.sh
 ./requirements.sh
 ```
 ## **Uso**
 **Para inicializar o robô, execute o seguinte comando:**
 ```bash
-cd navegation-warehouse/catkin_ws
+cd navegation-ros/catkin_ws
 catkin_make
 source devel/setup.bash
 ```
@@ -72,9 +72,19 @@ roslaunch robot_nav rviz_navigation.launch
 ## **Configuração**
 ```
 |-- src
-    |-- aws-robomaker-small-warehouse-world 
+    |-- aws-robomaker-small-warehouse-world # mundo utilizado
     |-- robot_nav
         |-- config
+           |-- controller 
+           |-- imu
+           |-- kinematics
+           |-- navigation
+               |-- amcl
+               |-- gmapping
+               |-- maps
+               |-- move_base
+           |-- rviz
+           |-- sensor_fusion
         |-- docs
         |-- launch
         |-- robots
