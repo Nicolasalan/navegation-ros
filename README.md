@@ -60,11 +60,6 @@ export MAP_NAME=your_map_name
 ```bash
 roslaunch robot_nav navigation_basic_amcl.launch
 ```
-**Para visualizar a navegação:**
-```bash
-roslaunch robot_nav rviz_navigation.launch
-```
-
 ## **Configuração**
 ```
 |-- src
