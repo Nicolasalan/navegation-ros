@@ -54,7 +54,7 @@ class MoveRobot():
             return self.client.get_result() 
                 
 
-    def handler(self):
+    def handler(self, request):
         self.mov = 0
 
         while self.mov == 0:
