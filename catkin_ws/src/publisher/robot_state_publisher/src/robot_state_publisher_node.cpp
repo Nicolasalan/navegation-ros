@@ -32,77 +32,48 @@
 *  POSSIBILITY OF SUCH DAMAGE.
 *********************************************************************/
 
-/* Author: Wim Meeussen */
-
+#include <map>
 #include <string>
+#include <utility>
 
-#include <gtest/gtest.h>
 #include <ros/ros.h>
-#include <tf2_ros/transform_listener.h>
-#include <geometry_msgs/TransformStamped.h>
-#include <boost/thread/thread.hpp>
 #include <urdf/model.h>
+#include <kdl/tree.hpp>
 #include <kdl_parser/kdl_parser.hpp>
 
+#include "robot_state_publisher/robot_state_publisher.h"
 #include "robot_state_publisher/joint_state_listener.h"
 
-using namespace ros;
-using namespace tf2_ros;
-using namespace robot_state_publisher;
-
-#define EPS 0.01
-
-class TestPublisher : public testing::Test
-{
-public:
-  JointStateListener* publisher;
-
-protected:
-  /// constructor
-  TestPublisher()
-  {}
-
-  /// Destructor
-  ~TestPublisher()
-  {}
-};
-
-TEST_F(TestPublisher, test)
-{
-  {
-    ros::NodeHandle n_tilde;
-    std::string robot_description;
-    ASSERT_TRUE(n_tilde.getParam("robot_description", robot_description));
-  }
-
-  ROS_INFO("Creating tf listener");
-  Buffer buffer;
-  TransformListener listener(buffer);
-
-
-  for (unsigned int i = 0; i < 100 && !buffer.canTransform("link1", "link2", Time()); i++) {
-    ros::Duration(0.1).sleep();
-    ros::spinOnce();
-  }
-
-
-  ASSERT_TRUE(buffer.canTransform("link1", "link2", Time()));
-  ASSERT_FALSE(buffer.canTransform("base_link", "wim_link", Time()));
-
-  geometry_msgs::TransformStamped t = buffer.lookupTransform("link1", "link2", Time());
-  EXPECT_NEAR(t.transform.translation.x, 5.0, EPS);
-  EXPECT_NEAR(t.transform.translation.y, 0.0, EPS);
-  EXPECT_NEAR(t.transform.translation.z, 0.0, EPS);
-
-  SUCCEED();
-}
-
+// ----------------------------------
+// ----- MAIN -----------------------
+// ----------------------------------
 int main(int argc, char** argv)
 {
-  testing::InitGoogleTest(&argc, argv);
-  ros::init(argc, argv, "test_two_links_fixed_joint");
+  // Initialize ros
+  ros::init(argc, argv, "robot_state_publisher");
+  ros::NodeHandle node;
 
-  int res = RUN_ALL_TESTS();
+  // gets the location of the robot description on the parameter server
+  urdf::Model model;
+  if (!model.initParam("robot_description"))
+    return 1;
 
-  return res;
+  KDL::Tree tree;
+  if (!kdl_parser::treeFromUrdfModel(model, tree)) {
+    ROS_ERROR("Failed to extract kdl tree from xml robot description");
+    return 1;
+  }
+
+  robot_state_publisher::MimicMap mimic;
+
+  for (std::map< std::string, urdf::JointSharedPtr >::iterator i = model.joints_.begin(); i != model.joints_.end(); i++) {
+    if (i->second->mimic) {
+      mimic.insert(std::make_pair(i->first, i->second->mimic));
+    }
+  }
+
+  robot_state_publisher::JointStateListener state_publisher(tree, mimic, model);
+  ros::spin();
+
+  return 0;
 }

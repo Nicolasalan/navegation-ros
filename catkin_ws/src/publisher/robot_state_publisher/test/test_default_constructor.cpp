@@ -1,7 +1,7 @@
 /*********************************************************************
 * Software License Agreement (BSD License)
 *
-*  Copyright (c) 2008, Willow Garage, Inc.
+*  Copyright (c) 2020, Open Source Robotics Foundation, Inc.
 *  All rights reserved.
 *
 *  Redistribution and use in source and binary forms, with or without
@@ -32,77 +32,39 @@
 *  POSSIBILITY OF SUCH DAMAGE.
 *********************************************************************/
 
-/* Author: Wim Meeussen */
 
 #include <string>
+#include <utility>
 
 #include <gtest/gtest.h>
 #include <ros/ros.h>
-#include <tf2_ros/transform_listener.h>
-#include <geometry_msgs/TransformStamped.h>
-#include <boost/thread/thread.hpp>
-#include <urdf/model.h>
-#include <kdl_parser/kdl_parser.hpp>
 
 #include "robot_state_publisher/joint_state_listener.h"
 
-using namespace ros;
-using namespace tf2_ros;
-using namespace robot_state_publisher;
-
-#define EPS 0.01
-
-class TestPublisher : public testing::Test
+TEST(RobotStatePublisher, assignment)
 {
-public:
-  JointStateListener* publisher;
+  robot_state_publisher::RobotStatePublisher rsp;
 
-protected:
-  /// constructor
-  TestPublisher()
-  {}
-
-  /// Destructor
-  ~TestPublisher()
-  {}
-};
-
-TEST_F(TestPublisher, test)
-{
-  {
-    ros::NodeHandle n_tilde;
-    std::string robot_description;
-    ASSERT_TRUE(n_tilde.getParam("robot_description", robot_description));
-  }
-
-  ROS_INFO("Creating tf listener");
-  Buffer buffer;
-  TransformListener listener(buffer);
-
-
-  for (unsigned int i = 0; i < 100 && !buffer.canTransform("link1", "link2", Time()); i++) {
-    ros::Duration(0.1).sleep();
-    ros::spinOnce();
-  }
-
-
-  ASSERT_TRUE(buffer.canTransform("link1", "link2", Time()));
-  ASSERT_FALSE(buffer.canTransform("base_link", "wim_link", Time()));
-
-  geometry_msgs::TransformStamped t = buffer.lookupTransform("link1", "link2", Time());
-  EXPECT_NEAR(t.transform.translation.x, 5.0, EPS);
-  EXPECT_NEAR(t.transform.translation.y, 0.0, EPS);
-  EXPECT_NEAR(t.transform.translation.z, 0.0, EPS);
-
-  SUCCEED();
+  urdf::Model model;
+  KDL::Tree tree;
+  rsp = std::move(robot_state_publisher::RobotStatePublisher(tree, model));
 }
 
-int main(int argc, char** argv)
+TEST(JointStateListener, assignment)
 {
-  testing::InitGoogleTest(&argc, argv);
-  ros::init(argc, argv, "test_two_links_fixed_joint");
+  robot_state_publisher::JointStateListener jsl;
 
-  int res = RUN_ALL_TESTS();
+  urdf::Model model;
+  KDL::Tree tree;
 
-  return res;
+  jsl = std::move(robot_state_publisher::JointStateListener(
+    tree, robot_state_publisher::MimicMap(), model));
 }
+
+int main(int argc, char ** argv)
+{
+  ros::init(argc, argv, "test_default_constructor");
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
+

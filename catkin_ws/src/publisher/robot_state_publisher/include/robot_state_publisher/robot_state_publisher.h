@@ -34,75 +34,69 @@
 
 /* Author: Wim Meeussen */
 
+#ifndef ROBOT_STATE_PUBLISHER_H
+#define ROBOT_STATE_PUBLISHER_H
+
+#include <map>
 #include <string>
 
-#include <gtest/gtest.h>
 #include <ros/ros.h>
-#include <tf2_ros/transform_listener.h>
-#include <geometry_msgs/TransformStamped.h>
-#include <boost/thread/thread.hpp>
 #include <urdf/model.h>
-#include <kdl_parser/kdl_parser.hpp>
+#include <tf2_ros/static_transform_broadcaster.h>
+#include <tf2_ros/transform_broadcaster.h>
+#include <kdl/frames.hpp>
+#include <kdl/segment.hpp>
+#include <kdl/tree.hpp>
 
-#include "robot_state_publisher/joint_state_listener.h"
+namespace robot_state_publisher {
 
-using namespace ros;
-using namespace tf2_ros;
-using namespace robot_state_publisher;
-
-#define EPS 0.01
-
-class TestPublisher : public testing::Test
+class SegmentPair
 {
 public:
-  JointStateListener* publisher;
+  SegmentPair(const KDL::Segment& p_segment, const std::string& p_root, const std::string& p_tip):
+    segment(p_segment), root(p_root), tip(p_tip){}
 
-protected:
-  /// constructor
-  TestPublisher()
-  {}
-
-  /// Destructor
-  ~TestPublisher()
-  {}
+  KDL::Segment segment;
+  std::string root, tip;
 };
 
-TEST_F(TestPublisher, test)
+
+class RobotStatePublisher
 {
-  {
-    ros::NodeHandle n_tilde;
-    std::string robot_description;
-    ASSERT_TRUE(n_tilde.getParam("robot_description", robot_description));
-  }
+public:
+  /** Default constructor.
+   */
+  RobotStatePublisher();
 
-  ROS_INFO("Creating tf listener");
-  Buffer buffer;
-  TransformListener listener(buffer);
+  /** Constructor
+   * \param tree The kinematic model of a robot, represented by a KDL Tree
+   */
+  RobotStatePublisher(const KDL::Tree& tree, const urdf::Model& model = urdf::Model());
 
+  /// Destructor
+  ~RobotStatePublisher(){};
 
-  for (unsigned int i = 0; i < 100 && !buffer.canTransform("link1", "link2", Time()); i++) {
-    ros::Duration(0.1).sleep();
-    ros::spinOnce();
-  }
+  /** Publish transforms to tf
+   * \param joint_positions A map of joint names and joint positions.
+   * \param time The time at which the joint positions were recorded
+   */
+  virtual void publishTransforms(const std::map<std::string, double>& joint_positions, const ros::Time& time);
+  virtual void publishFixedTransforms(bool use_tf_static = false);
 
+  /** Publish transforms with tf_prefix
+   */
+  void publishTransforms(const std::map<std::string, double>& joint_positions, const ros::Time& time, const std::string & tf_prefix);
+  void publishFixedTransforms(const std::string & tf_prefix, bool use_tf_static = false);
 
-  ASSERT_TRUE(buffer.canTransform("link1", "link2", Time()));
-  ASSERT_FALSE(buffer.canTransform("base_link", "wim_link", Time()));
+protected:
+  virtual void addChildren(const KDL::SegmentMap::const_iterator segment);
 
-  geometry_msgs::TransformStamped t = buffer.lookupTransform("link1", "link2", Time());
-  EXPECT_NEAR(t.transform.translation.x, 5.0, EPS);
-  EXPECT_NEAR(t.transform.translation.y, 0.0, EPS);
-  EXPECT_NEAR(t.transform.translation.z, 0.0, EPS);
+  std::map<std::string, SegmentPair> segments_, segments_fixed_;
+  urdf::Model model_;
+  tf2_ros::TransformBroadcaster tf_broadcaster_;
+  tf2_ros::StaticTransformBroadcaster static_tf_broadcaster_;
+};
 
-  SUCCEED();
 }
 
-int main(int argc, char** argv)
-{
-  testing::InitGoogleTest(&argc, argv);
-  ros::init(argc, argv, "test_two_links_fixed_joint");
-
-  int res = RUN_ALL_TESTS();
-
-  return res;
-}
+#endif

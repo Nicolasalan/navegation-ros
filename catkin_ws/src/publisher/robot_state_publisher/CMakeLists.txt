@@ -1,119 +1,96 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.0.2)
 project(robot_state_publisher)
 
-# Default to C++14
-if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
-endif()
+include(CheckCXXCompilerFlag)
+unset(COMPILER_SUPPORTS_CXX11 CACHE)
+if(MSVC)
+  # https://docs.microsoft.com/en-us/cpp/build/reference/std-specify-language-standard-version
+  # MSVC will fail the following check since it does not have the c++11 switch
+  # however, c++11 is always enabled (the newer /std:c++14 is enabled by default)
+  check_cxx_compiler_flag(/std:c++11 COMPILER_SUPPORTS_CXX11)
+  if(COMPILER_SUPPORTS_CXX11)
+    add_compile_options(/std:c++11)
+  endif()
 
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  # MSVC does not support the Wextra flag
+  add_compile_options(/Wall)
+else()
+  check_cxx_compiler_flag(-std=c++11 COMPILER_SUPPORTS_CXX11)
+  if(COMPILER_SUPPORTS_CXX11)
+    add_compile_options(-std=c++11)
+  endif()
   add_compile_options(-Wall -Wextra)
 endif()
 
-find_package(ament_cmake REQUIRED)
-find_package(builtin_interfaces REQUIRED)
-find_package(geometry_msgs REQUIRED)
-find_package(kdl_parser REQUIRED)
 find_package(orocos_kdl REQUIRED)
-find_package(rcl_interfaces REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(rclcpp_components REQUIRED)
-find_package(sensor_msgs REQUIRED)
-find_package(std_msgs REQUIRED)
-find_package(tf2_ros REQUIRED)
-find_package(urdf REQUIRED)
+find_package(catkin REQUIRED
+  COMPONENTS kdl_parser roscpp rosconsole rostime sensor_msgs tf2_ros tf2_kdl
+)
+find_package(Eigen3 REQUIRED)
 
-set(THIS_PACKAGE_INCLUDE_DEPENDS
-  builtin_interfaces
-  geometry_msgs
-  kdl_parser
-  orocos_kdl
-  rcl_interfaces
-  rclcpp
-  rclcpp_components
-  sensor_msgs
-  std_msgs
-  tf2_ros
-  urdf)
+find_package(urdfdom_headers REQUIRED)
 
-add_library(
-  ${PROJECT_NAME}_node SHARED
-  src/robot_state_publisher.cpp)
-target_include_directories(${PROJECT_NAME}_node PUBLIC
-  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
-  "$<INSTALL_INTERFACE:include/${PROJECT_NAME}>")
-ament_target_dependencies(${PROJECT_NAME}_node ${THIS_PACKAGE_INCLUDE_DEPENDS})
-ament_export_targets(export_${PROJECT_NAME}_node)
-
-rclcpp_components_register_node(${PROJECT_NAME}_node
-  PLUGIN "robot_state_publisher::RobotStatePublisher"
-  EXECUTABLE robot_state_publisher)
-
-install(
-  TARGETS
-  ${PROJECT_NAME}_node
-  EXPORT export_${PROJECT_NAME}_node
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
-  RUNTIME DESTINATION bin
+catkin_package(
+  LIBRARIES ${PROJECT_NAME}_solver joint_state_listener
+  INCLUDE_DIRS include
+  DEPENDS kdl_parser orocos_kdl roscpp rosconsole rostime sensor_msgs tf2_ros tf2_kdl urdfdom_headers
 )
 
-install(DIRECTORY include/
-  DESTINATION include/${PROJECT_NAME})
+include_directories(SYSTEM ${EIGEN3_INCLUDE_DIRS})
+include_directories(include ${catkin_INCLUDE_DIRS} ${orocos_kdl_INCLUDE_DIRS} ${urdfdom_headers_INCLUDE_DIRS})
+link_directories(${orocos_kdl_LIBRARY_DIRS})
 
-install(DIRECTORY launch urdf
-  DESTINATION share/${PROJECT_NAME}
+add_library(${PROJECT_NAME}_solver
+  src/robot_state_publisher.cpp
 )
+target_link_libraries(${PROJECT_NAME}_solver ${catkin_LIBRARIES} ${orocos_kdl_LIBRARIES})
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  ament_lint_auto_find_test_dependencies()
+add_library(joint_state_listener src/joint_state_listener.cpp)
+target_link_libraries(joint_state_listener ${PROJECT_NAME}_solver ${orocos_kdl_LIBRARIES})
 
-  find_package(ament_cmake_gtest REQUIRED)
-  find_package(launch_testing_ament_cmake REQUIRED)
-  ament_find_gtest()
+add_executable(${PROJECT_NAME} src/robot_state_publisher_node.cpp)
+target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}_solver joint_state_listener ${orocos_kdl_LIBRARIES})
 
-  add_executable(test_two_links_fixed_joint test/test_two_links_fixed_joint.cpp)
-  ament_target_dependencies(test_two_links_fixed_joint
-    rclcpp
-    tf2_ros
-  )
-  target_include_directories(test_two_links_fixed_joint PRIVATE ${GTEST_INCLUDE_DIRS})
-  target_link_libraries(test_two_links_fixed_joint ${GTEST_LIBRARIES})
-  add_launch_test(test/two_links_fixed_joint-launch.py
-    ARGS "test_exe:=$<TARGET_FILE:test_two_links_fixed_joint>")
+# Tests
 
-  add_executable(test_two_links_fixed_joint_prefix test/test_two_links_fixed_joint_prefix.cpp)
-  ament_target_dependencies(test_two_links_fixed_joint_prefix
-    rclcpp
-    tf2_ros
-  )
-  target_include_directories(test_two_links_fixed_joint PRIVATE ${GTEST_INCLUDE_DIRS})
-  target_link_libraries(test_two_links_fixed_joint_prefix ${GTEST_LIBRARIES})
-  add_launch_test(test/two_links_fixed_joint_prefix-launch.py
-    ARGS "test_exe:=$<TARGET_FILE:test_two_links_fixed_joint_prefix>")
+if (CATKIN_ENABLE_TESTING)
 
-  add_executable(test_two_links_moving_joint test/test_two_links_moving_joint.cpp)
-  ament_target_dependencies(test_two_links_moving_joint
-    rclcpp
-    sensor_msgs
-    tf2_ros
-  )
-  target_include_directories(test_two_links_fixed_joint PRIVATE ${GTEST_INCLUDE_DIRS})
-  target_link_libraries(test_two_links_moving_joint ${GTEST_LIBRARIES})
-  add_launch_test(test/two_links_moving_joint-launch.py
-    ARGS "test_exe:=$<TARGET_FILE:test_two_links_moving_joint>")
+  find_package(rostest REQUIRED)
 
-  add_executable(test_two_links_change_fixed_joint test/test_two_links_change_fixed_joint.cpp)
-  ament_target_dependencies(test_two_links_change_fixed_joint
-    rclcpp
-    tf2_ros
-  )
-  target_include_directories(test_two_links_change_fixed_joint PRIVATE ${GTEST_INCLUDE_DIRS})
-  target_link_libraries(test_two_links_change_fixed_joint ${GTEST_LIBRARIES})
-  add_launch_test(test/two_links_change_fixed_joint-launch.py
-    ARGS "test_exe:=$<TARGET_FILE:test_two_links_change_fixed_joint>")
+  add_rostest_gtest(test_default_constructor test/test_default_constructor.launch test/test_default_constructor.cpp)
+  target_link_libraries(test_default_constructor joint_state_listener ${PROJECT_NAME}_solver)
+
+  add_rostest_gtest(test_one_link ${CMAKE_CURRENT_SOURCE_DIR}/test/test_one_link.launch test/test_one_link.cpp)
+  target_link_libraries(test_one_link ${catkin_LIBRARIES} ${PROJECT_NAME}_solver)
+
+  add_rostest_gtest(test_two_links_fixed_joint ${CMAKE_CURRENT_SOURCE_DIR}/test/test_two_links_fixed_joint.launch test/test_two_links_fixed_joint.cpp)
+  target_link_libraries(test_two_links_fixed_joint ${catkin_LIBRARIES} ${PROJECT_NAME}_solver)
+
+  add_rostest_gtest(test_two_links_moving_joint ${CMAKE_CURRENT_SOURCE_DIR}/test/test_two_links_moving_joint.launch test/test_two_links_moving_joint.cpp)
+  target_link_libraries(test_two_links_moving_joint ${catkin_LIBRARIES} ${PROJECT_NAME}_solver)
+
+  add_rostest_gtest(test_frames_and_slashes ${CMAKE_CURRENT_SOURCE_DIR}/test/test_frames_and_slashes.launch test/test_frames_and_slashes.cpp)
+  target_link_libraries(test_frames_and_slashes ${catkin_LIBRARIES})
+
+  add_rostest_gtest(test_joint_states_bag ${CMAKE_CURRENT_SOURCE_DIR}/test/test_joint_states_bag.launch test/test_joint_states_bag.cpp)
+  target_link_libraries(test_joint_states_bag ${catkin_LIBRARIES} ${PROJECT_NAME}_solver)
+
+  add_rostest_gtest(test_subclass ${CMAKE_CURRENT_SOURCE_DIR}/test/test_subclass.launch test/test_subclass.cpp)
+  target_link_libraries(test_subclass ${catkin_LIBRARIES} ${PROJECT_NAME}_solver joint_state_listener)
+
+  install(FILES test/one_link.urdf test/pr2.urdf test/two_links_fixed_joint.urdf test/two_links_moving_joint.urdf test/frames_and_slashes.urdf DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/test)
+
 endif()
 
-ament_export_dependencies(${THIS_PACKAGE_INCLUDE_DEPENDS})
-ament_package()
+# Install library
+install(TARGETS ${PROJECT_NAME}_solver joint_state_listener
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION})
+
+# Install executable
+install(TARGETS ${PROJECT_NAME}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})

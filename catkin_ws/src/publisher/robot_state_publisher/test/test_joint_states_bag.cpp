@@ -50,6 +50,10 @@ using namespace ros;
 using namespace tf2_ros;
 using namespace robot_state_publisher;
 
+
+int g_argc;
+char** g_argv;
+
 #define EPS 0.01
 
 class TestPublisher : public testing::Test
@@ -67,41 +71,42 @@ protected:
   {}
 };
 
+
 TEST_F(TestPublisher, test)
 {
-  {
-    ros::NodeHandle n_tilde;
-    std::string robot_description;
-    ASSERT_TRUE(n_tilde.getParam("robot_description", robot_description));
-  }
-
   ROS_INFO("Creating tf listener");
   Buffer buffer;
-  TransformListener listener(buffer);
+  TransformListener tf(buffer);
 
+  ROS_INFO("Waiting for bag to complete");
+  Duration(15.0).sleep();
 
-  for (unsigned int i = 0; i < 100 && !buffer.canTransform("link1", "link2", Time()); i++) {
-    ros::Duration(0.1).sleep();
-    ros::spinOnce();
-  }
-
-
-  ASSERT_TRUE(buffer.canTransform("link1", "link2", Time()));
+  ASSERT_TRUE(buffer.canTransform("base_link", "torso_lift_link", Time()));
+  ASSERT_TRUE(buffer.canTransform("base_link", "r_gripper_palm_link", Time()));
+  ASSERT_TRUE(buffer.canTransform("base_link", "r_gripper_palm_link", Time()));
+  ASSERT_TRUE(buffer.canTransform("l_gripper_palm_link", "r_gripper_palm_link", Time()));
+  ASSERT_TRUE(buffer.canTransform("l_gripper_palm_link", "fl_caster_r_wheel_link", Time()));
   ASSERT_FALSE(buffer.canTransform("base_link", "wim_link", Time()));
 
-  geometry_msgs::TransformStamped t = buffer.lookupTransform("link1", "link2", Time());
-  EXPECT_NEAR(t.transform.translation.x, 5.0, EPS);
-  EXPECT_NEAR(t.transform.translation.y, 0.0, EPS);
-  EXPECT_NEAR(t.transform.translation.z, 0.0, EPS);
+  geometry_msgs::TransformStamped t = buffer.lookupTransform("base_link", "r_gripper_palm_link", Time());
+  EXPECT_NEAR(t.transform.translation.x, 0.769198, EPS);
+  EXPECT_NEAR(t.transform.translation.y, -0.188800, EPS);
+  EXPECT_NEAR(t.transform.translation.z, 0.764914, EPS);
 
-  SUCCEED();
+  t = buffer.lookupTransform("l_gripper_palm_link", "r_gripper_palm_link", Time());
+  EXPECT_NEAR(t.transform.translation.x, 0.000384222, EPS);
+  EXPECT_NEAR(t.transform.translation.y, -0.376021, EPS);
+  EXPECT_NEAR(t.transform.translation.z, -1.0858e-05, EPS); SUCCEED();
 }
+
 
 int main(int argc, char** argv)
 {
   testing::InitGoogleTest(&argc, argv);
-  ros::init(argc, argv, "test_two_links_fixed_joint");
+  ros::init(argc, argv, "test_robot_state_publisher");
 
+  g_argc = argc;
+  g_argv = argv;
   int res = RUN_ALL_TESTS();
 
   return res;

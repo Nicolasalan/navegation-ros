@@ -34,75 +34,61 @@
 
 /* Author: Wim Meeussen */
 
+#ifndef JOINT_STATE_LISTENER_H
+#define JOINT_STATE_LISTENER_H
+
+#include <memory>
+#include <map>
 #include <string>
 
-#include <gtest/gtest.h>
-#include <ros/ros.h>
-#include <tf2_ros/transform_listener.h>
-#include <geometry_msgs/TransformStamped.h>
-#include <boost/thread/thread.hpp>
+#include <boost/scoped_ptr.hpp>
 #include <urdf/model.h>
-#include <kdl_parser/kdl_parser.hpp>
+#include <kdl/tree.hpp>
+#include <ros/ros.h>
+#include <sensor_msgs/JointState.h>
 
-#include "robot_state_publisher/joint_state_listener.h"
+#include "robot_state_publisher/robot_state_publisher.h"
 
-using namespace ros;
-using namespace tf2_ros;
-using namespace robot_state_publisher;
+namespace robot_state_publisher {
 
-#define EPS 0.01
+typedef boost::shared_ptr<sensor_msgs::JointState const> JointStateConstPtr;
+typedef std::map<std::string, urdf::JointMimicSharedPtr > MimicMap;
 
-class TestPublisher : public testing::Test
-{
+class JointStateListener {
 public:
-  JointStateListener* publisher;
+  /** Default constructor.
+   */
+  JointStateListener();
 
-protected:
-  /// constructor
-  TestPublisher()
-  {}
+  /** Constructor
+   * \param tree The kinematic model of a robot, represented by a KDL Tree
+   */
+  JointStateListener(const KDL::Tree& tree, const MimicMap& m, const urdf::Model& model = urdf::Model());
+
+  JointStateListener(const std::shared_ptr<RobotStatePublisher>& rsp, const MimicMap& m);
+
 
   /// Destructor
-  ~TestPublisher()
-  {}
+  ~JointStateListener();
+
+private:
+  std::string getTFPrefix();
+
+protected:
+  virtual void callbackJointState(const JointStateConstPtr& state);
+  virtual void callbackFixedJoint(const ros::TimerEvent& e);
+
+  ros::Duration publish_interval_;
+  std::shared_ptr<RobotStatePublisher> state_publisher_;
+  ros::Subscriber joint_state_sub_;
+  ros::Timer timer_;
+  ros::Time last_callback_time_;
+  std::map<std::string, ros::Time> last_publish_time_;
+  MimicMap mimic_;
+  bool use_tf_static_;
+  bool ignore_timestamp_;
+
 };
-
-TEST_F(TestPublisher, test)
-{
-  {
-    ros::NodeHandle n_tilde;
-    std::string robot_description;
-    ASSERT_TRUE(n_tilde.getParam("robot_description", robot_description));
-  }
-
-  ROS_INFO("Creating tf listener");
-  Buffer buffer;
-  TransformListener listener(buffer);
-
-
-  for (unsigned int i = 0; i < 100 && !buffer.canTransform("link1", "link2", Time()); i++) {
-    ros::Duration(0.1).sleep();
-    ros::spinOnce();
-  }
-
-
-  ASSERT_TRUE(buffer.canTransform("link1", "link2", Time()));
-  ASSERT_FALSE(buffer.canTransform("base_link", "wim_link", Time()));
-
-  geometry_msgs::TransformStamped t = buffer.lookupTransform("link1", "link2", Time());
-  EXPECT_NEAR(t.transform.translation.x, 5.0, EPS);
-  EXPECT_NEAR(t.transform.translation.y, 0.0, EPS);
-  EXPECT_NEAR(t.transform.translation.z, 0.0, EPS);
-
-  SUCCEED();
 }
 
-int main(int argc, char** argv)
-{
-  testing::InitGoogleTest(&argc, argv);
-  ros::init(argc, argv, "test_two_links_fixed_joint");
-
-  int res = RUN_ALL_TESTS();
-
-  return res;
-}
+#endif
