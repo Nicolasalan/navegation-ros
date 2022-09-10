@@ -88,6 +88,8 @@ let vueApp = new Vue({
       ros: null,
       rosbridge_address: '', // adicionar o endereço do rosbridge
 ```
+### **Pagina web:**
+![WebPage](/catkin_ws/src/robot_nav/docs/page.png)
 ## **Configuração**
 ```
 |-- src
