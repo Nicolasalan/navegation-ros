@@ -3,7 +3,6 @@
 import rospy
 import actionlib
 
-from os.path import expanduser
 from robot_nav.srv import goal
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 
