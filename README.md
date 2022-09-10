@@ -73,11 +73,21 @@ python -m http.server 7000
 ```bash
 webpage_address
 ```
-Para conectar com o robô, com o servidor web:
+**Para conectar com o robô, com o servidor web:**
 ```bash
 rosbridge_address
 ```
+**Para facilitar o acesso a página web, foi criado um script: 
+O caminho do arquivo é:** `navegation-ros/catkin_ws/src/robot_nav/src/main.js`
 
+```javascript
+let vueApp = new Vue({
+    el: "#vueApp",
+    data: {
+      // ros connection
+      ros: null,
+      rosbridge_address: '', // adicionar o endereço do rosbridge
+```
 ## **Configuração**
 ```
 |-- src
