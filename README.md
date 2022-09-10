@@ -60,6 +60,24 @@ export MAP_NAME=your_map_name
 ```bash
 roslaunch robot_nav navigation_basic_amcl.launch
 ```
+Caso não tenha o mapa (SLAM):
+```bash
+roslaunch robot_nav navigation_basic_slam.launch
+```
+## Web Page
+**Para iniciar a página web:**
+```bash
+python -m http.server 7000
+```
+**Apos iniciar um servidor web, acesse a página web com o comando:**
+```bash
+webpage_address
+```
+Para conectar com o robô, com o servidor web:
+```bash
+rosbridge_address
+```
+
 ## **Configuração**
 ```
 |-- src
