@@ -1,92 +1,126 @@
 <html>
 
 <head>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-     crossorigin="anonymous">
-    <!-- ROS stuff -->
-    <script type="text/javascript" src="https://static.robotwebtools.org/EaselJS/current/easeljs.min.js">
+  <title>Connecting Robot</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"> </script>
+  <script src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js"> </script>
+  <script type="text/javascript" src="https://static.robotwebtools.org/EaselJS/current/easeljs.min.js"> </script>
+  <script type="text/javascript"
+    src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"> </script>
+  <script type="text/javascript" src="https://static.robotwebtools.org/ros2djs/current/ros2d.min.js"> </script>
 
-    </script>
-    <script type="text/javascript" src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js">
+  <style type="text/css">
+    #dragstartzone {
+      position: relative;
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #333;
+      border-radius: 50%;
+      z-index: 10;
+      -moz-user-select: -moz-none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+    }
 
-    </script>
-    <script type="text/javascript" src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js">
+    #dragCircle {
+      position: absolute;
+      z-index: 9;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 30%);
+      -moz-user-select: -moz-none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+    }
 
-    </script>
-    <script type="text/javascript" src="https://static.robotwebtools.org/ros2djs/current/ros2d.min.js">
-
-    </script>
-    <!-- Vuejs -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js">
-
-    </script>
+    #dragCircle:hover {
+      background-color: lightcoral;
+    }
+  </style>
 </head>
 
 <body class="d-flex flex-column h-100">
-
-    <header class="header">
-		<div class="container">
-			<div class="jumbotron text-center">
-				<h1>Serviços de Navegação</h1> <!-- titulo da pagina -->
-				<p>Setup de Serviços de Navegação</p> <!-- subtitulo da pagina -->
-			</div>
-		</div>
-	</header>
-
-    <div id="app" class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-6 text-center">
-                <h3>Connection status</h3>
-                <p class="text-danger" v-if="!connected">Not connected!</p>
-                <p class="text-success" v-if="connected">Connected!</p>
-                <label>ROSBridge address</label>
-                <br>
-                <input type="text" v-model="rosbridge_address" />
-                <br><br>
-                <button :disabled="loading" class="btn btn-danger" @click="disconnect"
-                    v-if="connected">Disconnect!</button>
-                <button :disabled="loading" class="btn btn-success" @click="connect" v-else>Connect!</button>
-            </div>
-            <div class="col-md-12 col-sm-6" style="overflow:auto;">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h5>Serviços disponíveis</h5>                  
-                    </div>
-
-                    <!-- 1st row -->
-                    <div class="col-md-12 text-center my-2">
-                        <div id="map"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- header of the page -->
+  <header class="header">
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1>Navigation Commands</h1>
+        <p>Connect the site to the ROS robot!</p>
+      </div>
     </div>
-    <main id="vueApp">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <!-- actions -->
-                    <div class="card">
-                        <div class="card-body">
-                            <h2 class="text-center">{{ main_title }}</h2>
-                            <p>Subscribing robot data</p>
-                            <p>
-                                <span>X: {{ position.x.toFixed(2) }}</span>
-                                <br>
-                                <span>Y: {{ position.y.toFixed(2) }}</span>
-                                <br>
-                                <span>Z: {{ position.z.toFixed(2) }}</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+  </header>
 
-    <script src="main.js">
-    </script>
+  <!-- main content -->
+  <main id="vueApp">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h3>{{ menu_title }}</h3>
+              <hr>
+              <label>ROSBridge address</label>
+              <br>
+              <input type="text" v-model="rosbridge_address" />
+              <br>
+              <button class="mt-2 btn btn-success" v-if="connected" @click="disconnect">Connected!</button>
+              <button class="mt-2 btn btn-primary" v-else @click="connect">Connect!</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <h2 class="text-center">Joystick</h2>
+              <hr>
+              <p>Some actions for the robot</p>
+              <div id="dragstartzone" @mousedown="startDrag" @mousemove="doDrag">
+              </div>
+              <div id="dragCircle" :style="dragCircleStyle"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="text-center">States values</h2>
+              <hr />
+              <p>Vertical: {{ joystick.vertical.toFixed(3) }}</p>
+              <br />
+              <p>Horizontal: {{ joystick.horizontal.toFixed(3) }}</p>
+              <p>Subscribing robot data:</p>
+              <p>
+                <span>X: {{ position.x.toFixed(2) }}</span>
+                <br>
+                <span>Y: {{ position.y.toFixed(2) }}</span>
+                <br>
+                <span>Z: {{ position.z.toFixed(2) }}</span>
+              </p>
+              <button @click="MoveGoal" :disabled="loading || !connected || service_busy" class="btn btn-primary">move
+                robot to goal</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-12 col-sm-6" style="overflow:auto;">
+        <div class="row">
+          <div class="col-md-12 text-center my-5">
+            <h3>Map services</h5>
+          </div>
+          <!-- 1st row -->
+          <div class="col-md-12 text-center my-2">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="main.js"> </script>
 </body>
 
 </html>
