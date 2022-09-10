@@ -13,7 +13,7 @@ class MoveRobot():
 
     def __init__(self):
         
-        rospy.Service('move_robot', goal, self.handler)
+        rospy.Service('robot_goal', goal, self.handler)
 
         rospy.loginfo("Start MoveRobot Init process...")
         # get an instance of RosPack with the default search paths
@@ -67,10 +67,11 @@ class MoveRobot():
 
 
 if __name__ == '__main__':
-    rospy.init_node('move_robot', log_level=rospy.INFO)
-    MoveRobot()
-
     try:
-        rospy.spin()
+       # Initializes a rospy node to let the SimpleActionClient publish and subscribe
+        rospy.init_node('robot_goal', log_level=rospy.INFO)
+        result = MoveRobot()
+        if result:
+            rospy.loginfo("Goal execution done!")
     except rospy.ROSInterruptException:
-        pass
+        rospy.loginfo("Navigation test finished.")
