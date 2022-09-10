@@ -4,5 +4,8 @@
 
         <include file="$(find robot_nav)/configs/navigation/amcl/amcl_basic.launch"/>
         <include file="$(find robot_nav)/configs/navigation/move_base/move_base.launch"/>
+        
+        <!-- execute move_robot.py-->
+	<node name="goal" pkg="robot_nav" type="move_robot.py" output="screen"/>
 
 </launch>

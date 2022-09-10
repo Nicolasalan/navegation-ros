@@ -71,7 +71,4 @@
 
 	<!--launch rviz_navegation-->
 	<include file="$(find robot_nav)/launch/rviz_navigation.launch"/>
-
-	<!-- execute move_robot.py-->
-	<node name="goal" pkg="robot_nav" type="move_robot.py" output="screen"/>
 </launch>
