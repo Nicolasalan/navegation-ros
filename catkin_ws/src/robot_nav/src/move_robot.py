@@ -4,7 +4,7 @@ import rospy
 import actionlib
 
 from os.path import expanduser
-from ....srv import move_robot
+from robot_nav.srv import goal
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 
 class MoveRobot():
@@ -13,7 +13,7 @@ class MoveRobot():
 
     def __init__(self):
         
-        rospy.Service('move_robot', move_robot, self.handler)
+        rospy.Service('move_robot', goal, self.handler)
 
         rospy.loginfo("Start MoveRobot Init process...")
         # get an instance of RosPack with the default search paths
