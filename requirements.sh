@@ -1,4 +1,3 @@
-
 sudo apt-get install ros-$ROS_DISTRO-ros-controllers
 sudo apt-get install ros-$ROS_DISTRO-gazebo-ros-control
 sudo apt-get install ros-$ROS_DISTRO-navigation
