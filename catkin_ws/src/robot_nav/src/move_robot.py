@@ -67,10 +67,11 @@ class MoveRobot():
 
 
 if __name__ == '__main__':
-    rospy.init_node('move_robot', log_level=rospy.INFO)
-    MoveRobot()
-
     try:
-        rospy.spin()
+       # Initializes a rospy node to let the SimpleActionClient publish and subscribe
+        rospy.init_node('move_robot')
+        result = MoveRobot()
+        if result:
+            rospy.loginfo("Goal execution done!")
     except rospy.ROSInterruptException:
-        pass
+        rospy.loginfo("Navigation test finished.")
