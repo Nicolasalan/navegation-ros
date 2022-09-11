@@ -110,7 +110,6 @@ let vueApp = new Vue({
         |-- launch
         |-- robots
         |-- src
-        |-- test
         |-- worlds
     |-- webPage
         |-- async_web_server_cpp
