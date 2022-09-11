@@ -1,7 +1,7 @@
 omni_wheel_front_left_controller:
-    type: velocity_controllers/JointVelocityController
-    joint: omni_wheel_front_left_joint
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    type: velocity_controllers/JointVelocityController # tipo de controlador a utilizar
+    joint: omni_wheel_front_left_joint # nome do joint a ser controlado
+    pid: {p: 100.0, i: 0.01, d: 10.0} # parâmetros do PID
 
 omni_wheel_front_right_controller:
     type: velocity_controllers/JointVelocityController
