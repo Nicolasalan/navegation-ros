@@ -75,5 +75,5 @@ Este nó é altamente configurável e possui muitos parâmetros que podem ser al
 
 Todos esses parâmetros podem ser alterados no arquivo YAML.
 ```
-~/navegation-warehouse/catkin_ws/src/robot_nav/configs/navigation/gmapping/gmapping_basic.yaml
+~/navegation-ros/catkin_ws/src/robot_nav/configs/navigation/gmapping/gmapping_basic.yaml
 ```
