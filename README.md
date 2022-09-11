@@ -46,7 +46,7 @@ roslaunch robot_nav gmapping_basic.launch
 ```bash
 rosrun map_server map_saver -f your_map_name
 ```
-Isso criará dois arquivos, um arquivo “your_map_name.pgm” e um arquivo “your_map_name.yaml”. Ambos os arquivos são necessários e devem estar sempre no mesmo diretório.
+Isso criará dois arquivos, um arquivo `your_map_name.pgm` e um arquivo `your_map_name.yaml`. Ambos os arquivos são necessários e devem estar sempre no mesmo diretório.
 **Instalando o mapa:**
 ```bash
 cp your_map_name.* ~/navegation-warehouse/catkin_ws/src/robot_nav/configs/navigation/maps/
