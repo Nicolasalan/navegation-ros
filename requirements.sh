@@ -6,3 +6,5 @@ sudo apt-get install ros-$ROS_DISTRO-teleop-twist-keyboard
 sudo apt-get install ros-$ROS_DISTRO-amcl
 sudo apt-get install ros-$ROS_DISTRO-map-server
 sudo apt-get install ros-$ROS_DISTRO-move-base
+
+chmod +x ~/catkin_ws/src/robot_nav/src/*
