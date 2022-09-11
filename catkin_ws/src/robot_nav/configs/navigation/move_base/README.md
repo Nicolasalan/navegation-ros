@@ -62,7 +62,7 @@ Uma vez que o planejador global calculou o caminho a seguir, este caminho é env
 
 Ao contrário do planejador global, o planejador local monitora a odometria e os dados do laser e escolhe um plano local livre de colisões (vamos imaginar o plano local como uma parte menor do plano global) para o robô. Assim, o planejador local pode recalcular o caminho do robô em tempo real para evitar que o robô atinja objetos, mas ainda permitindo que ele chegue ao seu destino.
 
-Depois que o plano local é calculado, ele é publicado em um tópico chamado `/local_plan`. O planejador local também publica a parte do plano global que está tentando seguir no tópico `/global_plan`. Vamos fazer um exercício para que você possa ver isso melhor.
+Depois que o plano local é calculado, ele é publicado em um tópico chamado `/local_plan`. O planejador local também publica a parte do plano global que está tentando seguir no tópico `/global_plan`.
 
 **NOTA** Quanto ao planejador global, existem também diferentes tipos de planejadores locais. Dependendo da configuração e uso como o ambiente em que navega, etc.) e o tipo de desempenho que você deseja, você usará um ou outro.
 
