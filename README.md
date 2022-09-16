@@ -71,12 +71,10 @@ python -m http.server 7000
 ```
 **Apos iniciar um servidor web, acesse a página web com o comando:**
 ```bash
-webpage_address
+roslaunch robot_nav web.launch
 ```
-**Para conectar com o robô, com o servidor web:**
-```bash
-rosbridge_address
-```
+**Esse launch disponibiliza um protocolo ws para comunicação com a página web.**
+
 **Para facilitar o acesso a página web, foi criado um script: 
 O caminho do arquivo é:** `navegation-ros/catkin_ws/src/robot_nav/src/main.js`
 
