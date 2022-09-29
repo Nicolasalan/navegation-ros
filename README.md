@@ -119,6 +119,6 @@ A estrutra do repositório e configurações estão descritas abaixo:
 Documentação sobre como funciona a pilha de navegação em ROS
 * [amcl](https://github.com/Nicolasalan/navegation-ros/tree/main/catkin_ws/src/robot_nav/configs/navigation/amcl/README.md)
 * [gmapping](https://github.com/Nicolasalan/navegation-ros/tree/main/catkin_ws/src/robot_nav/configs/navigation/gmapping/README.md)
-* [move_base](https://https://github.com/Nicolasalan/navegation-ros/blob/main/catkin_ws/src/robot_nav/configs/navigation/move_base/README.md)
+* [move_base](https://github.com/Nicolasalan/navegation-ros/blob/main/catkin_ws/src/robot_nav/configs/navigation/move_base/README.md)
 ---
 **Para utilizar com outro robô, basta alterar os arquivos de configuração `config`, e adicionar o modelo do robô no diretório `robots`.**
