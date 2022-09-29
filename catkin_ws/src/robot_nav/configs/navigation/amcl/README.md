@@ -13,11 +13,11 @@ O pacote inicia uma pose inicial que publica no topico `/initialpose`, logo em s
 
 # Parâmetros
 ## Parâmetros Gerais
-* **odom_model_type (default: `diff`):** It puts the odometry model to use. It can be "diff," "omni," "diff-corrected," or "omni-corrected."
-* **odom_frame_id (default: `odom`):** Indicates the frame associated with odometry.
-* **base_frame_id (default: `base_link`):** Indicates the frame associated with the robot base.
-* **global_frame_id (default: `map`):** Indicates the name of the coordinate frame published by the localization system.
-* **use_map_topic (default: `false`):** Indicates if the node gets the map data from the topic or from a service call.
+* **odom_model_type (default: `diff`):** Ele coloca o modelo de odometria em uso. Pode ser "diff", "omni", "diff corrigido" ou "omni-corrigido".
+* **odom_frame_id (default: `odom`):** Indica o quadro associado à odometria.
+* **base_frame_id (default: `base_link`):** Indica o quadro associado à base do robô.
+* **global_frame_id (default: `map`):** Indica o nome do quadro de coordenadas publicado pelo sistema de localização.
+* **use_map_topic (default: `false`):** Indica se o nó obtém os dados do mapa do tópico ou de uma chamada de serviço.
 
 ## Parâmetros de Particulas
 * **min_particles (padrão: `100`):** Define o número mínimo permitido de partículas para o filtro.
