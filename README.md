@@ -1,4 +1,4 @@
-# Intelligent autonomous robot
+# Intelligent Autonomous Robot
 
 ## **About the project**
 Autonomous navigation of an omnidirectional robot for automation.
