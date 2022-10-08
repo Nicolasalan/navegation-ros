@@ -1,82 +1,82 @@
-# Robô autônomo inteligente (AMR)
+# Intelligent autonomous robot (AMR)
 
-## **Sobre o Projeto**
-Navegação autônoma de um robô omnidirecional para automação. 
+## **About the project**
+Autonomous navigation of an omnidirectional robot for automation.
 
 ## RNS - ROS Navigation Stack
-A Pilha de Navegação é um conjunto de nós e algoritmos ROS que são usados ​​para mover um robô de um ponto a outro de forma autônoma, evitando todos os obstáculos que o robô possa encontrar em seu caminho. O ROS Navigation Stack vem com uma implementação de vários algoritmos relacionados à navegação que podem ajudá-lo a realizar navegação autônoma em seus robôs móveis.
+The Navigation Stack is a set of ROS nodes and algorithms that are used to move a robot from one point to another autonomously, avoiding all obstacles that the robot might encounter in its path. ROS Navigation Stack comes with an implementation of various navigation-related algorithms that can help you perform autonomous navigation on your mobile robots.
 
 ![RNS](/catkin_ws/src/robot_nav/docs/rns.png)
 
-* **Fonte de odometria:** Os dados de odometria de um robô fornecem a posição do robô em relação à sua posição inicial. As principais fontes de odometria são codificadores de roda, IMU e câmeras 2D/3D (odometria visual). O valor odom deve ser publicado na pilha de navegação, que possui um tipo de mensagem `nav_msgs/Odometry`. A mensagem odom pode manter a posição e a velocidade do robô.
+* **Odometry Source:** A robot's odometry data provides the robot's position relative to its home position. The main sources of odometry are wheel encoders, IMU and 2D/3D cameras (visual odometry). The odom value must be published on the navigation stack, which has a `nav_msgs/Odometry` message type. The odom message can maintain the robot's position and speed.
 
-* **Fonte do sensor:** Os sensores são usados ​​para duas tarefas na navegação: uma para localizar o robô no mapa (usando, por exemplo, o laser) e outra para detectar obstáculos no caminho do robô (usando o laser, sonares ou nuvens de pontos) .
+* **Sensor source:** Sensors are used for two tasks in navigation: one to locate the robot on the map (using for example the laser) and another to detect obstacles in the robot's path (using the laser , sonar or point clouds).
 
-* **sensor transforms/tf:** os dados capturados pelos diferentes sensores do robô devem ser referenciados a um quadro de referência comum (geralmente o `base_link`) para poder comparar os dados provenientes de diferentes sensores. O robô deve publicar a relação entre o quadro de coordenadas do robô principal e os quadros dos diferentes sensores usando transformações ROS.
+* **sensor transforms/tf:** the data captured by the different sensors of the robot must be referenced to a common frame of reference (generally the `base_link`) in order to be able to compare the data coming from different sensors. The robot must publish the relationship between the coordinate frame of the main robot and the frames of the different sensors using ROS transformations.
  
-* **base_controller:** A função principal do controlador base é converter a saída da pilha de navegação, que é uma mensagem Twist (`geometry_msgs/Twist`), em velocidades de motor correspondentes para o robô.
-## Clonar o repositório
+* **base_controller:** The main function of the base controller is to convert the output of the navigation stack, which is a Twist message (`geometry_msgs/Twist`), into corresponding motor speeds for the robot.
+## Clone the repository
 ```bash
 git clone https://github.com/Nicolasalan/navegation-ros.git
 ```
-## **Dependências**
-Instale as seguintes dependências:
+## **Dependencies**
+Install the following dependencies:
 ```bash
 cd navegation-ros
 chmod +x requirements.sh
 ./requirements.sh
 ```
-## **Uso**
-**Para inicializar o robô, execute o seguinte comando:**
+## **Use**
+**To start the robot, run the following command:**
 ```bash
 cd navegation-ros/catkin_ws
 catkin_make
 source devel/setup.bash
 ```
-**Para iniciar a simulação:**
+**To start the simulation:**
 ```bash
 roslaunch robot_nav bringup.launch
 ```
-### Mapeamento
-**Iniciar o mapa:**
+### Mapping
+**Start the map:**
 ```bash
 roslaunch robot_nav gmapping_basic.launch
 ```
-**Salvar o mapa:**
+**Save the map:**
 ```bash
 rosrun map_server map_saver -f your_map_name
 ```
-Isso criará dois arquivos, um arquivo `your_map_name.pgm` e um arquivo `your_map_name.yaml`. Ambos os arquivos são necessários e devem estar sempre no mesmo diretório.
-**Instalando o mapa:**
+This will create two files, a `your_map_name.pgm` file and a `your_map_name.yaml` file. Both files are required and must always be in the same directory.
+**Installing the map:**
 ```bash
 cp your_map_name.* ~/navegation-warehouse/catkin_ws/src/robot_nav/configs/navigation/maps/
 ```
-**Para utilizar o mapa que foi salvo:**
+**To use the map that has been saved:**
 ```bash
 export MAP_NAME=your_map_name
 ```
-### Localização
-**Iniciar a localização:**
+### Location
+**Start localization:**
 ```bash
 roslaunch robot_nav navigation_basic_amcl.launch
 ```
-Caso não tenha o mapa (SLAM):
+If you don't have the map (SLAM):
 ```bash
 roslaunch robot_nav navigation_basic_slam.launch
 ```
 ## Web Page
-**Para iniciar a página web:**
+**To start the website:**
 ```bash
 python -m http.server 7000
 ```
-**Apos iniciar um servidor web, acesse a página web com o comando:**
+**After starting a web server, access the web page with the command:**
 ```bash
 roslaunch robot_nav web.launch
 ```
-**Esse launch disponibiliza um protocolo ws para comunicação com a página web.**
+**This launch provides a ws protocol for communication with the web page.**
 
-**Para facilitar o acesso a página web, foi criado um script: 
-O caminho do arquivo é:** `navegation-ros/catkin_ws/src/robot_nav/src/main.js`
+**To facilitate access to the web page, a script was created:
+The file path is:** `navigation-ros/catkin_ws/src/robot_nav/src/main.js`
 
 ```javascript
 let vueApp = new Vue({
@@ -86,11 +86,11 @@ let vueApp = new Vue({
       ros: null,
       rosbridge_address: '', // adicionar o endereço do rosbridge
 ```
-### **Pagina web:**
-Pagina web para controle do robô, com o uso de ROS.
+### **Web page:**
+Web page for robot control, using ROS.
 ![WebPage](/catkin_ws/src/robot_nav/docs/pages.png)
-## **Configuração**
-A estrutra do repositório e configurações estão descritas abaixo:
+## **Settings**
+The repository structure and settings are described below:
 ```
 |-- src
     |-- aws-robomaker-small-warehouse-world # mundo utilizado
@@ -116,9 +116,9 @@ A estrutra do repositório e configurações estão descritas abaixo:
         |-- web_video_server
         
 ```
-Documentação sobre como funciona a pilha de navegação em ROS
+Documentation on how the navigation stack in ROS works
 * [amcl](https://github.com/Nicolasalan/navegation-ros/tree/main/catkin_ws/src/robot_nav/configs/navigation/amcl/README.md)
 * [gmapping](https://github.com/Nicolasalan/navegation-ros/tree/main/catkin_ws/src/robot_nav/configs/navigation/gmapping/README.md)
 * [move_base](https://github.com/Nicolasalan/navegation-ros/blob/main/catkin_ws/src/robot_nav/configs/navigation/move_base/README.md)
 ---
-**Para utilizar com outro robô, basta alterar os arquivos de configuração `config`, e adicionar o modelo do robô no diretório `robots`.**
+**To use with another robot, just change the `config` configuration files, and add the robot model in the `robots` directory.**
