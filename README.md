@@ -1,4 +1,4 @@
-# Intelligent autonomous robot (AMR)
+# Intelligent autonomous robot
 
 ## **About the project**
 Autonomous navigation of an omnidirectional robot for automation.
